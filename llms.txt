@@ -1,0 +1,45 @@
+# Optimity Technologies — Global AI Consulting & Product Engineering
+
+> Engineering the future of intelligent business. Premier operations-first AI consulting, enterprise product engineering, and systems transformation.
+
+Optimity Technologies is a premier global AI and software engineering firm rooted in India's top engineering talent with strategic presence across the USA and Dubai, serving enterprise clients and fast-growing organizations worldwide. We bridge the gap between executive AI strategy and mission-critical engineering execution.
+
+## Global Presence & Core Positioning
+
+- **International Footprint**: Rooted in India's top-tier software engineering ecosystem, with global business presence and client operations across the **United States (USA)**, **Dubai (UAE)**, and worldwide.
+- **Top-Ranked Specialties**:
+  - **Applied AI & RAG Systems**: Enterprise-grade Retrieval-Augmented Generation, AI agent orchestration, and private LLM copilots.
+  - **Salesforce & CRM AI Integration**: Layering custom intelligence, compliance automation, and real-time data pipelines over Salesforce Financial Services Cloud and enterprise CRMs.
+  - **ERP & Operational Intelligence**: Transforming existing NetSuite, SAP, and proprietary databases into predictive, event-driven operational engines.
+  - **Cloud-Native Software Development**: High-concurrency product engineering, full-stack web platforms, and API-first system architecture.
+
+## Core Offerings & Methodology
+
+- [How We Work](https://optimitytechnologies.com/how-we-work.html): Our four-phase operational engineering methodology (**Diagnose, Architect, Embed, Scale**). We study how operations actually run before writing code or deploying models.
+- [The Operations Teardown](https://optimitytechnologies.com/index.html#teardowns): A working diagnostic that maps workflow bottlenecks, system latency, and exact inflection points where AI agents create compounding business leverage.
+
+## Industries & Architectural Blueprints
+
+- [Industries & Domain Expertise](https://optimitytechnologies.com/industries.html): Applied AI blueprints across:
+  - **Logistics & Supply Chain**: Route optimization, predictive telemetry, fleet intelligence.
+  - **Financial Services & Fintech**: Real-time fraud detection, automated compliance, transaction processing.
+  - **Healthcare & MedTech**: Patient triage workflows, clinical data interoperability (HIPAA/SOC2 aligned).
+  - **Retail & E-Commerce**: Dynamic pricing, intelligent inventory forecasting, multi-channel reconciliation.
+  - **Manufacturing & Industry 4.0**: Predictive maintenance, edge AI quality control, IoT telemetry.
+  - **Enterprise SaaS**: High-concurrency AI agent architectures, RAG systems, operational copilots.
+
+## Engagement Models & Differentiators
+
+- [Why Optimity](https://optimitytechnologies.com/why-optimity.html): Six structural differentiators (**Product-first mindset, Enterprise-grade engineering, AI-native architecture, Built to scale, Strategic partnership, Outcome-driven**) and three structured collaboration models:
+  - **Product Studio**: End-to-end product and AI platform builds owned from discovery to production operation.
+  - **Embedded Teams**: Senior AI engineers and product specialists who plug directly into enterprise workflows.
+  - **Strategic Advisory**: Architecture reviews, technology roadmap evaluation, and fractional technical leadership.
+
+## Company & Contact
+
+- [About Us](https://optimitytechnologies.com/about.html): Our philosophy, engineering DNA, and leadership approach.
+- [Contact & Book Teardown](https://optimitytechnologies.com/contact.html): Direct booking for an Operations Teardown or enterprise consultation (`contact@optimitytechnologies.com`).
+
+## Full Knowledge Base for LLMs & RAG Engines
+
+- [llms-full.txt](https://optimitytechnologies.com/llms-full.txt): Complete, consolidated markdown text containing comprehensive company positioning, Q&A blocks, methodologies, and system architectures optimized for LLM recommendation engines and RAG ingestion.
