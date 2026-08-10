@@ -12,10 +12,11 @@
     }
   }
 
-  // Default to light unless the user previously chose dark.
+  // Saved choice wins; otherwise follow the OS preference (matches the inline head script).
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
-  apply(saved === 'dark' ? 'dark' : 'light');
+  var osDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  apply(saved ? (saved === 'dark' ? 'dark' : 'light') : (osDark ? 'dark' : 'light'));
 
   document.addEventListener('click', function (e) {
     var t = e.target.closest && e.target.closest('[data-theme-toggle]');
