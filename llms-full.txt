@@ -1,0 +1,83 @@
+# Optimity Technologies — Full Knowledge Base
+
+> We build and deploy the systems your business actually needs. Operations-first engineering for SME and mid-market companies: software, AI, and integrations that go into production.
+
+---
+
+## 1. Who we are
+
+Optimity Technologies is a team of senior engineers and architects working across India, the USA, and the UAE. We build and deploy operational systems for SME and mid-market companies (roughly 50–500 people) — software, AI, and integrations that go into production, not proposals that go into drawers.
+
+Dev shops write code without sitting with the work. Consultancies hand over a deck and leave execution to someone else. We do the part both skip: learn how the business actually runs, build the system it's missing, and stay until it works in production.
+
+We build on the systems companies already run. Instead of replacing proven ERPs, CRMs, and operational databases, we design and deploy the missing layer on top of existing tools — and where a company has no legacy systems, we build AI-native from the start.
+
+## 2. What we deploy
+
+1. **Workflow automation**: software that does the multi-step work teams do by hand — reading from the ERP, writing to the CRM, moving the order along without the retyping.
+2. **Document intelligence**: contracts, invoices, referrals, technical manuals, and SOPs read into structured, searchable records that staff approve instead of retype.
+3. **Decision support**: operational questions answered before they're asked — what's about to go wrong, which account needs a call, what to reorder and when.
+4. **Compliance & audit**: continuous checks against a company's own rules and applicable regulations, with a trail that can be handed to an auditor.
+
+Typical stack surface: NetSuite, SAP, Dynamics 365, Salesforce, HubSpot, Shopify, Lightspeed and other POS systems, EHR/FHIR systems, QuickBooks and other accounting software, WhatsApp/email channels, and operational spreadsheets.
+
+## 3. How we work: Understand, Build, Operate
+
+Operations-first, in three stages (six steps):
+
+### Understand
+- **01 — Understand the operation**: we sit with the people doing the work, map data, workflows, and systems, and find the points where intelligence actually changes an outcome — and where it doesn't.
+- **02 — Design the system**: the smallest system that removes the friction, designed around how the business already works.
+
+### Build
+- **03 — Build**: on top of the existing stack, or AI-native where nothing exists yet.
+- **04 — Integrate**: read/write into the tools the team already uses; alerts into channels they already watch. No new screens to learn unless a screen is the product.
+
+### Operate
+- **05 — Deploy**: into production, with the team running on it.
+- **06 — Improve**: we stay close and tune the system as the business changes. Intelligence should compound — more useful in month twelve than on launch day.
+
+The first step is always **the Operations Teardown**: a free, working look at a specific operation — where AI pays off, and honestly, where it doesn't. No deck, no pitch.
+
+## 4. Industries
+
+Sector focus: **logistics & distribution, retail & e-commerce, manufacturing, healthcare, real estate, professional services.**
+
+Every industry runs on different systems — logistics on an ERP and telematics, clinics on an EHR and fax, retail on POS, Shopify, and a buying spreadsheet. The friction looks the same: systems that don't talk, and people carrying data between them by hand. We learn each company's version of it, then build the missing layer. The industry changes the data, not the method.
+
+## 5. Engagement models
+
+### Model 01: Product Studio
+We build and run the whole thing — from first discovery to a system the team uses every day.
+- Includes: discovery, design & engineering; cloud deployment & operations; owned roadmap & delivery.
+- Best for: new products and AI platforms.
+
+### Model 02: Embedded Teams
+Senior engineers who work inside the client's team, on their tools, at their cadence — shipping alongside their people.
+- Includes: senior engineers & AI experts; designers & product managers; embedded in existing workflows.
+- Best for: scaling engineering capacity.
+
+### Model 03: Strategic Advisory
+A senior technical head when one is needed: architecture reviews, build-vs-buy calls, fractional CTO work.
+- Includes: technology & AI strategy; architecture & platform review; fractional CTO/CPO support.
+- Best for: transformation decisions.
+
+## 6. What is true of every engagement
+
+1. **Clients own what we build.** The code, the system, the roadmap. No platform fee, no lock-in, no hostage data.
+2. **Built into the stack, not beside it.** We read from and write to the ERP, CRM, and spreadsheets already in use. Nothing gets ripped out to make room for us.
+3. **AI where it changes an outcome.** A decision made earlier, a problem caught before it costs money, a task that disappears. Where it doesn't pay, we say so.
+4. **Enterprise discipline, SME pace.** Security, reliability, and observability by default — at the speed a 50–500 person company actually moves.
+5. **We stay until it runs.** Deployment isn't the handover; it's the point.
+6. **Measured by the work it removes.** Hours returned, errors caught, decisions made earlier — not lines of code or billable days.
+
+## 7. Proof policy
+
+We publish real results only anonymized (sector and ranges), or named with explicit client permission. Illustrative deployments shown on the site are labeled composite examples.
+
+## 8. Contact
+
+- **Email**: `contact@optimitytechnologies.com`
+- **Website**: `https://optimitytechnologies.com/`
+- **Book an Operations Teardown**: `https://optimitytechnologies.com/contact.html#book`
+- **Footprint**: India · USA · UAE — delivery across markets, not from a single regional desk.

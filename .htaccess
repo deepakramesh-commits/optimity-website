@@ -1,0 +1,42 @@
+# Optimity Apache Configuration (.htaccess for Bluehost & Shared Hosting)
+RewriteEngine On
+
+# 1. Clean URL support: map extensionless URIs (e.g. /about) to .html if file exists
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# 2. Custom 404 Error Page
+ErrorDocument 404 /404.html
+
+# 3. Enable Server-Side Includes (SSI) for HTML partials (header.html / footer.html)
+Options +Includes
+AddOutputFilter INCLUDES .html
+
+# 4. Security Headers
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# 5. Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml application/manifest+json
+</IfModule>
+
+# 6. Static Asset Caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/css "access plus 30 days"
+    ExpiresByType application/javascript "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/jpg "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/gif "access plus 30 days"
+    ExpiresByType image/ico "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+    ExpiresByType application/pdf "access plus 30 days"
+</IfModule>

@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: optimity-website:latest
+    container_name: optimity-website
+    restart: always
+    ports:
+      - "127.0.0.1:3000:80"
