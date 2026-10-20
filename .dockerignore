@@ -3,3 +3,6 @@
 .gstack
 *.md
 **/*.md
+# Internal sources for rendered images: not part of the public site
+assets/products/placeholders/src
+assets/og-src

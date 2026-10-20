@@ -1,6 +1,14 @@
 # Optimity Apache Configuration (.htaccess for Bluehost & Shared Hosting)
 RewriteEngine On
 
+# 0. Retired pages (2026-10 product-led site): same 301s as nginx.conf; query strings are kept.
+RewriteRule ^how-we-work(\.html|/)?$ /custom-ai-systems.html [R=301,L]
+RewriteRule ^industries(\.html|/)?$ /products.html [R=301,L]
+RewriteRule ^why-optimity(\.html|/)?$ /about.html [R=301,L]
+RewriteCond %{QUERY_STRING} .
+RewriteRule ^management-team(\.html|/)?$ /about.html?%{QUERY_STRING}#team [R=301,NE,QSD,L]
+RewriteRule ^management-team(\.html|/)?$ /about.html#team [R=301,NE,L]
+
 # 1. Clean URL support: map extensionless URIs (e.g. /about) to .html if file exists
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -30,6 +38,8 @@ AddOutputFilter INCLUDES .html
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
+    # Pages revalidate on every visit (as in nginx.conf); CSS, JS and images use the ?v= string.
+    ExpiresByType text/html "access plus 0 seconds"
     ExpiresByType text/css "access plus 30 days"
     ExpiresByType application/javascript "access plus 30 days"
     ExpiresByType image/png "access plus 30 days"
