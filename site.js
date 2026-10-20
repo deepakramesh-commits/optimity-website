@@ -60,6 +60,7 @@
     for (var g = 0; g < groups.length; g++) {
       var items = groups[g].querySelectorAll('[role="radio"]');
       for (var i = 0; i < items.length; i++) items[i].tabIndex = items[i].getAttribute('aria-checked') === 'true' ? 0 : -1;
+      keepReachable(groups[g]);
     }
     document.addEventListener('keydown', function (e) {
       var item = e.target.closest && e.target.closest('[role="radio"], [role="tab"]');
@@ -83,6 +84,13 @@
       items[i].setAttribute(attr, on ? 'true' : 'false');
       items[i].tabIndex = on ? 0 : -1;
     }
+    keepReachable(group);
+  }
+  // If the chosen item is hidden (phone layout hides some sources), the first visible one takes the tab stop.
+  function keepReachable(group) {
+    var items = [].slice.call(group.querySelectorAll('[role="radio"], [role="tab"]'));
+    var visible = items.filter(function (b) { return b.offsetParent; });
+    if (visible.length && !visible.some(function (b) { return b.tabIndex === 0; })) visible[0].tabIndex = 0;
   }
 
   // Nexus AI sample panel. Sample data only; the page says so next to the panel.

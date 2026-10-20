@@ -25,7 +25,7 @@ Full redesign, built on the `redesign` branch as a new version alongside the cur
 - Calendly colour parameters follow the new palette (`ffffff` / `232323` / `c2410c`); the embed itself is unchanged
 - 404 page restyled, still self-contained for any URL depth
 - `llms.txt` and `llms-full.txt` rewritten to match, now including the practices, products and leadership
-- One cache string (`?v=20261019-r11`) across every page and the partial fetch
+- One cache string (`?v=20261019-r12`) across every page and the partial fetch
 
 ### Fixed (pre-landing review of the redesign)
 - Keyboard focus ring visible on every surface, including the ink close band and the white booking card

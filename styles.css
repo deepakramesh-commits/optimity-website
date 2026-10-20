@@ -151,7 +151,7 @@ nav.site .bar { max-width: 1600px; margin: 0 auto; display: flex; align-items: c
 .dropdown-item { display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 6px; text-decoration: none; font-size: 1rem; }
 .dropdown-item:hover { background: var(--surface); }
 .dropdown-item[aria-current="page"] { background: var(--surface); font-weight: 600; }
-.navactions { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.navactions { display: flex; align-items: center; gap: 12px; }
 .toggle {
   min-height: 44px; padding: 0 12px; background: none; border: 0; cursor: pointer;
   font-size: var(--t-small); color: var(--muted); white-space: nowrap;
@@ -385,7 +385,7 @@ ol.method > li.stage:nth-child(2) { background: var(--surface); margin: 0 calc(-
 .engine-btn b { font-size: 1.125rem; }
 .engine-btn span { color: var(--muted); font-size: .9375rem; }
 .engine-btn:hover { background: var(--stage); }
-.engine-btn[aria-selected="true"] { --focus: var(--strong-ink); background: var(--strong); color: var(--strong-ink); }
+.engine-btn[aria-selected="true"] { background: var(--strong); color: var(--strong-ink); }
 .engine-btn[aria-selected="true"] span { color: var(--strong-ink); opacity: .82; }
 .engine-view { background: var(--stage); border-radius: var(--r-ui); padding: clamp(24px, 3vw, 40px); min-height: 460px; }
 .engine-pane + .engine-pane { margin-top: 40px; }
@@ -499,6 +499,7 @@ table.data td a, .mail a { display: inline-flex; align-items: center; min-height
   :root { --rail: 0px; }
   nav.site .bar { gap: 12px; }
   .menu-btn { display: inline-flex; }
+  .navactions { margin-left: auto; }
   .desktop-only { display: none !important; }
   .navactions .cta-long { display: none; }
   .navactions .cta-short { display: inline; }
@@ -531,7 +532,7 @@ table.data td a, .mail a { display: inline-flex; align-items: center; min-height
   .pin .step, .pin .step:last-child { min-height: 0; padding-top: 28px; }
   .pin .step h3 { color: var(--ink); }
   .pin .stage { position: static; min-height: 0; margin: 40px calc(-1 * var(--m)) 0; padding: 24px var(--m); border-radius: 0; display: grid; gap: 12px; }
-  .has-js .pin .state { display: block; animation: none; }
+  .has-js .pin .state, .has-js .pin .stage[data-state] .state { display: block; animation: none; }
   .people { grid-template-columns: 1fr 1fr; column-gap: var(--gap); }
   .people h2 { grid-column: 1 / -1; }
   .close { display: block; min-height: 0; }

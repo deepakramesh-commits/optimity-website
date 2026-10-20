@@ -109,7 +109,7 @@ Eyebrow labels above headings · monospace outside real code · 01/02/03 index n
 ## 11. Files
 
 - `styles.css` — tokens, components, responsive rules. `site.js` — entrances, Nexus sample panel, switches, pinned teardown, engine picker, clocks, dropdown state. `theme.js` and `components.js` — unchanged behaviour (theme toggle, partial loading, nav highlighting).
-- Cache string: every page and `components.js` share `?v=YYYYMMDD-rN` (currently `20261019-r11`). Bump it whenever `styles.css`, `site.js`, `theme.js` or `components.js` changes.
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-rN` (currently `20261019-r12`). Bump it whenever `styles.css`, `site.js`, `theme.js` or `components.js` changes.
 - Verification: `taste-skill` `lint.mjs` (0 FAIL) and `inspect.mjs` on every page; screenshots at 1440 / 1024 / 390 in both themes via gstack `/browse`.
 
 ## Decisions Log
