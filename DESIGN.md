@@ -1,130 +1,122 @@
-# Design System — Optimity
+# Design System: Optimity Technologies — "The working system"
 
-> "Engineered Confidence for SME Operators" (v3). Created by /design-consultation 2026-06-22 as "Engineered Editorial"; v2 2026-08-09 from the founder's forward-deployment direction; v3 same day adds the founder's human/non-AI mandate. Evolution, not rebrand: type, palette, spacing carry over.
+> v4, 2026-10-19. Replaces "Engineered Confidence for SME Operators" (Fraunces / Geist / paper and amber). Chosen by the founder team from three dealt directions (taste-skill "The product performs"; alternatives were "The practice poster" and "The board"). Written in the stitch-skill structure; the house rules come from taste-skill and override anything generic below.
 
-## The Believability Mandate (v3 — governs everything below)
-**The site must not look AI-generated.** It should read as a small, excellent studio making hundreds of deliberate decisions: editorial design × engineering documentation × premium technology company. If forced to choose between more impressive and more believable, always choose **more believable**. The final feel: *a brilliant engineering team documented their work beautifully* — not a marketing team asking AI to design an engineering company.
+## 0. The one test
 
-Operating rules:
-- **Vary section structure.** Never let every section follow headline → paragraph → 3 cards → CTA. Adjacent sections should differ in shape (hairline list, ledger, split, diagram panel, open editorial column).
-- **Less UI, more editorial.** No boxes inside boxes. Cards only for a genuine grouping relationship; logo walls, principle lists, and step sequences get typography + thin rules + whitespace, not chrome.
-- **Controlled irregularity.** The grid is rigorous; content may deliberately break it — a number in the margin, an artifact wider than its text column, varied section heights, asymmetric image/text splits. Designed, never random.
-- **No repetitive pill UI.** Section labels are plain mono text, not repeated bordered chips.
-- **Real work is the visual identity.** Diagrams show actual tools and flows (CRM → integration → system → operations), never abstract network/AI visualizations. No fake terminals, fake metrics, fake "live" indicators, decorative code, or animated rings pretending to be technology.
-- **Human details, never fabricated ones.** Deployment identifiers, editorial captions, honest labels, footnotes — only where the detail is true. Authenticity > decoration; an empty slot beats an invented one.
-- **Motion is rare and reasoned.** A connection appearing, a line drawing itself, a state transitioning — once, on purpose. Nothing loops forever; nothing floats; `prefers-reduced-motion` stops everything including SVG/SMIL.
-- **The §18 self-audit before shipping:** could this be a Framer template? same structure every section? too many cards? everything symmetrical? abstract visuals instead of real artifacts? looks like an AI company / consultancy / SaaS template? Any yes → fix that section.
+Every page is checked against one question before it ships: **would an operations director at a 50 to 500 person company believe a serious engineering firm made this, and not a template?** The answer has to come from real work on the page: a working interface, a real workflow, a real table, real people. Never from decoration.
 
-## Product Context
-- **What this is:** Marketing site for Optimity, a forward-deployment technology company for SMEs and mid-market companies. Its job is to book "The Operations Teardown."
-- **Positioning:** *We build and deploy the systems your business actually needs.* We work directly inside the customer's operation: understand how the business works, find where technology fails or creates friction, build the software/AI/integration layer, deploy it into production.
-- **Who it's for:** SME / mid-market founder, CEO, COO, or technology leader (roughly 50–500 people). Sophisticated about technology, not buying a multi-year enterprise transformation. Skeptical, fatigued by AI decks. Global footprint (India / USA / UAE).
-- **"Forward Deployment"** is the distinctive name for the methodology. Never lead with the phrase before the visitor understands the value; earn it, then name it.
-- **The final design test (the memorable thing):** a founder/COO at a 50–500 person company concludes, in order: "They understand how businesses actually operate." → "They can build the technology." → "They will actually deploy it, not just give me a proposal." Every design choice serves making those three conclusions inevitable.
-- **Do NOT optimize for looking like a billion-dollar technology company.** Optimize for looking like the smartest technical team an SME can actually hire. Explicitly rejected: dark Palantir/defense-contractor aesthetic, generic AI agency, enterprise consultancy, SaaS startup.
+## 1. Visual Theme & Atmosphere
 
-## Core Design Move (non-negotiable)
-**Make the WORK the design — never the technology.** The most visually interesting elements are real representations of systems, workflows, architecture, integrations, interfaces, before/after processes, deployment stages, and operational results. The hero is a **real, legible deployment/teardown artifact** — never abstract imagery, neural-network decoration, or a services matrix. If a deployment story contains a real diagram, screenshot, workflow, or measurable result, that artifact is the visual centerpiece. Decorative illustration is a last resort, not a default.
+A quiet, white engineering document with one working system in the middle of it. Density **balanced (5)**, variance **offset asymmetric (6)**, motion **fluid but rare (4)**.
 
-## Aesthetic Direction
-- **Direction:** Engineered confidence for SME operators — the visual language of an engineering notebook / field deployment report, elevated to a premium editorial website.
-- **Feel:** technical but human · serious but approachable · premium but not corporate · engineered but not sterile · confident but not intimidating.
-- **Decoration level:** minimal-to-intentional. The decoration is working-software artifacts, thin engineering lines, precise grids, generous whitespace. No blobs, no gradients.
+- Most of the page is white ground, ink type and space. The visual interest comes from **interface fragments of the products doing their job** (Nexus AI answering an ERPNext question, a Move Concierge call, a Property Connect lead) and from **real tables and real workflows**, not from illustration.
+- One alignment carries the site: a **rail at 27% from the left edge**. Headlines, section headings and running text sit on it; wide things (bands, tables, the close) run to the margins.
+- Neighbouring sections never share a shape. The set of shapes in use: rail hero with a peeking panel; split hero with a fragment; live demo panel with controls; full-bleed sentence bands with switches; pinned statements with a changing card; quiet logo row; people row; real data table; statement rows; two-lane workflow; timeline; orange close with a booking card; ink close; surface close line.
+- The light theme is the default; the dark theme is complete and reviewed on a phone (the founder reviews in dark mode on a phone).
 
-## Typography
-- **Display/Hero:** Fraunces (variable, opsz) — warm, optically precise serif. Weights 400/500/600.
-- **Body / UI:** Geist — engineered, highly legible. Weights 400/500/600.
-- **Data/Tables:** Geist with `tabular-nums`.
-- **Technical labels:** Geist Mono — **seasoning only.** Tiny uppercase system tags, eyebrows, metadata, deployment labels. Never body, never a full section. Floor: 0.72rem (~11.5px) — never smaller; label text carrying meaning must stay legible.
-- **Loading:** Google Fonts — `Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600` + `Geist:wght@400;500;600` + `Geist+Mono:wght@400;500`.
-- **Scale (rem):** display clamp(2.6–4.6); h2 clamp(1.8–2.7); h3 1.3; body 1.0625 (17px); small 0.92; mono-label 0.72 (uppercase, letter-spacing .08em). Headlines letter-spacing -0.015em, line-height ~1.08. One scale — no per-instance inline font sizes.
-- **Known glyph issue:** Fraunces' display-size ampersand reads as "®". In headings, write "and" or use a styled span fallback — never ship the ambiguous glyph.
+## 2. Color Palette & Roles
 
-## Color
-- **Approach:** restrained warm-monochrome + ONE accent. Keep the warm paper / off-white foundation — this is the SME-operator warmth; do not go dark-first.
-- **Ink (text):** `#14110E` (warm near-black)
-- **Paper (bg):** `#F5F1EA` (warm off-white — paper, not stark white)
-- **Surface (cards):** `#FBF8F2`
-- **Muted text:** `#6B6256` (warm gray)
-- **Hairline:** `#DED7CB` (thin engineering lines — the primary structural device)
-- **Accent:** `#B8550F` (deep amber) — **semantic, not decorative.** Marks "where AI/the system changes an outcome" (intervention points, TARGET STATE), the primary CTA, and rare emphasis. Sole accent; do not add green/blue accent families.
-- **State color for diagrams:** reuse semantic info `#3A5A8C` for CURRENT STATE / pre-deployment elements when a before/after diagram needs contrast with amber TARGET STATE. No other new colors.
-- **Semantic:** success `#2E7D54`, error `#B23A2E`, info `#3A5A8C`. Accent tint `#F3E2D2`.
-- **Dark mode:** invert to warm near-black paper `#14110E`, ink `#F2ECE2`, surface `#1D1915`, hairline `#322B23`, muted `#A89D8C`, accent brightens to `#E0853A`. Light is the default; dark is offered and must be complete (no hardcoded light values, third-party embeds themed, logos legible).
+One ground, one ink, one accent. The accent is the logo's own orange and appears on actions and the home page's closing field only.
 
-## Spacing
-- **Base unit:** 8px. **Scale:** 2xs(2) xs(4) sm(8) md(16) lg(24) xl(32) 2xl(48) 3xl(64). Tokens only — no inline spacing values, no off-scale magic numbers in components.
-- **Density:** spacious-editorial sections wrapping dense, legible data zones. Calm around tight tabular/diagram data expresses "clarity on top of complexity."
+| Role | Light | Dark | Use |
+|---|---|---|---|
+| **Ground** (`--bg`) | Pure White `#FFFFFF` | Off-Black `#141414` | Page background |
+| **Surface** (`--surface`) | Paper Grey `#F2F2F0` | Graphite `#1E1E1E` | Fragment panels, statement bands, close line |
+| **Stage** (`--stage`) | Stage Grey `#E6E6E3` | Stage Graphite `#282826` | The flat colour behind a fragment, controls column, clocks |
+| **Ink** (`--ink`) | Near-Black `#232323` | Bone `#EDEDEB` | All running text, headings |
+| **Muted** (`--muted`) | Slate Grey `#5C5C59` | Ash `#A6A6A2` | Secondary notes, labels inside fragments, table headers |
+| **Signal Orange** (`--accent`) | `#F2541B` | `#F2541B` | Primary buttons, the home close field, the Nexus query mark. Text on it is `#1A1A1A` (4.9:1) |
+| **Calendly orange** (`--accent-deep`) | `#C2410C` | — | Calendly's `primary_color` only, so its white button text passes AA |
+| Band tints (`--band-1/2/3`) | `#E8E6E2` `#DFE6E8` `#E7E3EC` | `#2B2721` `#1F292B` `#27232C` | Fill of a switched-on sentence band on the home page |
 
-## Layout
-- **Approach:** disciplined grid with editorial moments. Left-aligned, structured, document-like. Not centered-everything.
-- **Max content width:** 1180px. Gutters 32px.
-- **Breakpoints:** 680 / 920 / 1040 only. No one-off breakpoints.
-- **Hero:** two-column on desktop (declaration left, real artifact right), stacks on mobile. Hero headline is a short, direct declaration an SME owner instantly understands — supporting copy explains we work directly with the operation to build, integrate, and deploy.
-- **Border radius:** sm 4px (tags, inputs), md 6px (buttons), lg 10–12px (cards/artifact). No bubble-radius-everything.
-- **Cards earn their existence.** Logo walls, principle lists, and content that reads as a list use hairline-rule lists (`.diffs`/`.caps` pattern), not bordered hover-lift card grids. No icon-in-box feature grids.
+- Body copy is always full ink (≥ 7:1). Muted is for secondary notes only.
+- Surfaces are separated by a tone step, never by a line or a shadow.
+- Orange is never used as text colour on white (3.3:1 fails).
+- Banned: cream-and-terracotta, purple/indigo, neon, gradients, pure `#000000`.
 
-## Voice & Content Style
-- **Benchmark:** the how-we-work page ("We start with your operations. Always." / "Five things you won't get from a platform pitch"). All pages speak in this operator voice.
-- **Banned:** "engineered for seamless adaptability" · "outcome-driven collaboration" · "transform your business" · "unlock the power of AI" · "drive digital transformation" · "leverage cutting-edge technology" · vision/mission consulting furniture · platform-pitch language.
-- **Preferred register:** "We start with the way your business actually works." · "We build the missing system." · "We connect the tools you already use." · "We deploy into production." · "Your team should not have to change how the business works just because the software is badly designed."
-- **Specificity beats adjectives.** Name the systems (ERP, CRM, spreadsheets, WhatsApp, accounting software), the friction, the outcome.
-- Closing CTAs are page-specific practical invitations ("Bring us the problem." / "Tell us where the work breaks."), all resolving to the low-friction Operations Teardown booking — never a generic sales close, never identical across pages.
+## 3. Typography Rules
 
-## Methodology Presentation
-Six steps grouped under the existing three stages (evolution of Understand · Build · Operate):
-- **UNDERSTAND:** 01 — Understand the operation · 02 — Design the system
-- **BUILD:** 03 — Build · 04 — Integrate
-- **OPERATE:** 05 — Deploy · 06 — Improve
-Integrate and Deploy are shown explicitly — they are the proof that this is deployment, not proposals.
+- **One family: Archivo** (Google Fonts, weights 400/500/600). `https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap`. Display stays at regular weight even at 76px; hierarchy comes from size and colour, not boldness.
+- **Five steps** (tokens in `styles.css`): small `0.875rem` (14px) · body `clamp(1.0625rem, 1rem + .25vw, 1.1875rem)` (17–19px) · lead `clamp(1.25rem, 1.1rem + .6vw, 1.5rem)` (20–24px) · head `clamp(1.75rem, 1.2rem + 2vw, 2.75rem)` (28–44px) · display `clamp(2.25rem, 1.1rem + 4.2vw, 4.75rem)` (36–76px). Interface fragments use their own true sizes (14–15px) inside `data-ui`.
+- Display tracking `-0.028em`, leading `1.02`; heads `-0.02em`, `1.08`; body leading `1.55`, measure ≤ 62ch.
+- **Every headline fits in two lines at 1440, 768 and 390.** Hero lines are authored (`.mask` spans), about 20 characters per line, so they survive a phone at 36px.
+- Sentence case everywhere. No uppercase labels, no letter-spaced captions.
+- Monospace appears only inside real code (`pre.sql` in the Nexus SQL fragment).
+- `™` appears once per product name, set small (`.tm`), in the product page headline and engine names.
 
-## Deployment Stories (case-study format)
-Structure every proof story as a deployment dossier, not a marketing case study:
-- `DEPLOYMENT NN` (mono label) → Client / Industry → **THE PROBLEM** (what was actually broken) → **THE SYSTEM** (what was built) → **THE DEPLOYMENT** (how it connected to the existing business) → **THE RESULT** (concrete measurable outcome where available).
-- Show architecture and actual interfaces whenever possible; no decorative illustration when a real artifact exists.
-- **Until real permissioned proof exists, dossiers are labeled composites** (see Content Integrity) designed so a real deployment drops into the same format unchanged.
+## 4. Component Stylings
 
-## Show-the-Problem Pattern
-The visitor must recognize themselves: a realistic SME environment (CRM, spreadsheets, email, WhatsApp, accounting software, internal tools, people manually moving information) → **Forward Deployment** → one operational system connecting the important pieces. Visually elegant, technically credible, built from the state colors above.
+- **Buttons:** flat Signal Orange fill, near-black text, 4px radius, 48px tall (44px small, 52px in cards). Hover darkens one step; press translates 1px. One primary action per screen; the second action is a **text link** with a 2px underline that opens on hover, never a ghost button.
+- **Header:** logo, six plain links (two are dropdowns: Products, About us), a text theme toggle and the orange "Book an Operations Teardown" button (short label "Book a teardown" under 1180px). No bar chrome. Under 1040px the links move into a drawer driven by the existing `#nav-cb` checkbox (`theme.js` unchanged).
+- **Dropdowns:** the only resting shadow on the site, because they float. Group names inside (Operational intelligence, Client engagement agents) are plain small text.
+- **Interface fragments (`data-ui`):** cropped pieces of real product UI at true size: query bar with an orange mark, routed-to line, data table with tabular figures, small bar chart, source toggles, checklists, transcripts, records. Inside a fragment the product's own conventions apply (1px control borders, 6–10px radii). **Every fragment that shows data carries a visible "Sample data" / "Example" / "Sample" label.**
+- **Sentence bands with switches (home):** a full-width band per capability; the switch is a real `<button aria-pressed>`; switching on fills the band with a tint and opens the practice it belongs to.
+- **Tables:** real `<table>` with header cells and 1px row rules; on phones each row stacks into a labelled block (`data-label`).
+- **Statement rows:** a key sentence in the rail column and its explanation from the rail onward; every other row sits on Surface.
+- **Cards:** only the booking card (home close) and fragments; never a grid of identical cards.
+- **Calendly:** embed markup unchanged; framed on Stage with a white inner panel in both themes; colour parameters `background_color=ffffff&text_color=232323&primary_color=c2410c`.
 
-## Technical Labels — allowed vocabulary, honest only
-Mono labels like `SYSTEM STATUS` · `DEPLOYMENT 03` · `CURRENT STATE` · `TARGET STATE` · `INTEGRATION` · `PRODUCTION` · `OPERATIONAL RESULT` are on-brand. **Never fake technical complexity:** no labeling a static illustration "LIVE …" or "… ENGINE", no implying functionality that doesn't exist. Overclaiming labels are a Content Integrity violation.
+## 5. Layout Principles
 
-## Navigation
-Current approved structure: **How We Work · Industries · Why Optimity · About Us · Contact · [Book an Operations Teardown]** (button). The founder-direction naming (**Work · What We Deploy · How We Work · About**) remains the target for a future restructure once real deployment stories exist to anchor a "Work" page; "Start a Project" register was considered and rejected — the Teardown is the deliberately low-friction wedge. No enterprise mega-nav.
+- Page max width 1600px; margins `clamp(20px, 2.6vw, 40px)`; one rail at 27% (`--rail`), collapsing to the margin under 1040px. Grids that start on the rail use `column-gap: 0` so text lands exactly on it.
+- Section gap `clamp(96px, 13vw, 184px)`, clearly larger than any gap inside a section.
+- Breakpoints: 1180 (header label), 1040 (rail collapses, drawer nav), 680 (phone composition). The phone layout is its own composition, not a squeeze: one column, buttons full width, tables stacked, the pinned teardown card sticky at the top half of the screen.
+- Touch targets ≥ 44px everywhere (links in nav and footer included). No horizontal scroll at 390px.
+- Each page closes in its own shape: home (orange field + booking card), industries (ink band), the rest (surface close line), contact (offices and email).
 
-## Motion
-- **Approach:** minimal-functional. Fast, precise, no choreography. Motion communicates systems becoming operational (data moving, connections resolving, states changing) — never ambient decoration.
-- **Easing:** enter ease-out, exit ease-in, move ease-in-out. **Duration:** micro 50–100ms, short 150–250ms, medium 250–400ms.
-- **No perpetual loops competing with content.** At most one restrained signature animation per page (e.g., the hero artifact resolving on load).
-- **`prefers-reduced-motion` must stop ALL motion, including SVG/SMIL animations** (CSS kill-switch alone does not stop SMIL — gate or remove SMIL accordingly).
+## 6. Motion & Interaction
 
-## Content Integrity (enforced — a design rule, not a suggestion)
+- **Signature move:** hero headline lines rise from behind their baseline on load (pure CSS, 900ms, second line +110ms).
+- **Entrances:** headings, rows, list items and fragments rise 24px with opacity as they enter (`site.js`, IntersectionObserver, staggered 80ms by position). Content is visible without JavaScript, and anything already on screen at load is shown immediately.
+- **Live things (one per page, from real content):** home — the Nexus AI sample panel (questions and sources switch the answer); sentence switches; the pinned teardown card changing state. Nexus AI — the engine picker. About — live office clocks for India, Dallas and the UAE. Product pages — the call and lead fragments.
+- Transform and opacity only. `prefers-reduced-motion` stops everything (CSS kill switch, and `site.js` skips entrances and bar growth).
+- No perpetual loops, nothing floats, no "live" indicators. (A deliberate departure from stitch-skill's default of perpetual micro-loops.)
+
+## 7. Imagery
+
+- Real only: the logo, the seven permitted client logos (single-colour treatment: greyscale + multiply in light, invert + screen in dark), the two team photographs (never shown above native size: 400px and 482px), and product interface fragments built in HTML.
+- No stock photography, no generated imagery on the site, no illustrations or abstract diagrams. Adding any new image needs the founder's approval first.
+- The taste-skill inspector's picture floor (four real pictures per page) is not met on text pages (about, contact, why-optimity) by choice: no new images without approval.
+
+## 8. Voice
+
+A senior engineer explaining it to a business owner: plain, specific, confident.
+- Name the systems (ERPNext, Odoo, HubSpot, Salesforce, Excel, WhatsApp), the friction (retyping, chasing, exports) and the outcome.
+- Avoid "not X but Y" lines, neat pairs and groups of three as rhetoric, slogans, and: seamless, elevate, unlock, empower, cutting-edge, transform, journey, leverage, next-gen.
+- Closing invitations are page-specific and all lead to the Operations Teardown (`contact.html#book`).
+- No prices on the site.
+
+## 9. Content Integrity (enforced — a design rule, not a suggestion)
+
 This rule is load-bearing for the firm's positioning and survives every redesign:
-- **No invented proof.** Never render client names, logos, or numbers that aren't real and permissioned — not even as placeholder/filler. An empty proof slot is acceptable; a fake one is not. Displayed client logos require recorded permission.
-- **Sample artifacts must be labeled.** Any illustrative deployment/teardown shown in marketing carries a visible "sample · illustrative" / "composite example" marker and uses an obviously-fictional composite company (never a real or known-demo name).
+- **No invented proof.** Never render client names, logos, or numbers that aren't real and permissioned — not even as placeholder/filler. An empty proof slot is acceptable; a fake one is not. Displayed client logos require recorded permission (`assets/logo/PERMISSIONS.md`).
+- **Sample artifacts must be labeled.** Any illustrative deployment, workflow, query or record shown in marketing carries a visible "Sample data" / "Example" / "Sample" marker and uses obviously fictional content (invoice and account numbers, "Sample family clinic"), never a real or known-demo name.
 - **Anonymized-by-default proof.** Real deployment proof is published fully anonymized (sector-only, ranges) unless a client grants named permission.
-- **Live systems over slideware.** Favor real working-software screenshots over decorative imagery everywhere.
-- **No overclaiming labels** (see Technical Labels).
+- **Live systems over slideware.** Favor real working-software fragments over decorative imagery everywhere.
+- **No overclaiming labels.** Nothing static is labelled "live", "engine" or "real-time" unless it is.
+- No composite case studies next to real logos.
 
-## Anti-slop guardrails (do NOT introduce)
-Purple/violet gradients · 3-column icon-in-circle feature grids · giant icon grids · centered-everything · uniform bubble radius · gradient CTA buttons · stock-photo hero · smiling corporate teams · robots/brains/glowing neural networks · abstract 3D shapes · generic SaaS illustrations · fake futuristic interfaces · system-ui/Inter/Space Grotesk as display or body · abstract render as hero · "Built for X" filler copy · corporate consulting imagery.
+## 10. Anti-Patterns (Banned)
+
+Eyebrow labels above headings · monospace outside real code · 01/02/03 index numbering · hairline dividers outside tables and fragments · shadows on resting elements (dropdowns excepted) · gradients · glass/blur · icon-topped feature cards and rows of identical cards · pill badges · emoji · styled accent words in headlines · centred-everything · fake diagrams, fake dashboards, fake "live" labels · stock photos, robots, glowing networks · cream-and-terracotta or purple palettes · `Inter`, system-ui display · Title Case headings · generic names ("John Doe", "Acme", "Nexus" as filler) · fake round numbers · AI copy clichés.
+
+## 11. Files
+
+- `styles.css` — tokens, components, responsive rules. `site.js` — entrances, Nexus sample panel, switches, pinned teardown, engine picker, clocks, dropdown state. `theme.js` and `components.js` — unchanged behaviour (theme toggle, partial loading, nav highlighting).
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-rN` (currently `20261019-r2`). Bump it whenever `styles.css`, `site.js`, `theme.js` or `components.js` changes.
+- Verification: `taste-skill` `lint.mjs` (0 FAIL) and `inspect.mjs` on every page; screenshots at 1440 / 1024 / 390 in both themes via gstack `/browse`.
 
 ## Decisions Log
+
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| 2026-06-22 | Initial system "Engineered Editorial" created | Research of Mechanical Orchard / Palantir / Sierra + memorable thing "these people actually ship, legible to an operator" |
-| 2026-06-22 | Hero = real teardown artifact, not imagery | Palantir's show-the-product approach reads most credible; on-thesis with "live systems not slideware" |
-| 2026-06-22 | Amber `#B8550F` accent, semantic-only | Dodges AI-green/purple clichés; color marks AI intervention points so it carries meaning |
-| 2026-06-22 | Content Integrity section added | User caught fake proof + a known demo-DB name in the preview; rule encoded so builds can't reintroduce invented proof |
-| 2026-08-09 | v2: forward-deployment direction, warm foundation KEPT | Founder direction: "engineered confidence for SME operators"; dark Palantir aesthetic explicitly rejected; buyer = SME/mid-market 50–500 |
-| 2026-08-09 | "Make the work the design" elevated to core move | Founder principle; also reverses the branch's hero regression (abstract services matrix) |
-| 2026-08-09 | Amber stays the sole accent; info blue reused for CURRENT STATE | "Green/blue/orange if appropriate" resolved conservatively — adding accent families is how restrained systems die |
-| 2026-08-09 | Deployment-dossier proof format; composites until real proof | Reconciles founder's DEPLOYMENT NN format with Content Integrity (conviction-stage, no permissioned case studies yet) |
-| 2026-08-09 | Methodology = 6 steps grouped under 3 stages | Integrate + Deploy shown explicitly as the anti-proposal proof; evolves rather than resets how-we-work |
-| 2026-08-09 | Nav CTA stays "Book an Operations Teardown"; "Start a Project" rejected | Teardown is the low-friction wedge offer; raising the commitment bar in the nav would fight the funnel |
-| 2026-08-09 | Voice rules encoded; banned-phrase list added | Branch pages (industries/why-optimity/about) shipped platform-pitch copy contradicting how-we-work |
-| 2026-08-09 | Trusted-by logos confirmed permitted (all 7) | Founder confirmed real clients + display permission; recorded in assets/logo/PERMISSIONS.md |
-| 2026-08-09 | v3: Believability Mandate added | Founder: site must not look AI-generated; editorial variation, de-carding, controlled irregularity, no decorative animation, real artifacts only |
-| 2026-08-09 | Kicker de-pilled to plain mono label | Bordered pill on every section = repetitive pill UI, a template signal |
-| 2026-08-09 | Diagrams made static + literal | SMIL pulse loops and rotating "AI CORE" ring were fake live indicators / AI-mystical; replaced with precise static flows naming real tools |
+| 2026-06-22 | Initial system "Engineered Editorial" | Superseded |
+| 2026-08-09 | v2/v3: forward deployment, Believability Mandate | Superseded; the mandate's intent survives as §0 |
+| 2026-08-10 | Hero must answer "what do you do" | Stakeholder phone review; the three practices are in the first screen |
+| 2026-10-19 | v4 "The working system" (taste-skill "The product performs") | Chosen over "The practice poster" and "The board"; the product doing its job is the most believable thing an engineering firm can show |
+| 2026-10-19 | Archivo replaces Fraunces + Geist + Geist Mono | One family; approved with the direction |
+| 2026-10-19 | Logo orange `#F2541B` replaces amber `#B8550F` | The subject's own colour; used on actions only |
+| 2026-10-19 | Mono labels, eyebrows, numbered steps, hairlines, shadows removed | Generated-page tells (audit 2026-10-19) |
+| 2026-10-19 | Industries / about diagrams replaced by a sector table, a document-to-record fragment and live office clocks | The diagrams were decoration, not real systems |
+| 2026-10-19 | Calendly primary `#C2410C` | Keeps Calendly's own white button text at AA |

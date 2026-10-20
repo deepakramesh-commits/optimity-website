@@ -4,6 +4,32 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.0.0.0] - 2026-10-19
+
+Full redesign, built on the `redesign` branch as a new version alongside the current site. Direction "The working system" (DESIGN.md v4): the products doing their job are the picture, on a quiet white engineering page.
+
+### Added
+- Nexus AI sample panel on the homepage: pick a question or a source (ERPNext, Odoo, HubSpot, documents, PostgreSQL) and see the answer, the engine it went to, the source rows and a chart. Labelled sample data throughout
+- The three practices (AI & Automation, Product Engineering, Enterprise Solutions) named in the homepage's first screen, and as switchable capability bands further down
+- Pinned "How it starts" section on the homepage: the Operations Teardown card changes as you read the three steps
+- Nexus AI engine picker (DocIntellect AI, SmartOps AI, SQL Database Agent), a sample Move Concierge call with the record it produces, and a Property Connect lead timeline
+- How we work: one order traced from WhatsApp to invoice, today versus after (labelled example)
+- Industries: a real sector table (systems, where work breaks, what we'd build) and a document-to-record fragment
+- About: live clocks for the India, Dallas and UAE offices
+- `site.js` for page behaviour; every page reads fully without it
+
+### Changed
+- Type: Archivo replaces Fraunces, Geist and Geist Mono. Palette: white, greys and ink, with the logo's orange on actions only. Full dark theme
+- Every page rewritten in plain language with the same facts; navigation labels in sentence case; Products menu grouped without the nested fly-out
+- Management team page: large portraits and rewritten bios (same facts)
+- Calendly colour parameters follow the new palette (`ffffff` / `232323` / `c2410c`); the embed itself is unchanged
+- 404 page restyled, still self-contained for any URL depth
+- `llms.txt` and `llms-full.txt` rewritten to match, now including the practices, products and leadership
+- One cache string (`?v=20261019-r2`) across every page and the partial fetch
+
+### Removed
+- Uppercase mono labels, eyebrows, numbered steps, hairline dividers, resting shadows, icon-and-card grids and the decorative system diagrams on industries, about and the homepage
+
 ## [1.0.1.0] - 2026-08-10
 
 Homepage revisions from the first stakeholder review of staging (phone, dark mode).
