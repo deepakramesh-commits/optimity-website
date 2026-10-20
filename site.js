@@ -47,7 +47,9 @@
         started = true;
         // The first screen is already showing; give it its own step's caption (empty for a real screenshot).
         for (var c = 0; c < steps.length; c++) if (steps[c].getAttribute('data-shot') === current) { apply(steps[c]); break; }
-        for (var p = 0; p < steps.length; p++) { var pre = new Image(); pre.src = steps[p].getAttribute('data-shot'); }
+        // Fetch the other step screens after the page has loaded, so they never compete with the hero image.
+        var preload = function () { for (var p = 0; p < steps.length; p++) { var pre = new Image(); pre.src = steps[p].getAttribute('data-shot'); } };
+        if (document.readyState === 'complete') preload(); else window.addEventListener('load', preload, { once: true });
         // Track every step inside the middle band and show the last one, so leaving the band counts too.
         var inBand = [];
         var io = new IntersectionObserver(function (entries) {
