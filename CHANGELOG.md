@@ -4,7 +4,22 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
-## [2.0.1.0] - 2026-10-21
+## [2.1.0.0] - 2026-10-20
+
+The AI Receptionist joins the site as the lead product family.
+
+### Added
+- `ai-receptionist.html`: the AI Receptionist overview. It answers every call day or night, books the appointment into the booking system, logs every call and booking in a dashboard and hands over to a person when it should, with an index of its four editions (movers first)
+- Edition pages for home-service trades (`ai-receptionist-home-services.html`), nail salons (`ai-receptionist-nail-salons.html`) and hair salons (`ai-receptionist-hair-salons.html`), sharing one layout with the Move Concierge page: each has its own sample call with a curveball (an urgent leak at night, a reschedule, a price question that becomes a consultation), its own booking and dashboard screens, and its own Book a Demo
+- Twelve new sample screens (`ar-*`), listed in PLACEHOLDERS.md
+- Booking names for `?demo=ai-receptionist`, `home-services`, `nail-salons` and `hair-salons`, tagged on the Calendly booking like the other products
+
+### Changed
+- Products menu (desktop and mobile) and footer: AI Receptionist with its four editions, then Property Connect AI and Nexus AI
+- Move Concierge AI is named as the movers edition of the AI Receptionist, on its page, the homepage and the products page
+- Products page leads with the AI Receptionist family; sitemap, llms.txt, llms-full.txt and JSON-LD cover the new pages
+
+## [2.0.1.0] - 2026-10-20
 
 Changes from four outside reviews of the product-led site.
 

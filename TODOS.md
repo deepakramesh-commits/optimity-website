@@ -77,10 +77,15 @@ Placeholders are 2x PNGs (78–147 KB each). When real screenshots land, add Web
 
 ## P1: Facts the outside reviews asked for (only the company can supply them)
 
-Four outside reviews (2026-10-21) agreed these decide whether a buyer books a demo. Add each to the product pages once it is true and confirmed:
+Four outside reviews (2026-10-20) agreed these decide whether a buyer books a demo. Add each to the product pages once it is true and confirmed:
 1. A 30–60 second recording of Move Concierge AI (and Property Connect AI) answering a call, real with consent or clearly labelled as a demo.
 2. Product status: live customers, pilot, or first customers going live (an honest line beats silence).
 3. Pricing model: monthly fee, setup fee or per call, and contract length (no figures needed).
 4. How calls reach Move Concierge AI (call forwarding, which phone systems), what callers hear, and whether it says it is an AI.
 5. Setup time and support hours, including what happens when the service is down.
 6. A company phone number, and the Calendly event renamed from "Deepak Ramesh · 30 Minute Meeting" to an Optimity product demo.
+
+## P1: AI Receptionist facts to confirm before launch
+
+The new pages say only what the product does (answers every call, books into the booking system, dashboard of every call and booking, hands over to a person). Confirm with the product team: which booking systems each edition connects to (none are named yet), how an urgent home-services call reaches the on-call person, and whether callers are told they're talking to an AI. Replace the twelve `ar-*` sample screens with real ones, and consider an audio clip from each demo line (the number itself stays off the site).
+

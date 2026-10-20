@@ -7,7 +7,8 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy website HTML, CSS, JS, PNG, and PDF files. *.html includes every page
-# (index, products, move-concierge, property-connect, nexus-ai, custom-ai-systems,
+# (index, products, ai-receptionist, ai-receptionist-home-services, ai-receptionist-nail-salons,
+# ai-receptionist-hair-salons, move-concierge, property-connect, nexus-ai, custom-ai-systems,
 # about, contact, 404) plus the header/footer partials.
 COPY *.html *.css *.js *.png *.pdf *.txt *.xml /usr/share/nginx/html/
 # Favicons are linked from the web root on every page; copy them there

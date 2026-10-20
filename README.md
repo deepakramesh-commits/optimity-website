@@ -1,12 +1,12 @@
 # Optimity website
 
-Optimity Technologies makes AI products for specific workflows: Move Concierge AI (the lead product), Property Connect AI and Nexus AI, plus custom AI systems. Static marketing site: eight pages, no build step, no dependencies.
+Optimity Technologies makes AI products for specific workflows: the AI Receptionist (the lead product, with editions for movers, which is Move Concierge AI, home services, nail salons and hair salons), Property Connect AI and Nexus AI, plus custom AI systems. Static marketing site: twelve pages, no build step, no dependencies.
 
 - **Staging (review) URL:** https://deepakramesh-commits.github.io/optimity-website/
-- **Pages:** `index.html` (Home), `products.html`, `move-concierge.html`, `property-connect.html`, `nexus-ai.html`, `custom-ai-systems.html`, `about.html` (team at `#team`), `contact.html` (booking at `#book`) — plus a self-contained `404.html`. The old how-we-work, industries, why-optimity and management-team pages are retired and 301 in `nginx.conf`.
+- **Pages:** `index.html` (Home), `products.html`, `ai-receptionist.html` (the AI Receptionist family) with its editions `move-concierge.html` (movers), `ai-receptionist-home-services.html`, `ai-receptionist-nail-salons.html` and `ai-receptionist-hair-salons.html`, `property-connect.html`, `nexus-ai.html`, `custom-ai-systems.html`, `about.html` (team at `#team`), `contact.html` (booking at `#book`) — plus a self-contained `404.html`. The old how-we-work, industries, why-optimity and management-team pages are retired and 301 in `nginx.conf`.
 - **Shared partials:** `header.html` / `footer.html`, loaded on every page by `components.js` (nginx SSI in production, fetch fallback locally)
 - **Styles:** `styles.css` · **Theme toggle:** `theme.js` · **Page behaviour:** `site.js` (the product stage, Nexus tabs, nav state) · **Design system:** `DESIGN.md`
-- **Booking:** inline Calendly embed on the Contact page (`#book`). Every "Book a Demo" links there; product CTAs add `?demo=move-concierge`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`, which names the product on the page and tags the booking with `utm_content`.
+- **Booking:** inline Calendly embed on the Contact page (`#book`). Every "Book a Demo" links there; product CTAs add `?demo=ai-receptionist`, `?demo=move-concierge`, `?demo=home-services`, `?demo=nail-salons`, `?demo=hair-salons`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`, which names the product on the page and tags the booking with `utm_content`.
 - **Product screens:** labelled placeholders in `assets/products/placeholders/` until real screenshots exist; see `PLACEHOLDERS.md` there for sizes, usage and how to swap one in.
 - **Discovery layer:** `sitemap.xml`, `robots.txt`, `llms.txt` / `llms-full.txt`, `og-image.png` share card, Schema.org JSON-LD in each page head.
 - **Version:** `VERSION` holds the current release (`X.Y.Z.W`); every release gets an entry in `CHANGELOG.md`. Open work lives in `TODOS.md`.

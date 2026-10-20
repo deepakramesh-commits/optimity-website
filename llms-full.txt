@@ -1,6 +1,6 @@
 # Optimity Technologies — Full Knowledge Base
 
-> Optimity Technologies builds AI products for specific workflows. Its lead product, Move Concierge AI™, answers the calls a moving company misses and gives the team a complete lead to follow up. It also makes Property Connect AI™ and Nexus AI™, and builds custom AI systems where a product doesn't fit.
+> Optimity Technologies builds AI products for specific workflows. Its lead product is the AI Receptionist, with editions for movers (Move Concierge AI™), home-service trades, nail salons and hair salons. It also makes Property Connect AI™ and Nexus AI™, and builds custom AI systems where a product doesn't fit.
 
 ---
 
@@ -8,7 +8,21 @@
 
 Optimity Technologies is a team of senior engineers and architects in India, the USA and the UAE. The same team builds the products and the integrations around them. Its engineering covers AI and automation, product engineering, and ERP and CRM integration, which is why the products are built to connect to the systems a business already runs.
 
-## 2. Move Concierge AI™ (lead product)
+## 2. AI Receptionist (lead product)
+
+**What it is:** an AI voice receptionist for businesses that take bookings by phone. It answers every call, day or night, books the appointment into the business's booking system, and shows every call and booking in one dashboard. Emergencies, complaints and anything it can't answer go to the owner or the team, as set up. It does not quote prices, promise times that haven't been offered or agree to exceptions.
+
+**Editions:**
+- **Movers:** Move Concierge AI™ (section 3).
+- **Home services** (plumbers, electricians, HVAC techs, handymen): books jobs into the schedule; when a call is urgent, such as a leak at night, it marks it urgent and passes the details to the person the business chooses. It doesn't quote job prices, diagnose problems or promise arrival times.
+- **Nail salons** (nail salons, lash and beauty studios, spas): books clients with the right technician and moves appointments when plans change. Prices, group and bridal bookings and complaints go to the owner.
+- **Hair salons** (hair salons, barbers, stylists): books cuts and color with the right stylist. When a caller asks what a service costs, it books a consultation or passes the question to the team; it never quotes a price.
+
+**Systems:** connected to the business's phone line and booking system during setup; what each setup needs is confirmed before anything is connected.
+
+**The demo:** the prospect calls it, books an appointment the way a customer would, then sees the booking in the dashboard, and can try a curveball such as a price question, a reschedule or an urgent job.
+
+## 3. Move Concierge AI™ (AI Receptionist, movers edition)
 
 **Who it's for:** independent moving companies with a busy phone line, where the owner, general manager or office manager decides how calls are handled and there is already a phone, a calendar and a CRM or dispatch tool. Single or multiple locations.
 
@@ -27,7 +41,7 @@ A daily summary shows leads, bookings and the callers who still need a call back
 
 **Systems it connects to:** Google Calendar or a dispatch or booking tool (estimates); MoveOps, Supermove, HubSpot, or the company's own database through a webhook (the lead); SMS and WhatsApp Business (caller summary, pre-move checklist 48 hours before the move). Which calls reach it is agreed during setup.
 
-## 3. Property Connect AI™
+## 4. Property Connect AI™
 
 **Who it's for:** brokerages, real-estate teams and developers whose agents can't call every web, portal or listing-sign lead back straight away.
 
@@ -35,7 +49,7 @@ A daily summary shows leads, bookings and the callers who still need a call back
 
 **Systems:** CRM sync with Follow Up Boss, kvCORE, HubSpot, Salesforce or custom webhooks; agent calendars; SMS.
 
-## 4. Nexus AI™
+## 5. Nexus AI™
 
 **Who it's for:** operations, finance and sales managers who need figures from ERPNext, Odoo, HubSpot or a PostgreSQL database, or answers from contracts and policies, without waiting for a report.
 
@@ -48,7 +62,7 @@ Nexus AI can act on an answer only for actions that have been configured and app
 
 **Fit and security:** sits on top of existing databases, ERP and CRM with no data migration; organizations and teams kept apart with Clerk enterprise authentication and isolated database partitions; self-hosted, on-premise inference through vLLM, so business data doesn't train public models; team-level and row-level permissions.
 
-## 5. How a product goes live
+## 6. How a product goes live
 
 1. **Look at the workflow:** how calls or questions are handled today, what the product does and when it hands over to a person.
 2. **Configure:** questions, wording, business rules and the situations that always go to the team.
@@ -56,30 +70,29 @@ Nexus AI can act on an answer only for actions that have been configured and app
 4. **Launch:** test with real scenarios, then go live with the team watching the first conversations.
 5. **Improve:** review recordings, transcripts and outcomes and adjust.
 
-## 6. Custom AI systems
+## 7. Custom AI systems
 
 When a workflow needs something the products don't do, Optimity builds a focused workflow, agent, integration or interface for it. It is selective: a real operational workflow, existing systems kept, something worth reusing (for example as an extension of a product), and a person in charge of anything uncertain or sensitive. General software development with no AI workflow in it is not taken on. Code written only for a client belongs to the client; where the work extends an Optimity product, that part stays in the product and is used under the product terms.
 
-## 7. What clients can hold us to
+## 8. How we work with clients
 
 - It fits around existing systems; nothing gets ripped out to make room.
-- AI only where it changes an outcome; if it won't pay off, we say so.
-- Security and reliability are part of the setup, at a pace your team can manage.
+- If the call volume or setup means it won't pay off, we say so on the first call.
 - We stay through setup, launch and the months after.
 - We review the results with you: the calls handled and the questions answered, each month.
-- People stay in charge (see sections 2–4).
+- People stay in charge (see sections 2–5).
 
-## 8. Team
+## 9. Team
 
 - **Ramesh Sethuraman, Founder & CEO:** 35 years in the global IT industry; founded and exited two IT services companies; led strategic programs for Fortune 500 companies and multinational enterprises; startup advisor, mentor and angel investor.
 - **Makam Nagendra, Director:** 33 years in technology leadership, delivery management and business consulting across telecommunications, VoIP, IoT and mobile applications; based in Dallas, Texas.
 
-## 9. Proof policy
+## 10. Proof policy
 
 Client logos shown on the site are companies Optimity has built software for, displayed with recorded permission; they are not presented as product customers. No testimonials, case studies or results are published until they are real and approved. Product screens on the site are sample screens, tagged "Sample data", with fictional businesses and data.
 
-## 10. Contact
+## 11. Contact
 
-- **Book a demo:** `https://optimitytechnologies.com/contact.html#book` (add `?demo=move-concierge`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`)
+- **Book a demo:** `https://optimitytechnologies.com/contact.html#book` (add `?demo=ai-receptionist`, `?demo=move-concierge`, `?demo=home-services`, `?demo=nail-salons`, `?demo=hair-salons`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`)
 - **Email:** `contact@optimitytechnologies.com`
 - **Offices:** India (delivery and engineering), United States and United Arab Emirates (delivery and client partnership).
