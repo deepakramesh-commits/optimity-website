@@ -1,0 +1,69 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/how-we-work",
+      "destination": "/custom-ai-systems",
+      "permanent": true
+    },
+    {
+      "source": "/industries",
+      "destination": "/products",
+      "permanent": true
+    },
+    {
+      "source": "/why-optimity",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/management-team",
+      "destination": "/about#team",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(favicon\\.ico|favicon\\.svg|favicon-96x96\\.png|apple-touch-icon\\.png|site\\.webmanifest|web-app-manifest-192x192\\.png|web-app-manifest-512x512\\.png)",
+      "destination": "/favicon/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(css|js|png|jpg|jpeg|svg|ico|webmanifest|pdf)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    }
+  ]
+}

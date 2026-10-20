@@ -1,0 +1,18 @@
+# Vercel publishes everything that isn't listed here. Keep this in step with .dockerignore:
+# only the public site goes up, never internal notes, sources or server config.
+*.md
+**/*.md
+.git
+.gitignore
+.gstack
+.taste-skill
+.dockerignore
+.htaccess
+Dockerfile
+docker-compose.yml
+nginx.conf
+VERSION
+assets/products/placeholders/src
+assets/og-src
+.env*
+.vercel

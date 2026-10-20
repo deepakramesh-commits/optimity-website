@@ -36,6 +36,16 @@ docker compose up -d --build   # serves on 127.0.0.1:3000
 - **`docker-compose.yml`** — binds **localhost only** (`127.0.0.1:3000`); a reverse proxy (Dokploy) terminates TLS and exposes the site publicly. Port 3000 must not be reachable externally.
 - **`.dockerignore`** — excludes all Markdown (including the internal `assets/logo/PERMISSIONS.md` ledger and `PLACEHOLDERS.md`) and the HTML sources of rendered images (`assets/products/placeholders/src`, `assets/og-src`), so internal files are never published from the Docker image. GitHub Pages staging publishes the whole repository, these files included.
 
+## Vercel preview (shareable copy)
+
+A copy of the `product-led` site runs on Vercel at https://optimity-website.vercel.app (team "optimity", project `optimity-website`). It is for review only: every response carries `X-Robots-Tag: noindex, nofollow`, and it is not connected to optimitytechnologies.com.
+
+- **`vercel.json`** mirrors `nginx.conf`: clean URLs, the four retired-page redirects, the root favicon paths, security headers and 30-day caching for static files. There is no build step.
+- **`.vercelignore`** keeps internal files off Vercel, in step with `.dockerignore`: all Markdown, the mock-up sources, server config, `VERSION`, and the local `.env*` / `.vercel` files that `vercel link` creates.
+- **Redeploy:** `vercel deploy --prod --yes --scope optimity` from the repo root.
+- The header and footer load through `components.js` there (Vercel has no SSI). Bookings made on the copy go to the real Calendly account.
+- Before the real domain ever points at Vercel, remove the `X-Robots-Tag` header from `vercel.json`.
+
 ## Versioning & changelog
 
 Releases use a four-part version in `VERSION` (`X.Y.Z.W`). Every release gets a dated entry in `CHANGELOG.md` (sections: Added / Changed / Fixed / Removed) describing what changed in user-facing terms. Bump the version and add the entry as part of shipping, not after.
