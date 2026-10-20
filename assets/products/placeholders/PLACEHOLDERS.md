@@ -1,0 +1,33 @@
+# Product screen placeholders
+
+There are no real product screenshots yet. Every product screen on the site is a placeholder, built as an HTML/CSS mock-up in `src/` and rendered to PNG at 2x with the gstack browse tool. Each one uses fictional sample data ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co.", hidden phone numbers) and is shown on the site with a visible **"Illustrative"** caption.
+
+## Swapping in a real screenshot
+
+1. Save the real file under the **same name** and at the **same pixel size** (listed below) in this folder. Pages reference only the file name and size.
+2. Bump the shared `?v=` cache string (every page, `components.js`, and the generator if you use it). Image URLs carry it too (`mc-incoming-call.png?v=…`), so returning visitors get the new file instead of a 30-day cached placeholder.
+3. Remove its "Illustrative" label: delete the `<figcaption>Illustrative</figcaption>` in that file's inline figures, and on the home and Move Concierge pages set `data-cap=""` on the matching step. Never delete the figcaption inside the stage (`<aside class="stage">`): it is shared by every step and hides itself when a step's `data-cap` is empty.
+4. Update the `alt` text and the `data-alt` attribute, which currently start with "Illustrative".
+5. If you replace `mc-enquiry-record.png`, re-render `/og-image.png` from `assets/og-src/og-image.html` too (it composites that screen). Social networks cache share images for days; use their debuggers to refresh.
+6. Real screenshots must not show real customer names, numbers or phone numbers unless the customer has agreed (DESIGN.md, Content Integrity).
+
+## The files
+
+| File | Pixel size (CSS size) | Used on | Replace with |
+|---|---|---|---|
+| `mc-incoming-call.png` | 1440 × 840 (720 × 420) | Home: Move Concierge journey, step 1 · Move Concierge page: "How it works" step 1 and the stage's first screen | The call log or dashboard view showing an after-hours or busy-line call answered by Move Concierge AI |
+| `mc-call-transcript.png` | 1440 × 800 (720 × 400) | Home: journey step 2 · Move Concierge page: step 2 | The transcript view of a real (consented or test) call, showing the move questions and the "no binding price" handling |
+| `mc-enquiry-record.png` | 1760 × 1040 (880 × 520) | Home: hero (stage and phone inline) and journey step 3 · Products: Move Concierge row · Move Concierge page: hero and step 3 · also composited into `/og-image.png` | The structured enquiry record with the recording attached |
+| `mc-survey-booked.png` | 1440 × 880 (720 × 440) | Home: journey step 4 · Move Concierge page: step 4 | The survey or callback as it appears in the estimator calendar, plus the SMS or WhatsApp message to the caller |
+| `mc-team-handoff.png` | 1440 × 960 (720 × 480) | Home: journey step 5 · Move Concierge page: step 5 | The email or CRM record staff receive, ideally one that shows a "needs a person" flag |
+| `mc-morning-summary.png` | 1440 × 920 (720 × 460) | Home: after the journey ("Each morning…") · Move Concierge page: "What you can see" | The daily summary: enquiries, surveys booked, callbacks due, items passed to a person |
+| `pc-lead-record.png` | 1440 × 880 (720 × 440) | Home: "Our other products", Property Connect · Products: Property Connect row · Property Connect page: hero and "How it works" | A qualified web lead record with call-back time, pre-approval, timeline and tour |
+| `pc-tour-briefing.png` | 1440 × 760 (720 × 380) | Property Connect page: "How it works" | The agent's private briefing and the booked tour |
+| `nexus-answer-table.png` | 1440 × 1000 (720 × 500) | Home: "Our other products", Nexus AI · Products: Nexus row · Nexus AI page: hero and the SmartOps tab | A SmartOps answer from ERPNext, Odoo or HubSpot with its table and chart |
+| `nexus-doc-answer.png` | 1440 × 640 (720 × 320) | Nexus AI page: the DocIntellect tab | A DocIntellect answer with its cited passage |
+
+The SQL Database Agent tab on the Nexus AI page shows an example query as text (labelled "Example query, illustrative"), not an image.
+
+## Re-rendering a placeholder
+
+Serve the repo locally, open `src/<name>.html` in the browse tool with the viewport set to the CSS size above and `--scale 2`, and take a viewport screenshot to `<name>.png`. The size of each source is set by `--w` and `--h` at the top of its file. `src/` and this file are excluded from the Docker image (`.dockerignore`).

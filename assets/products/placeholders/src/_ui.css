@@ -1,0 +1,37 @@
+/* Shared look for the placeholder product screens. Not loaded by the site:
+   each screen is rendered to PNG at 2x with the gstack browse tool (see ../PLACEHOLDERS.md). */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: var(--w); height: var(--h); overflow: hidden; }
+body { font: 14px/1.45 Geist, system-ui, sans-serif; color: #1B2430; background: #F4F5F7; -webkit-font-smoothing: antialiased; }
+.app { display: grid; grid-template-rows: 44px 1fr; height: 100%; }
+.top { display: flex; align-items: center; gap: 12px; padding: 0 16px; background: #FFFFFF; border-bottom: 1px solid #E3E6EB; }
+.top .prod { font-weight: 600; }
+.top .org { color: #6A7380; }
+.top .tag { margin-left: auto; font-size: 11px; font-weight: 500; color: #6A7380; background: #EEF0F3; border-radius: 4px; padding: 3px 7px; }
+.mark { width: 18px; height: 18px; border-radius: 5px; background: #F2541B; }
+.body { padding: 16px; display: grid; gap: 12px; align-content: start; }
+.panel { background: #FFFFFF; border: 1px solid #E3E6EB; border-radius: 8px; padding: 14px 16px; }
+.panel h2 { font-size: 13px; font-weight: 600; color: #1B2430; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.panel h2 span { font-weight: 400; color: #6A7380; }
+.muted { color: #6A7380; }
+.small { font-size: 12px; }
+.row { display: flex; align-items: center; gap: 10px; }
+.pill { display: inline-block; font-size: 11.5px; font-weight: 500; padding: 2px 8px; border-radius: 999px; background: #EEF0F3; color: #1B2430; white-space: nowrap; }
+.pill.ok { background: #E3F2EA; color: #1D6B44; }
+.pill.warn { background: #FCEBDD; color: #9A4310; }
+.pill.ai { background: #FDE7DE; color: #A8370F; }
+.pill.person { background: #E6ECF7; color: #2E4C86; }
+dl.kv { display: grid; grid-template-columns: 132px 1fr; }
+dl.kv dt, dl.kv dd { padding: 7px 0; border-bottom: 1px solid #EEF0F3; }
+dl.kv dt { color: #6A7380; }
+dl.kv div:last-child dt, dl.kv div:last-child dd { border-bottom: 0; }
+dl.kv div { display: contents; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #EEF0F3; vertical-align: top; }
+th { font-weight: 500; color: #6A7380; font-size: 12px; }
+.num { text-align: right; }
+.hl { background: #FFF4EE; }
+.btn { display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 6px; font-weight: 500; font-size: 12.5px; background: #1B2430; color: #FFFFFF; }
+.btn.ghost { background: #FFFFFF; color: #1B2430; border: 1px solid #D5DAE1; }
+.hidden-num { letter-spacing: 1px; color: #9AA2AD; }

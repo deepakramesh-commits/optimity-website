@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>nexus-answer-table (placeholder)</title>
+<link rel="stylesheet" href="_ui.css">
+<style>:root{--w:720px;--h:500px}.q{display:flex;gap:10px;align-items:center;border:1px solid #D5DAE1;border-radius:8px;padding:10px 12px}.bars{display:flex;align-items:flex-end;gap:10px;height:110px;margin-top:16px}.bars i{flex:1;background:#1B2430;border-radius:2px 2px 0 0}.bars i.hi{background:#F2541B}.lbl{display:flex;gap:10px;margin-top:6px;color:#6A7380;font-size:12px}.lbl span{flex:1;text-align:center}</style>
+</head><body>
+<div class="app">
+  <header class="top"><span class="mark"></span><span class="prod">Nexus AI</span><span class="org">· Sample Distribution Co.</span><span class="tag">Sample data</span></header>
+  <main class="body">
+    <section class="panel">
+      <div class="q"><span class="mark"></span>Which invoices are more than 30 days overdue?</div>
+      <p class="muted small" style="margin:10px 0 6px">Answered by <b style="color:#1B2430">SmartOps</b> · from ERPNext</p>
+      <table>
+        <thead><tr><th>Invoice</th><th>Due</th><th class="num">Days late</th><th class="num">Balance</th></tr></thead>
+        <tbody>
+          <tr><td>SINV-0418</td><td>02 Sep</td><td class="num">47</td><td class="num">4,820.00</td></tr>
+          <tr><td>SINV-0431</td><td>09 Sep</td><td class="num">40</td><td class="num">1,265.50</td></tr>
+          <tr><td>SINV-0457</td><td>15 Sep</td><td class="num">34</td><td class="num">9,310.00</td></tr>
+        </tbody>
+      </table>
+      <div class="bars"><i class="hi" style="height:96%"></i><i style="height:48%"></i><i style="height:3%"></i><i style="height:3%"></i></div>
+      <div class="lbl"><span>31–40 d</span><span>41–50 d</span><span>51–60 d</span><span>60+ d</span></div>
+    </section>
+  </main>
+</div>
+</body></html>
