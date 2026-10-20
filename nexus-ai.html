@@ -3,59 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nexus AI™ — Operations Intelligence Layer for Enterprise · Optimity</title>
-<meta name="description" content="Nexus AI™ connects to your ERP, CRM, and databases to give your team an intelligent conversational layer to query, analyze, and act across your entire company in real time — with zero rip-and-replace.">
+<title>Nexus AI: questions across your ERP, CRM and documents</title>
+<meta name="description" content="Ask plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with the source of each answer shown.">
 <meta name="author" content="Optimity Technologies">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://optimitytechnologies.com/nexus-ai.html">
-
-<!-- Open Graph / WhatsApp / LinkedIn -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://optimitytechnologies.com/nexus-ai.html">
-<meta property="og:title" content="Nexus AI™ — Operations Intelligence Layer for Enterprise · Optimity">
-<meta property="og:description" content="Conversational intelligence over your ERP, CRM, documents, and PostgreSQL databases. Live queries, dynamic chart generation, and automated cross-system actions.">
+<meta property="og:title" content="Nexus AI: questions across your ERP, CRM and documents">
+<meta property="og:description" content="Ask plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with the source of each answer shown.">
 <meta property="og:image" content="https://optimitytechnologies.com/og-image.png">
 <meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Nexus AI™ — The Operations Intelligence Layer for Your Enterprise">
+<meta property="og:image:alt" content="Optimity Technologies: AI products for specific workflows, starting with Move Concierge AI for moving companies">
 <meta property="og:site_name" content="Optimity Technologies">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://optimitytechnologies.com/nexus-ai.html">
-<meta name="twitter:title" content="Nexus AI™ — Operations Intelligence Layer for Enterprise · Optimity">
-<meta name="twitter:description" content="Conversational intelligence over your ERP, CRM, documents, and PostgreSQL databases. Zero rip-and-replace.">
+<meta name="twitter:title" content="Nexus AI: questions across your ERP, CRM and documents">
+<meta name="twitter:description" content="Ask plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with the source of each answer shown.">
 <meta name="twitter:image" content="https://optimitytechnologies.com/og-image.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
-<script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260921-v5">
-<!-- LLM & AI Agent Markdown Discovery -->
+<script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}document.documentElement.classList.add("has-js");})();</script>
+<link rel="stylesheet" href="styles.css?v=20261020-p11">
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
-<!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://optimitytechnologies.com/#organization",
+      "name": "Optimity Technologies",
+      "url": "https://optimitytechnologies.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://optimitytechnologies.com/logo_lightmode.png"
+      },
+      "description": "Optimity Technologies builds AI products for specific workflows: Move Concierge AI for moving companies, Property Connect AI for real-estate teams and Nexus AI for questions across business systems, plus custom AI systems where a product doesn't fit.",
+      "email": "contact@optimitytechnologies.com"
+    },
+    {
       "@type": "SoftwareApplication",
       "@id": "https://optimitytechnologies.com/nexus-ai.html#software",
-      "name": "Nexus AI™",
+      "name": "Nexus AI",
+      "url": "https://optimitytechnologies.com/nexus-ai.html",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Cloud, On-Premise, Hybrid",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Exploratory Operations Teardown"
-      },
-      "description": "The enterprise operations intelligence layer connecting ERP, CRM, document knowledge bases, and relational databases for conversational analytics and real-time execution."
+      "operatingSystem": "Web",
+      "description": "Plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with the source of each answer shown. Actions only where you have approved them.",
+      "publisher": {
+        "@id": "https://optimitytechnologies.com/#organization"
+      }
     }
   ]
 }
@@ -66,144 +69,88 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO & POSITIONING -->
-<header class="hero"><div class="wrap">
-  <span class="kicker">Flagship Intelligence Platform</span>
-  <h1>Meet Nexus AI™: The Operations Intelligence Layer for Your Enterprise</h1>
-  <p class="lead lead-mt">Your ERP records transactions. Your CRM logs customers. Your databases store records. Nexus AI connects to all of them, giving your team an intelligent conversational layer to query, analyze, and act across your entire company in real time — with zero rip-and-replace.</p>
-  
-  <div class="systag-group mt-24">
-    <span class="systag">SQL</span>
-    <span class="systag">Documents</span>
-    <span class="systag">ERPNext</span>
-    <span class="systag">Odoo</span>
-    <span class="systag">HubSpot</span>
-    <span class="systag">LLM (Private / On-Prem)</span>
+<header class="page-hero">
+  <div>
+    <h1><span class="nm">Nexus AI<span class="tm">™</span></span> for your business data</h1>
+    <p class="lead">Your team asks a question in plain English and gets the answer from your ERP, CRM, databases or documents, with the source shown. It sits on top of the systems you already run.</p>
+    <div class="acts"><a class="btn" href="contact.html?demo=nexus-ai#book">Book a Nexus AI demo</a></div>
   </div>
-</div></header>
+  <div class="on-stage"><figure class="shot"><img src="assets/products/placeholders/nexus-answer-table.png?v=20261020-p11" width="1440" height="1000" alt="Illustrative Nexus AI answer to ‘Which invoices are more than 30 days overdue?’ from ERPNext, as a table and a chart." fetchpriority="high" decoding="async"><figcaption>Illustrative</figcaption></figure></div>
+</header>
 
-<!-- CORE CAPABILITIES (3 PILLARS) -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Core Capabilities</span>
-    <h2>Three specialized intelligence engines. One unified layer.</h2>
-    <p class="lead">Nexus AI routes natural language queries to the exact intelligence engine suited for the task — unstructured files, transactional business systems, or relational production databases.</p>
+<section class="sec facts2" aria-label="Who it is for and the problem">
+  <div>
+    <h2>Who it&rsquo;s for</h2>
+    <p class="sub">Operations, finance and sales managers who need figures from ERPNext, Odoo, HubSpot or a PostgreSQL database, or answers from contracts and policies, without waiting for someone to build a report.</p>
   </div>
-
-  <div class="nexus-grid">
-    
-    <!-- CARD 1: DocIntellect AI -->
-    <article class="nexus-card" id="demo-card-1">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Unstructured Data &amp; Knowledge</span>
-        <h3>DocIntellect AI™</h3>
-        <p class="nexus-card-headline">Ask Questions Across Documents, Contracts &amp; Reports</p>
-        <p class="nexus-card-summary">Instant conversational answers from your internal knowledge base, PDFs, spreadsheets, operating procedures, and compliance documents.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Semantic Vector Search (RAG) powered by Qdrant</li>
-          <li>Document citations with direct source snippet verification</li>
-          <li>Multi-format ingestion: PDFs, Word, Excel, Policy Docs, Financial Statements</li>
-          <li>Multi-tenant isolated knowledge repositories per team or organization</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- CARD 2: SmartOps AI -->
-    <article class="nexus-card" id="demo-card-2">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Live Business Systems</span>
-        <h3>SmartOps AI™</h3>
-        <p class="nexus-card-headline">Conversational Operations for ERPNext, Odoo &amp; HubSpot</p>
-        <p class="nexus-card-summary">Live bidirectional intelligence over your sales pipelines, inventory, invoices, and purchase orders without digging through menus.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Native live connectors: ERPNext, Odoo, and HubSpot</li>
-          <li>Real-time KPI summaries: Unfulfilled orders, overdue invoices, deal pipeline stages</li>
-          <li>Dynamic visual generation: Automatically generates interactive Bar, Line, Pie, and Donut charts directly inside the conversation</li>
-          <li>Automated cross-system reconciliation and operational alerts</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- CARD 3: SQL Database Agent -->
-    <article class="nexus-card" id="demo-card-3">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Relational Data &amp; Analytics</span>
-        <h3>SQL Database Agent</h3>
-        <p class="nexus-card-headline">Natural Language to SQL — Zero Technical Bottlenecks</p>
-        <p class="nexus-card-summary">Non-technical executives and ops managers can query production PostgreSQL databases in plain English without writing SQL.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Automated Text-to-SQL generation with strict read-only execution sandboxes</li>
-          <li>Instant interactive tabular result views with sorting and export</li>
-          <li>Auto-visualized data trends and operational anomaly detection</li>
-          <li>Drastically cuts IT and BI team backlog for ad-hoc operational reports</li>
-        </ul>
-      </div>
-    </article>
-
+  <div>
+    <h2>The problem</h2>
+    <p class="scene-big sub">It&rsquo;s Monday morning and the sales manager wants to know which customers have an overdue invoice and an open order. The answer is in two systems, and the person who usually exports it is on leave.</p>
   </div>
-</div></section>
+</section>
 
-<!-- ENTERPRISE TRUST & ARCHITECTURE STRIP -->
-<section><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Enterprise Architecture</span>
-    <h2>Engineered for security, privacy, and seamless coexistence.</h2>
-  </div>
-
-  <div class="nexus-trust-grid">
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">01</div>
-      <h3>Zero Rip-and-Replace</h3>
-      <p>Sits directly on top of your current databases, ERP, and CRM stacks. No migrating data, no retraining teams, no downtime.</p>
+<section class="sec" aria-labelledby="nx-how-h">
+  <h2 id="nx-how-h">How it works</h2>
+  <p class="sub measure">Each question goes to the engine built for that kind of data.</p>
+  <div class="tabs">
+    <div class="tablist" role="tablist" aria-label="Nexus AI engines">
+      <button class="tab" type="button" role="tab" id="tab-ops" aria-selected="true" aria-controls="panel-ops" tabindex="0"><b>SmartOps AI™</b><span>ERPNext, Odoo and HubSpot</span></button>
+      <button class="tab" type="button" role="tab" id="tab-doc" aria-selected="false" aria-controls="panel-doc" tabindex="-1"><b>DocIntellect AI™</b><span>Documents, contracts and reports</span></button>
+      <button class="tab" type="button" role="tab" id="tab-sql" aria-selected="false" aria-controls="panel-sql" tabindex="-1"><b>SQL Database Agent</b><span>PostgreSQL, in plain English</span></button>
     </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">02</div>
-      <h3>Dedicated Multi-Tenancy</h3>
-      <p>Strict cryptographic organization and team isolation powered by Clerk enterprise auth and isolated database partitions.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">03</div>
-      <h3>Private LLM Deployment</h3>
-      <p>Compatible with self-hosted / on-premise inference via vLLM. Your sensitive business data never trains public commercial models.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">04</div>
-      <h3>Role-Based Access Control</h3>
-      <p>Granular team-level and row-level permissions ensure staff only access operational data authorized for their role.</p>
+    <div>
+      <div class="tabpanel on" id="panel-ops" role="tabpanel" aria-labelledby="tab-ops">
+        <h3>Questions about orders, invoices, inventory and pipeline</h3>
+        <p>Two-way access to sales pipelines, inventory, invoices and purchase orders, with summaries such as unfulfilled orders and overdue invoices, and charts inside the conversation.</p>
+        <div class="on-stage"><figure class="shot"><img src="assets/products/placeholders/nexus-answer-table.png?v=20261020-p11" width="1440" height="1000" alt="Illustrative Nexus AI answer to ‘Which invoices are more than 30 days overdue?’ from ERPNext, as a table and a chart." loading="lazy" decoding="async"><figcaption>Illustrative</figcaption></figure></div>
+        <ul><li>Live connectors for ERPNext, Odoo and HubSpot</li><li>Bar, line, pie and donut charts generated in the conversation</li><li>Cross-system reconciliation and operational alerts</li></ul>
+      </div>
+      <div class="tabpanel" id="panel-doc" role="tabpanel" aria-labelledby="tab-doc">
+        <h3>Questions across documents, contracts and reports</h3>
+        <p>Answers from your knowledge base, PDFs, spreadsheets, operating procedures and compliance documents, each with the passage it came from.</p>
+        <div class="on-stage"><figure class="shot"><img src="assets/products/placeholders/nexus-doc-answer.png?v=20261020-p11" width="1440" height="640" alt="Illustrative Nexus AI answer about late payment terms, with the cited passage from a sample supplier agreement." loading="lazy" decoding="async"><figcaption>Illustrative</figcaption></figure></div>
+        <ul><li>Semantic search (RAG) on Qdrant</li><li>Citations with the source snippet, so every answer can be checked</li><li>A separate knowledge base for each team or organisation</li></ul>
+      </div>
+      <div class="tabpanel" id="panel-sql" role="tabpanel" aria-labelledby="tab-sql">
+        <h3>Plain English to SQL, for people who don&rsquo;t write SQL</h3>
+        <p>Executives and operations managers query production PostgreSQL databases in plain English. Queries run in strict read-only sandboxes, and results can be sorted and exported.</p>
+        <div class="on-stage"><p class="note" style="color:var(--stage-muted)">Example query, illustrative</p><pre class="code"><code>SELECT count(*) FROM (
+  SELECT customer_id FROM orders
+  WHERE created_at &gt;= date_trunc('quarter', now())
+  GROUP BY customer_id HAVING count(*) &gt; 1
+) repeat_customers;</code></pre></div>
+      </div>
     </div>
   </div>
-</div></section>
+  <div class="wont"><b>Actions, only where you approve them</b>Nexus AI can act on an answer, but only for actions you have configured and approved, and only for people whose role allows it.</div>
+</section>
 
-<!-- CLOSING CTA -->
-<section class="band"><div class="wrap"><div class="cta-block">
-  <span class="kicker">Bring us the problem</span>
-  <h2>See Nexus AI in action on your actual data.</h2>
-  <p>The first step is a free Operations Teardown — we sit with your systems and demonstrate an AI intelligence layer directly on your workflows. No generic decks.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<section class="sec" aria-labelledby="nx-fit-h">
+  <h2 id="nx-fit-h">How it fits your systems</h2>
+  <table class="data">
+    <thead><tr><th scope="col">Topic</th><th scope="col">What it does</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Systems it reads</th><td data-label="What it does">ERPNext, Odoo, HubSpot, PostgreSQL, and documents such as PDF, Word, Excel, policies and financial statements</td></tr>
+      <tr><th scope="row">No rip-and-replace</th><td data-label="What it does">Sits on top of your current databases, ERP and CRM. No data migration and no downtime.</td></tr>
+      <tr><th scope="row">Separate organisations</th><td data-label="What it does">Organisations and teams are kept apart with Clerk enterprise authentication and isolated database partitions.</td></tr>
+      <tr><th scope="row">Private models</th><td data-label="What it does">Works with self-hosted, on-premise inference through vLLM, so your business data doesn&rsquo;t train public models.</td></tr>
+      <tr><th scope="row">Access control</th><td data-label="What it does">Team-level and row-level permissions, so people only see the data their role allows.</td></tr>
+    </tbody>
+  </table>
+</section>
 
+<section class="final" aria-labelledby="final-h">
+  <div><h2 id="final-h">Book a Nexus AI demo</h2><p>Thirty minutes. Bring the questions your team asks every week and we&rsquo;ll show how Nexus AI would answer them.</p></div>
+  <div class="acts"><a class="btn" href="contact.html?demo=nexus-ai#book">Book a Nexus AI demo</a><a class="tlink" href="products.html">See the other products</a></div>
+</section>
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260921-v4"></script>
-<script src="theme.js?v=20260921-v4"></script>
+<script src="components.js?v=20261020-p11"></script>
+<script src="theme.js?v=20261020-p11"></script>
+<script src="site.js?v=20261020-p11" onerror="document.documentElement.classList.remove('has-js')"></script>
 </body>
 </html>
