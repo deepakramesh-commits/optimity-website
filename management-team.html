@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260810-v1">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 </head>
@@ -44,69 +44,49 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO -->
-<header class="hero"><div class="wrap">
-  <div class="eyebrow mono">Leadership · Optimity Technologies</div>
-  <h1>Management <span class="accent">Team</span></h1>
-  <p class="lead lead-wide">The leaders and architects steering Optimity Technologies across global delivery, operational strategy, and enterprise software engineering.</p>
-</div></header>
-
-<!-- MANAGEMENT TEAM MEMBERS -->
-<section class="tight band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Leadership</span>
-    <h2>Steering our vision &amp; execution.</h2>
-    <p>Experienced technology leaders committed to delivering production-ready intelligence and systems transformation.</p>
+<header class="hero-plain on-rail-hero">
+  <div class="col">
+    <h1><span class="mask"><span>Management team</span></span></h1>
+    <p class="lead">The two people who lead Optimity Technologies.</p>
   </div>
+</header>
 
-  <div class="team-grid">
-    <!-- Ramesh Sethuraman -->
-    <div class="team-card">
-      <div class="team-profile-header">
-        <div class="team-img-wrap">
-          <img src="assets/team/ramesh_sethuraman_founder.jpg" alt="Ramesh Sethuraman — Founder &amp; CEO" class="team-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="team-avatar-fallback" style="display:none;">RS</div>
-        </div>
-        <div class="team-meta">
-          <h3 class="team-name">Ramesh Sethuraman</h3>
-          <span class="team-role">Founder &amp; CEO</span>
-        </div>
-      </div>
-      <p class="team-bio">Ramesh Sethuraman is a seasoned technology leader and entrepreneur with over 35 years of experience in the global IT industry. He has successfully led strategic initiatives for Fortune 500 companies and multinational enterprises, driving business growth and operational excellence. A respected startup advisor, mentor, and angel investor, Ramesh has helped several emerging companies scale and succeed. As an entrepreneur, he has founded and successfully exited two IT services companies, demonstrating a strong track record of building high-value businesses. His expertise spans global delivery management, technology consulting, and business transformation, enabling organizations to achieve sustainable growth and innovation.</p>
+<section class="sec" aria-label="Leadership">
+  <article class="leader" aria-labelledby="rs-h">
+    <div class="who" data-rise><h2 id="rs-h">Ramesh Sethuraman</h2><p>Founder &amp; CEO</p></div>
+    <figure data-rise style="--i:1"><img src="assets/team/ramesh_sethuraman_founder.jpg" width="400" height="400" alt="Ramesh Sethuraman, Founder and CEO of Optimity Technologies"></figure>
+    <div class="bio">
+      <p class="lead">35 years in the global IT industry. He has founded two IT services companies and sold both.</p>
+      <p>Ramesh has led strategic programmes for Fortune 500 companies and multinational enterprises. He advises and mentors startups, invests in them as an angel investor, and has helped several of them scale.</p>
+      <p>His work covers global delivery management, technology consulting and large business change programmes.</p>
     </div>
+  </article>
 
-    <!-- Makam Nagendra -->
-    <div class="team-card">
-      <div class="team-profile-header">
-        <div class="team-img-wrap">
-          <img src="assets/team/makam_nagendra_director.jpeg" alt="Makam Nagendra — Director" class="team-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="team-avatar-fallback" style="display:none;">MN</div>
-        </div>
-        <div class="team-meta">
-          <h3 class="team-name">Makam Nagendra</h3>
-          <span class="team-role">Director</span>
-        </div>
-      </div>
-      <p class="team-bio">Makam is an accomplished IT professional with over 33 years of global experience in technology leadership, delivery management, and business consulting. His expertise spans Telecommunications, VoIP, IoT, and Mobile Applications, with a proven track record in leading multinational teams, optimizing QA and delivery processes, and driving business growth in international markets. Based in Dallas, Texas, USA, he brings a unique blend of technical excellence, operational leadership, and strategic business acumen.</p>
+  <article class="leader flip" aria-labelledby="mn-h">
+    <div class="who" data-rise><h2 id="mn-h">Makam Nagendra</h2><p>Director</p></div>
+    <figure data-rise style="--i:1"><img src="assets/team/makam_nagendra_director.jpeg" width="482" height="488" loading="lazy" decoding="async" alt="Makam Nagendra, Director of Optimity Technologies"></figure>
+    <div class="bio">
+      <p class="lead">33 years in technology leadership, delivery management and business consulting.</p>
+      <p>Makam's work spans telecommunications, VoIP, IoT and mobile applications. He has led multinational teams, improved QA and delivery processes, and grown business in international markets.</p>
+      <p>He is based in Dallas, Texas, and brings together technical depth, operational leadership and business sense.</p>
     </div>
-  </div>
-</div></section>
+  </article>
+</section>
 
-<!-- CLOSING CTA -->
-<section class="tight"><div class="wrap"><div class="cta-block" style="padding-left: var(--sp-32);">
-  <span class="kicker">Get in touch</span>
-  <h2>Interested in working with our team?</h2>
-  <p>Book a free Operations Teardown — we sit with your systems and show you what we see. No deck, no pitch.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<section class="close-line" aria-labelledby="mt-close">
+  <h2 id="mt-close">Interested in working with our team?</h2>
+  <p>Book a free Operations Teardown. We sit with your systems and show you what we see.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260810-v1"></script>
-<script src="theme.js?v=20260810-v1"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>

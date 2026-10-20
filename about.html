@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260810-v1">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD for Google Sitelinks & Organization -->
@@ -113,120 +113,66 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO -->
-<header class="hero"><div class="wrap">
-  <div class="eyebrow mono">About · Optimity Technologies</div>
-  <h1>Engineers who sit with <span class="accent">the work.</span></h1>
-  <p class="lead lead-wide">Optimity is a team of senior engineers and architects working across India, the USA, and the UAE. We build and deploy operational systems for SME and mid-market companies — software, AI, and integrations that go into production, not proposals that go into drawers.</p>
-  <p style="margin-top:16px;"><a class="link-inline" href="/Optimity_Profile_May_2026.pdf?v=2">Company profile (PDF) →</a></p>
-</div></header>
-
-<!-- POSITIONING & OPERATING MODEL -->
-<section class="band"><div class="wrap">
-  <div class="about-split">
-    <div>
-      <span class="kicker">Our Positioning</span>
-      <h2>Builders first. Advisors where it helps.</h2>
-      <p class="lede">One team does the understanding, the building, and the deploying. Nothing gets lost in a handover, because there isn’t one.</p>
-      <p class="text-muted mb-24">Consultancies hand you recommendations and leave the build to someone else. Dev shops build to spec without ever seeing how the work runs. We keep it in one room: the people who map your operation are the people who write the code and stand next to it in production.</p>
-      
-      <div class="split-cols">
-        <div>
-          <div class="mono split-label">We Build</div>
-          <h3 class="split-title">Product-First</h3>
-          <p class="split-text">The missing systems: workflow engines, integrations, internal tools, and AI layers on the software you already run.</p>
-        </div>
-        <div>
-          <div class="mono split-label">We Advise</div>
-          <h3 class="split-title">Consulting-Led</h3>
-          <p class="split-text">When you need a decision, not a build: architecture reviews, build-vs-buy calls, and where AI actually pays in your operation.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="operating-model-card" aria-hidden="true">
-      <div class="omc-head">
-        <span class="mono omc-kicker">Operating model</span>
-        <span class="mono omc-note">Diagram · illustrative</span>
-      </div>
-      <div class="omc-body">
-        <svg viewBox="0 0 420 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-fluid">
-          <!-- Connecting Lines -->
-          <line x1="120" y1="45" x2="210" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-opacity="0.3"/>
-          <line x1="120" y1="115" x2="210" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-opacity="0.3"/>
-          <line x1="120" y1="185" x2="210" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-opacity="0.3"/>
-          <line x1="210" y1="115" x2="310" y2="115" stroke="var(--accent)" stroke-width="2" stroke-opacity="0.5"/>
-
-          <!-- Animated Data Pulses -->
-          <circle cx="165" cy="80" r="3.5" fill="var(--accent)">
-          </circle>
-          <circle cx="165" cy="115" r="3.5" fill="var(--accent)">
-          </circle>
-          <circle cx="165" cy="150" r="3.5" fill="var(--accent)">
-          </circle>
-
-          <!-- Left Pillars -->
-          <!-- Applied AI -->
-          <rect x="15" y="25" width="105" height="40" rx="6" stroke="currentColor" stroke-width="1.5" fill="var(--surface)"/>
-          <text x="28" y="44" fill="currentColor" font-family="monospace" font-size="7.5" font-weight="bold">APPLIED AI</text>
-          <text x="28" y="55" fill="var(--muted)" font-family="sans-serif" font-size="6.5">LLMs · RAG · Agents</text>
-          
-          <!-- Product Engineering -->
-          <rect x="15" y="95" width="105" height="40" rx="6" stroke="currentColor" stroke-width="1.5" fill="var(--surface)"/>
-          <text x="28" y="114" fill="currentColor" font-family="monospace" font-size="7.5" font-weight="bold">ENGINEERING</text>
-          <text x="28" y="125" fill="var(--muted)" font-family="sans-serif" font-size="6.5">SaaS · Cloud-Native</text>
-
-          <!-- Strategic Consulting -->
-          <rect x="15" y="165" width="105" height="40" rx="6" stroke="currentColor" stroke-width="1.5" fill="var(--surface)"/>
-          <text x="28" y="184" fill="currentColor" font-family="monospace" font-size="7.5" font-weight="bold">ADVISORY</text>
-          <text x="28" y="195" fill="var(--muted)" font-family="sans-serif" font-size="6.5">ERP/CRM · Strategy</text>
-          <!-- Center: one team -->
-          <rect x="165" y="93" width="90" height="44" rx="6" stroke="var(--accent)" stroke-width="1.5" fill="var(--accent)" fill-opacity="0.10"/>
-          <text x="210" y="112" fill="currentColor" font-family="monospace" font-size="7.5" text-anchor="middle" font-weight="bold">OPTIMITY</text>
-          <text x="210" y="123" fill="var(--accent)" font-family="monospace" font-size="6.5" text-anchor="middle" font-weight="bold">ONE TEAM</text>
-
-          <!-- Right Outcome Box -->
-          <rect x="310" y="90" width="95" height="50" rx="8" stroke="var(--accent)" stroke-width="2" fill="var(--surface)"/>
-          <circle cx="324" cy="108" r="3.5" fill="var(--accent)">
-          </circle>
-          <text x="334" y="110" fill="currentColor" font-family="monospace" font-size="7.5" font-weight="bold">PRODUCTION</text>
-          <text x="324" y="122" fill="var(--muted)" font-family="sans-serif" font-size="6.5">Working systems</text>
-          <text x="324" y="131" fill="var(--muted)" font-family="sans-serif" font-size="6.5">No rip-and-replace</text>
-        </svg>
-      </div>
-    </div>
+<header class="hero-split hero-about">
+  <div>
+    <h1><span class="mask"><span>Engineers who sit</span></span><span class="mask"><span>with the work.</span></span></h1>
+    <p class="lead">Optimity is a team of senior engineers and architects in India, the USA and the UAE. We build and deploy operational systems for SME and mid-market companies: software, AI and integrations that go into production.</p>
+    <div class="acts"><a class="tlink" href="/Optimity_Profile_May_2026.pdf?v=2">Company profile (PDF)</a><a class="tlink" href="management-team.html">Management team</a></div>
   </div>
-</div></section>
-
-<!-- WHAT WE BELIEVE -->
-<section><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Why we exist</span>
-    <h2>What we believe.</h2>
+  <div>
+    <h2 class="vh">Our offices right now</h2>
+    <div class="clocks" data-ui data-rise>
+    <div class="clock"><p class="t" data-tz="Asia/Kolkata">IST</p><p class="city">India</p><p class="z">India Standard Time</p></div>
+    <div class="clock"><p class="t" data-tz="America/Chicago">CT</p><p class="city">USA, Dallas</p><p class="z">US Central Time</p></div>
+    <div class="clock"><p class="t" data-tz="Asia/Dubai">GST</p><p class="city">United Arab Emirates</p><p class="z">Gulf Standard Time</p></div>
   </div>
-  <div class="diffs">
-    <div class="diff"><h3>Software should fit the business.</h3><p>Your team shouldn't have to change how the business works because the software is badly designed.</p></div>
-    <div class="diff"><h3>Understanding comes before building.</h3><p>The discovery isn't a formality before the real project — it is the project's foundation.</p></div>
-    <div class="diff"><h3>Systems belong in production.</h3><p>A demo that never ships is a cost, not an asset. The work isn't done until your team runs on it.</p></div>
-    <div class="diff"><h3>Intelligence should compound.</h3><p>A system worth deploying is more useful in month twelve than it was on launch day.</p></div>
+    <p class="note">Our offices right now, from your device's clock.</p>
   </div>
-</div></section>
+</header>
 
-<!-- CLOSING CTA -->
-<section class="band"><div class="wrap"><div class="cta-block">
-  <span class="kicker">Meet us over your operations</span>
-  <h2>The fastest way to know us is to watch us work.</h2>
-  <p>Book a free Operations Teardown — we sit with your systems and show you what we see. No deck, no pitch.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<!-- How we're set up -->
+<section class="sec" aria-labelledby="team-h">
+  <div class="on-rail" data-rise>
+    <h2 id="team-h">One team, start to finish</h2>
+    <p class="lead" style="margin-top:20px">The people who map your operation are the people who write the code and stand next to it in production. Nothing gets lost in a handover, because there isn't one.</p>
+  </div>
+  <div class="two-col on-rail">
+    <div data-rise style="--i:1"><h3>When you need a build</h3><p>The missing systems: workflow engines, integrations, internal tools and AI layers on the software you already run.</p></div>
+    <div data-rise style="--i:2"><h3>When you need a decision</h3><p>Architecture reviews, build-or-buy calls, and an honest view of where AI pays in your operation and where it doesn't.</p></div>
+  </div>
+  <dl class="facts">
+    <div data-rise><dt>Offices</dt><dd>India, USA, UAE</dd></div>
+    <div data-rise style="--i:1"><dt>Practices</dt><dd>AI &amp; Automation, Product Engineering, Enterprise Solutions</dd></div>
+    <div data-rise style="--i:2"><dt>Our own products</dt><dd><a href="nexus-ai.html">Nexus AI</a>, <a href="move-concierge.html">Move Concierge AI</a>, <a href="property-connect.html">Property Connect AI</a></dd></div>
+    <div data-rise style="--i:3"><dt>Who we build for</dt><dd>SME and mid-market companies, roughly 50 to 500 people</dd></div>
+  </dl>
+</section>
+
+<!-- What we believe -->
+<section class="sec" aria-labelledby="believe-h">
+  <h2 class="on-rail" id="believe-h" data-rise>What we believe</h2>
+  <div class="statements">
+    <div data-rise><p class="k">Software should fit the business.</p><p class="v">Your team shouldn't have to change how the business works because the software is badly designed.</p></div>
+    <div data-rise><p class="k">Understanding comes before building.</p><p class="v">The discovery is the foundation of the project. It isn't a formality before the real work starts.</p></div>
+    <div data-rise><p class="k">Systems belong in production.</p><p class="v">A demo that never ships is a cost. The work is done when your team runs on it.</p></div>
+    <div data-rise><p class="k">A good system gets more useful.</p><p class="v">Something worth deploying should help more in month twelve than it did on launch day.</p></div>
+  </div>
+</section>
+
+<section class="close-line" aria-labelledby="about-close">
+  <h2 id="about-close">The fastest way to know us is to watch us work.</h2>
+  <p>Book a free Operations Teardown. We sit with your systems and show you what we see.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260810-v1"></script>
-<script src="theme.js?v=20260810-v1"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>

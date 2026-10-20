@@ -33,8 +33,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -42,7 +41,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <script>(function () { try { var t = localStorage.getItem("optimity-theme"); if (!t && window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) t = "dark"; if (t === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) { } })();</script>
-  <link rel="stylesheet" href="styles.css?v=20260921-v5">
+  <link rel="stylesheet" href="styles.css?v=20261019-r2">
   <!-- LLM & AI Agent Markdown Discovery -->
   <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
   <!-- Schema.org JSON-LD -->
@@ -70,171 +69,92 @@
 </head>
 
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div id="site-header"><!--#include virtual="/header.html" --></div>
+<div id="site-header"><!--#include virtual="/header.html" --></div>
 
-  <main id="main">
+<main id="main" class="page">
 
-    <!-- HERO & POSITIONING -->
-    <header class="hero">
-      <div class="wrap">
-        <span class="kicker">Client Engagement Agent · Real Estate</span>
-        <h1>Property Connect AI™: Intelligent Real Estate Calling &amp; Lead Qualification</h1>
-        <p class="lead lead-mt">Engage property prospects within seconds of inquiry, qualify buyer and seller intent
-          against strict criteria, and drive more confirmed showings — transferring high-intent buyers directly to your
-          active agents.</p>
+<header class="prod-hero">
+  <h1><span class="mask"><span>Property Connect AI<span class="tm">™</span></span></span><span class="mask"><span>calls new leads fast.</span></span></h1>
+  <div>
+    <p class="lead">Real estate leads go cold in minutes. Property Connect AI calls new web leads within a minute, answers listing-sign calls around the clock, checks pre-approval and timeline, and books showings into your agents' calendars.</p>
+    <div class="acts"><a class="btn" href="contact.html#book">Book an Operations Teardown</a><a class="tlink" href="#lead">Follow one lead</a></div>
+  </div>
+  <div class="record" data-ui data-rise>
+    <h4>New web lead <span class="sample">Sample</span></h4>
+    <dl>
+      <dt>Called back</dt><dd>Under a minute after the form</dd>
+      <dt>Pre-approved</dt><dd>Yes</dd>
+      <dt>Timeline</dt><dd>3 months</dd>
+      <dt>Also selling</dt><dd>Yes, current home</dd>
+      <dt>Showing</dt><dd>Saturday 11:00</dd>
+      <dt>Agent</dt><dd>Warm transfer, briefed first</dd>
+    </dl>
+  </div>
+</header>
 
-        <div class="systag-group mt-24">
-          <span class="systag">Outbound &amp; Inbound Voice AI</span>
-          <span class="systag">CRM Integration</span>
-          <span class="systag">Buyer &amp; Seller Qualification</span>
-          <span class="systag">Tour Scheduling</span>
-          <span class="systag">Call Sentiment Analytics</span>
-          <span class="systag">Live Agent Warm Transfer</span>
-        </div>
-      </div>
-    </header>
+<!-- One lead, start to finish -->
+<section class="sec" id="lead" aria-labelledby="lead-h">
+  <div class="on-rail" data-rise>
+    <h2 id="lead-h">One lead, start to finish</h2>
+    <p style="margin-top:14px">A sample lead, to show the order things happen in.</p>
+  </div>
+  <ol class="timeline">
+    <li class="tl-step" data-rise><span class="at">10:02:14</span><span>Buyer submits the form on your website.</span></li>
+    <li class="tl-step" data-rise style="--i:1"><span class="at">10:02:51</span><span>Property Connect calls straight back, triggered by the form's webhook.</span></li>
+    <li class="tl-step" data-rise style="--i:2"><span class="at">10:04</span><span>Answers questions on the listing: price, square footage, HOA fees, schools.</span></li>
+    <li class="tl-step hot" data-rise style="--i:3"><span class="at">10:06</span><span>Qualified on budget, pre-approval and timeline. Briefs the agent privately, then joins the buyer to the call.</span></li>
+    <li class="tl-step" data-rise style="--i:4"><span class="at">Sat 11:00</span><span>Showing booked. The buyer gets an SMS invite with directions and the agent's contact card.</span></li>
+  </ol>
+</section>
 
-    <!-- CORE CAPABILITIES (3 PILLARS) -->
-    <section class="band">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Operational Pillars</span>
-          <h2>Convert portal inquiries while intent is peak. Zero lead decay.</h2>
-          <p class="lead">Real estate leads go cold in minutes. Property Connect AI™ dials new web leads instantly,
-            answers listing sign inquiries 24/7, verifies pre-approval and purchase timeline, and books property
-            showings directly into your agents' calendars.</p>
-        </div>
+<section class="sec" aria-labelledby="pc-cap-h">
+  <h2 class="on-rail" id="pc-cap-h" data-rise>What it does</h2>
+  <div class="cap-cols on-rail">
+    <div data-rise><h3>Speed to lead</h3><ul>
+      <li>Dials out as soon as a form is submitted, through a webhook</li>
+      <li>Takes inbound calls around the clock from listing signboards and marketing numbers</li>
+      <li>Answers listing specs: price, square footage, HOA fees, schools</li>
+      <li>Covers weekends, open houses and out-of-hours</li>
+    </ul></div>
+    <div data-rise style="--i:1"><h3>Qualification and tours</h3><ul>
+      <li>The same questions every time: budget, mortgage pre-approval, move-in timeline</li>
+      <li>Spots buyers who also need to sell their current home</li>
+      <li>Books private showings straight into the agent's calendar</li>
+      <li>Sends SMS calendar invites with directions and the agent's contact card</li>
+    </ul></div>
+    <div data-rise style="--i:2"><h3>Transfer and records</h3><ul>
+      <li>Warm transfer: the agent is briefed before the buyer joins the line</li>
+      <li>Script guardrails and fair-housing compliance maintained by Optimity</li>
+      <li>Full call recordings, word-for-word transcripts and sentiment tracking</li>
+      <li>CRM sync with Follow Up Boss, kvCORE, HubSpot, Salesforce or custom webhooks</li>
+    </ul></div>
+  </div>
+</section>
 
-        <div class="nexus-grid">
+<section class="sec" aria-labelledby="pc-run-h">
+  <h2 class="on-rail" id="pc-run-h" data-rise>Built for brokerages, teams and developers</h2>
+  <div class="statements">
+    <div data-rise><p class="k">Real-time warm transfer</p><p class="v">A telephony bridge connects qualified buyers to your agents' mobiles, with a private whisper briefing before they're connected.</p></div>
+    <div data-rise><p class="k">One qualification standard</p><p class="v">Every lead is asked about financing, timeline and location the same way, so agents don't chase unvetted leads.</p></div>
+    <div data-rise><p class="k">Every call on record</p><p class="v">Each call is recorded, transcribed and analysed for buyer sentiment, objections and agent follow-up.</p></div>
+    <div data-rise><p class="k">We maintain it</p><p class="v">We configure, tune and maintain the conversation flows and compliance guardrails. You show properties and close deals.</p></div>
+  </div>
+</section>
 
-          <!-- CARD 1: Speed-to-Lead & Inbound -->
-          <article class="nexus-card">
-            <div class="nexus-card-top">
-              <span class="kicker mb-8">Lead Capture</span>
-              <h3>Speed-to-Lead &amp; 24/7 Inbound</h3>
-              <p class="nexus-card-headline">Sub-60 Second Response Time on Web &amp; Portal Inquiries</p>
-              <p class="nexus-card-summary">Instantly calls leads the second they submit a form on your website to start
-                the conversation.</p>
-            </div>
+<section class="close-line" aria-labelledby="pc-close">
+  <h2 id="pc-close">See it on your own leads.</h2>
+  <p>On a free Operations Teardown we review your lead response times and qualification steps, and show where voice AI gets showings booked sooner.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
-            <div class="nexus-card-body">
-              <div class="mono small text-muted mb-8">Key Capabilities</div>
-              <ul class="nexus-features-list">
-                <li>Immediate outbound dialing triggered by webhook upon form completion</li>
-                <li>Handles 24/7 inbound calls from listing signboards and marketing numbers</li>
-                <li>Accurately answers property listing specs: price, square footage, HOA fees, schools</li>
-                <li>Never misses a call during weekends, open houses, or off-hours</li>
-              </ul>
-            </div>
-          </article>
+</main>
 
-          <!-- CARD 2: Qualification & Showing Booking -->
-          <article class="nexus-card">
-            <div class="nexus-card-top">
-              <span class="kicker mb-8">Buyer &amp; Seller Discovery</span>
-              <h3>Qualification &amp; Tour Booking</h3>
-              <p class="nexus-card-headline">Verify Budget &amp; Pre-Approval Before Booking Agent Time</p>
-              <p class="nexus-card-summary">Conversational qualification ensures realtors only spend time on serious
-                prospects with validated financing and active buying timelines.</p>
-            </div>
+<div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-            <div class="nexus-card-body">
-              <div class="mono small text-muted mb-8">Key Capabilities</div>
-              <ul class="nexus-features-list">
-                <li>Standardized qualification: Budget, mortgage pre-approval, and move-in timeline</li>
-                <li>Identifies dual-transaction leads (buyers who also need to sell current property)</li>
-                <li>Direct integration with agent calendar to schedule private showings</li>
-                <li>Sends instant SMS calendar invitations with directions and agent contact card</li>
-              </ul>
-            </div>
-          </article>
-
-          <!-- CARD 3: Warm Transfer & Call Analytics -->
-          <article class="nexus-card">
-            <div class="nexus-card-top">
-              <span class="kicker mb-8">Supervised Voice Architecture</span>
-              <h3>Live Warm Transfer &amp; Analytics</h3>
-              <p class="nexus-card-headline">Live Transfers to Active Agents With Complete Call Telemetry</p>
-              <p class="nexus-card-summary">Instant warm transfer connects high-intent buyers to an available realtor's
-                cell phone with full context, backed by deep call analytics.</p>
-            </div>
-
-            <div class="nexus-card-body">
-              <div class="mono small text-muted mb-8">Key Capabilities</div>
-              <ul class="nexus-features-list">
-                <li>Live warm transfer: AI briefs the realtor before merging the buyer onto the line</li>
-                <li>Managed Voice Logic: Script guardrails and fair-housing compliance maintained by Optimity</li>
-                <li>Full call audio recordings, word-for-word transcripts, and sentiment tracking</li>
-                <li>Native CRM sync: Follow Up Boss, kvCORE, HubSpot, Salesforce, or custom webhooks</li>
-              </ul>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ENTERPRISE TRUST & ARCHITECTURE STRIP -->
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <span class="kicker">Voice Architecture &amp; Delivery</span>
-          <h2>Engineered for real estate brokerages, teams, and developers.</h2>
-        </div>
-
-        <div class="nexus-trust-grid">
-          <div class="nexus-trust-item">
-            <div class="nexus-trust-num mono">01</div>
-            <h3>Real-Time Warm Transfer</h3>
-            <p>Seamless telephony bridge connects qualified buyers to your agents' mobile phones with a private whisper
-              briefing before connecting.</p>
-          </div>
-
-          <div class="nexus-trust-item">
-            <div class="nexus-trust-num mono">02</div>
-            <h3>Strict Qualification Standards</h3>
-            <p>Standardizes lead discovery across financing, timeline, and location to ensure your agents never chase
-              unvetted leads.</p>
-          </div>
-
-          <div class="nexus-trust-item">
-            <div class="nexus-trust-num mono">03</div>
-            <h3>Complete Audio &amp; Transcript Audit</h3>
-            <p>Every call is recorded, transcribed, and analyzed for buyer sentiment, objection patterns, and agent
-              follow-up quality.</p>
-          </div>
-
-          <div class="nexus-trust-item">
-            <div class="nexus-trust-num mono">04</div>
-            <h3>Zero Technical Overhead</h3>
-            <p>We configure, optimize, and maintain all conversational flows and compliance guardrails. You focus on
-              showing properties and closing deals.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLOSING CTA -->
-    <section class="band">
-      <div class="wrap">
-        <div class="cta-block">
-          <span class="kicker">Bring us the problem</span>
-          <h2>See Property Connect AI in action on your properties.</h2>
-          <p>The first step is a free Operations Teardown — we review your lead response times, qualification funnel,
-            and show you how voice AI accelerates your showing bookings.</p>
-          <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <div id="site-footer"><!--#include virtual="/footer.html" --></div>
-
-  <script src="components.js?v=20260921-v5"></script>
-  <script src="theme.js?v=20260921-v5"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
-
 </html>

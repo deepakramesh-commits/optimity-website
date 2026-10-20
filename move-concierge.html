@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260921-v5">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD -->
@@ -66,144 +66,95 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO & POSITIONING -->
-<header class="hero"><div class="wrap">
-  <span class="kicker">Client Engagement Agent · Movers &amp; Packers</span>
-  <h1>Move Concierge AI™: Smart Reception &amp; Inbound Operations for Movers &amp; Packers</h1>
-  <p class="lead lead-mt">Automate customer interactions, instant quotation intake, inventory itemization, and survey scheduling 24/7 over natural voice and messaging — with zero manual phone tag and complete operational analytics.</p>
-  
-  <div class="systag-group mt-24">
-    <span class="systag">Voice AI Receptionist</span>
-    <span class="systag">WhatsApp Business API</span>
-    <span class="systag">CRM &amp; Dispatch Integration</span>
-    <span class="systag">Inventory Itemization</span>
-    <span class="systag">Real-Time Call Analytics</span>
-    <span class="systag">Calendar Scheduling</span>
+<header class="hero-plain on-rail-hero">
+  <div class="col">
+    <h1><span class="mask"><span>Move Concierge AI<span class="tm">™</span></span></span><span class="mask"><span>answers every call.</span></span></h1>
+    <p class="lead">Moving customers call in the evening and at weekends, when the office is closed. Move Concierge AI answers by voice or WhatsApp, collects the move details, quotes, and books the estimator's visit into your calendar.</p>
+    <div class="acts"><a class="btn" href="contact.html#book">Book an Operations Teardown</a><a class="tlink" href="#call">Read a sample call</a></div>
   </div>
-</div></header>
+</header>
 
-<!-- CORE CAPABILITIES (3 PILLARS) -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Operational Pillars</span>
-    <h2>Never miss a moving inquiry. Book surveys instantly.</h2>
-    <p class="lead">Moving customers call during evenings and weekends when offices are closed. Move Concierge AI™ answers every call immediately, collects full move details, quotes accurately, and books estimator visits straight into your calendar.</p>
+<!-- A call, and what it leaves behind -->
+<section class="sec" id="call" aria-labelledby="call-h">
+  <div class="on-rail" data-rise>
+    <h2 id="call-h">A call at 9:40 pm</h2>
+    <p style="margin-top:14px">A sample call, written to show what the agent asks and where the answers go.</p>
   </div>
-
-  <div class="nexus-grid">
-    
-    <!-- CARD 1: Instant Quotation & Inventory -->
-    <article class="nexus-card">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Inbound Intake</span>
-        <h3>Quotation &amp; Inventory Intake</h3>
-        <p class="nexus-card-headline">Conversational Move Assessment Without Endless Forms</p>
-        <p class="nexus-card-summary">Captures origin address, destination, target move dates, home size, elevator access, and specialty packing requirements conversationally.</p>
+  <div class="pair on-rail">
+    <div class="ui-panel" data-ui>
+      <div class="transcript">
+        <div class="msg" data-rise><span class="who">Caller</span><span>Hi, we're moving a three-bedroom flat on the 14th.</span></div>
+        <div class="msg ai" data-rise style="--i:1"><span class="who">Move Concierge</span><span>Thanks. Is there a lift at the old address and at the new one?</span></div>
+        <div class="msg" data-rise style="--i:2"><span class="who">Caller</span><span>Only at the new place. And we have a piano.</span></div>
+        <div class="msg ai" data-rise style="--i:3"><span class="who">Move Concierge</span><span>Noted: piano, stairs at pickup. Any artwork, gym equipment or a safe?</span></div>
+        <div class="msg" data-rise style="--i:4"><span class="who">Caller</span><span>A treadmill, that's it.</span></div>
+        <div class="msg ai" data-rise style="--i:5"><span class="who">Move Concierge</span><span>I can book a video survey tomorrow at 10 or at 4. Which suits you? I'll send the summary on WhatsApp.</span></div>
       </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Automated room-by-room inventory itemization via natural voice dialog</li>
-          <li>Identifies heavy or fragile items (pianos, artwork, gym equipment, safe boxes)</li>
-          <li>Calculates estimated weight and cubic footage ranges dynamically</li>
-          <li>Sends instant SMS / WhatsApp quote summaries and documentation requests</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- CARD 2: 24/7 Scheduling & Rescheduling -->
-    <article class="nexus-card">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Dispatch &amp; Booking</span>
-        <h3>24/7 Survey &amp; Move Booking</h3>
-        <p class="nexus-card-headline">Direct Calendar Booking for On-Site or Video Estimates</p>
-        <p class="nexus-card-summary">Checks real-time surveyor availability and schedules video or in-person walk-throughs directly during the first phone conversation.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Direct calendar integration with your dispatch, Google Calendar, or booking tool</li>
-          <li>Handles appointment rescheduling, cancellation, and arrival confirmation calls</li>
-          <li>Automated pre-move checklist dispatch via WhatsApp 48h prior to move date</li>
-          <li>Live customer updates for truck dispatch time and crew arrival status</li>
-        </ul>
-      </div>
-    </article>
-
-    <!-- CARD 3: Analytics & Supervised Model -->
-    <article class="nexus-card">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Supervised Voice Architecture</span>
-        <h3>Complete Operational Analytics</h3>
-        <p class="nexus-card-headline">Enterprise Observability With Zero Script Maintenance</p>
-        <p class="nexus-card-summary">Full access to audio recordings, searchable transcripts, lead qualification scores, and conversion funnels without managing voice prompts.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Managed Voice Logic: Script guardrails and pricing formulas engineered by Optimity</li>
-          <li>Searchable transcripts and full audio recordings with sentiment analysis</li>
-          <li>Daily operational summary of inbound lead volume, conversion, and lost leads</li>
-          <li>Instant webhook sync to MoveOps, Supermove, HubSpot, or internal database</li>
-        </ul>
-      </div>
-    </article>
-
-  </div>
-</div></section>
-
-<!-- ENTERPRISE TRUST & ARCHITECTURE STRIP -->
-<section><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Voice Architecture &amp; Delivery</span>
-    <h2>Built for high-volume moving operations with zero technical overhead.</h2>
-  </div>
-
-  <div class="nexus-trust-grid">
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">01</div>
-      <h3>Sub-Second Voice Latency</h3>
-      <p>Natural conversational pacing with instant speech-to-speech processing and interruption handling so callers never feel a robotic lag.</p>
     </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">02</div>
-      <h3>Zero Script Maintenance</h3>
-      <p>We build, tune, and maintain all conversational flows, pricing rules, and compliance guardrails so your dispatchers focus on running trucks.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">03</div>
-      <h3>Complete Analytics &amp; Auditing</h3>
-      <p>Full visibility into call recordings, timestamped transcripts, caller sentiment scores, and first-call booking conversion rates.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">04</div>
-      <h3>Native Dispatch &amp; CRM Sync</h3>
-      <p>Instant webhook integration with your existing moving software, CRM, WhatsApp Business, or custom operational database.</p>
+    <div class="record" data-ui data-rise style="--i:2">
+      <h4>New move enquiry <span class="sample">Sample</span></h4>
+      <dl>
+        <dt>Move date</dt><dd>14th</dd>
+        <dt>From</dt><dd>3-bedroom flat, stairs only</dd>
+        <dt>To</dt><dd>Lift available</dd>
+        <dt>Heavy or fragile</dt><dd>Piano, treadmill</dd>
+        <dt>Survey</dt><dd>Video, tomorrow 10:00</dd>
+        <dt>Summary sent</dt><dd>WhatsApp</dd>
+        <dt>Synced to</dt><dd>Your moving software or CRM</dd>
+      </dl>
     </div>
   </div>
-</div></section>
+</section>
 
-<!-- CLOSING CTA -->
-<section class="band"><div class="wrap"><div class="cta-block">
-  <span class="kicker">Bring us the problem</span>
-  <h2>See Move Concierge AI in action on your calls.</h2>
-  <p>The first step is a free Operations Teardown — we review your inbound call workflows, lead loss points, and show you exactly where voice AI streamlines your move booking.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<!-- Capabilities, grouped by the job -->
+<section class="sec" aria-labelledby="mc-cap-h">
+  <h2 class="on-rail" id="mc-cap-h" data-rise>What it does</h2>
+  <div class="cap-cols on-rail">
+    <div data-rise><h3>Takes the enquiry</h3><ul>
+      <li>Captures origin, destination, move dates, home size, lift access and special packing needs in conversation</li>
+      <li>Itemises the inventory room by room, by voice</li>
+      <li>Flags heavy or fragile items: pianos, artwork, gym equipment, safes</li>
+      <li>Estimates weight and cubic footage ranges, and sends the quote summary by SMS or WhatsApp</li>
+    </ul></div>
+    <div data-rise style="--i:1"><h3>Books the survey</h3><ul>
+      <li>Checks surveyor availability and books video or in-person visits on the first call</li>
+      <li>Works with your dispatch tool, Google Calendar or booking system</li>
+      <li>Handles rescheduling, cancellations and arrival confirmations</li>
+      <li>Sends a pre-move checklist on WhatsApp 48 hours before, and updates customers on truck dispatch and crew arrival</li>
+    </ul></div>
+    <div data-rise style="--i:2"><h3>Reports back</h3><ul>
+      <li>Audio recordings and searchable transcripts, with sentiment analysis</li>
+      <li>Lead qualification scores and conversion funnels</li>
+      <li>A daily summary of inbound leads, bookings and lost leads</li>
+      <li>Webhook sync to MoveOps, Supermove, HubSpot or your own database</li>
+    </ul></div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="mc-run-h">
+  <h2 class="on-rail" id="mc-run-h" data-rise>How we run it for you</h2>
+  <div class="statements">
+    <div data-rise><p class="k">Natural pacing</p><p class="v">Sub-second voice latency and interruption handling, so callers don't wait on a robotic pause.</p></div>
+    <div data-rise><p class="k">We maintain the scripts</p><p class="v">We build, tune and maintain the conversation flows, pricing rules and compliance guardrails, so your dispatchers can run trucks.</p></div>
+    <div data-rise><p class="k">Every call on record</p><p class="v">Recordings, timestamped transcripts, caller sentiment and first-call booking rates.</p></div>
+    <div data-rise><p class="k">Fits your systems</p><p class="v">Webhooks into your moving software, CRM, WhatsApp Business or your own operational database.</p></div>
+  </div>
+</section>
+
+<section class="close-line" aria-labelledby="mc-close">
+  <h2 id="mc-close">See it on your own calls.</h2>
+  <p>On a free Operations Teardown we review your inbound call flow and where leads get lost, and show where voice AI fits into your move booking.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260921-v5"></script>
-<script src="theme.js?v=20260921-v5"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>

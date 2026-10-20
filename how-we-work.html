@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260810-v1">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD for Google Sitelinks & Organization -->
@@ -113,86 +113,89 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO -->
-<header class="hero"><div class="wrap-narrow">
-  <div class="eyebrow mono">How we work</div>
-  <h1>We start with your operations. <span class="accent">Always.</span></h1>
-  <p class="lead lead-mt">Most AI work starts with the technology and hopes the business fits. We do the opposite — we learn how your business actually runs first, then decide what to build. It’s slower to start and far more likely to work.</p>
-</div></header>
+<header class="hero-plain on-rail-hero">
+  <div class="col">
+    <h1><span class="mask"><span>We learn the operation</span></span><span class="mask"><span>before we write code.</span></span></h1>
+    <p class="lead">AI projects rarely fail because of the model. They fail because nobody understood the work underneath: the real workflow, the edge cases, the spreadsheet the team quietly built around the system years ago.</p>
+  </div>
+</header>
 
-<!-- WHY OPERATIONS-FIRST -->
-<section class="band"><div class="wrap-narrow">
-  <span class="kicker">Why operations-first</span>
-  <h2 class="mb-24">Most AI projects don’t fail on the model.</h2>
-  <p class="lede">They fail because no one understood the business underneath — the real workflows, the edge cases, the system the team has quietly built around for years. Generic platforms can’t see any of that. So they automate the wrong thing, or solve a problem you didn’t have.</p>
-  <p class="lede">Operations-first means the opposite order of work: understand, then build. The discovery isn’t a formality before the real project — it <em>is</em> the project’s foundation.</p>
-</div></section>
-
-<!-- THREE STAGES -->
-<section><div class="wrap-narrow">
-  <span class="kicker">The three stages</span>
-  <h2 class="mb-48">Understand · Build · Operate</h2>
-
-  <div class="stage">
-    <div class="stage-num" aria-hidden="true">1</div>
-    <div class="stage-body">
-    <div class="mono accent">Understand</div>
-    <h3>We sit with your operations.</h3>
-    <p>Not just leadership, but the people doing the work. We map your data, your workflows, and the systems you already run, and we find the points where intelligence actually changes an outcome: a decision made earlier, a problem caught before it costs you, a repetitive task that disappears. You finish this stage with a clear picture of where AI pays off — and, just as important, where it doesn’t.</p>
-    <div class="stage-steps"><span class="mono"><b>01</b> Understand the operation</span><span class="mono"><b>02</b> Design the system</span></div>
+<!-- One order, today and after: the memorable moment, from a real kind of workflow -->
+<section class="sec" aria-labelledby="flow-h">
+  <div class="on-rail" data-rise>
+    <h2 id="flow-h">What that looks like on one order</h2>
+    <p style="margin-top:14px">An example of a flow we map on a teardown. Same WhatsApp, same ERPNext, with the retyping taken out.</p>
+  </div>
+  <div class="flow on-rail" data-ui>
+    <div class="lane" data-rise style="--i:1">
+      <h3>Today, by hand</h3>
+      <ol>
+        <li><span class="who">Customer</span><span>Sends the order on WhatsApp</span></li>
+        <li><span class="who">Sales</span><span>Retypes it into ERPNext</span></li>
+        <li><span class="who">Sales</span><span>Phones the warehouse to check stock</span></li>
+        <li><span class="who">Accounts</span><span>Raises the invoice from a spreadsheet</span></li>
+        <li><span class="who">Accounts</span><span>Chases payment from calendar reminders</span></li>
+      </ol>
+    </div>
+    <div class="lane after" data-rise style="--i:2">
+      <h3>After we build it</h3>
+      <ol>
+        <li><span class="who">Customer</span><span>Sends the order on WhatsApp</span></li>
+        <li class="sys"><span class="who">System</span><span>Reads the message and drafts the sales order in ERPNext</span></li>
+        <li><span class="who">Sales</span><span>Checks the draft and approves it</span></li>
+        <li class="sys"><span class="who">System</span><span>Checks stock and raises the invoice</span></li>
+        <li class="sys"><span class="who">System</span><span>Flags the invoice when it passes 30 days</span></li>
+      </ol>
     </div>
   </div>
+  <p class="on-rail note">Example workflow, not a client's.</p>
+</section>
 
-  <div class="stage">
-    <div class="stage-num" aria-hidden="true">2</div>
-    <div class="stage-body">
-    <div class="mono accent">Build</div>
-    <h3>On top of your stack, or the stack itself.</h3>
-    <p>If you have systems, we build AI on top of them — intelligence layers, agents, and tools that make your existing ERP, CRM, and software smarter, with nothing ripped out. If you don’t, we build the systems themselves, AI-native from the start, so you skip the legacy step entirely. Either way, you keep ownership and control. What we build is shaped around how you work, not the other way around.</p>
-    <div class="stage-steps"><span class="mono"><b>03</b> Build</span><span class="mono"><b>04</b> Integrate</span></div>
-    </div>
-  </div>
+<!-- The six steps, in order, grouped under three stages -->
+<section class="sec" aria-labelledby="method-h">
+  <h2 class="on-rail" id="method-h" data-rise>The work, in order</h2>
+  <ol class="method">
+    <li class="stage"><h3 class="stage-h">Understand</h3><ol class="stage-steps">
+      <li><div><h4>Understand the operation</h4><p>We sit with the people doing the work, not only leadership, and map your data, your workflows and the systems you already run.</p></div><p class="get"><b>You get</b>A clear picture of where AI pays off, and just as important, where it doesn't.</p></li>
+      <li><div><h4>Design the system</h4><p>We find the points where intelligence changes an outcome: a decision made earlier, a problem caught before it costs you, a repetitive task that goes away.</p></div><p class="get"><b>You get</b>A design shaped around how you work.</p></li>
+    </ol></li>
+    <li class="stage"><h3 class="stage-h">Build</h3><ol class="stage-steps">
+      <li><div><h4>Build</h4><p>If you have systems, we build on top of them: intelligence layers, agents and tools that make your ERP, CRM and software more useful, with nothing ripped out. If you don't, we build the systems themselves, AI-native from the start.</p></div><p class="get"><b>You keep</b>Ownership and control of what we build.</p></li>
+      <li><div><h4>Integrate</h4><p>We connect what we build to the ERP, CRM, spreadsheets and messaging your team already uses, so nobody types the same data in twice.</p></div><p class="get"><b>You get</b>One flow where there used to be hand-offs.</p></li>
+    </ol></li>
+    <li class="stage"><h3 class="stage-h">Operate</h3><ol class="stage-steps">
+      <li><div><h4>Deploy</h4><p>We put it into production with your team. A demo that never ships is a cost; the work is done when your team runs on it.</p></div><p class="get"><b>You get</b>Working software, in production, that you own.</p></li>
+      <li><div><h4>Improve</h4><p>We stay close after launch, tuning, extending and adapting the system as the business changes.</p></div><p class="get"><b>The aim</b>A system that's more useful in month twelve than on launch day.</p></li>
+    </ol></li>
+  </ol>
+</section>
 
-  <div class="stage">
-    <div class="stage-num" aria-hidden="true">3</div>
-    <div class="stage-body">
-    <div class="mono accent">Operate</div>
-    <h3>Software that compounds, not rots.</h3>
-    <p>Software that ships and then rots is a liability, not an asset. We hand over working systems you own, then stay close — tuning, extending, and adapting them as your business changes. The goal is intelligence that compounds: more useful in month twelve than it was on launch day.</p>
-    <div class="stage-steps"><span class="mono"><b>05</b> Deploy</span><span class="mono"><b>06</b> Improve</span></div>
-    </div>
+<!-- What you can expect -->
+<section class="sec" aria-labelledby="expect-h">
+  <h2 class="on-rail" id="expect-h" data-rise>What you can expect from us</h2>
+  <div class="statements">
+    <div data-rise><p class="k">You own what we build.</p><p class="v">The systems are built for your operation and belong to you. There's no platform to rent.</p></div>
+    <div data-rise><p class="k">Your current tools stay.</p><p class="v">We build on the ERP, CRM and spreadsheets your team relies on, and they get more useful.</p></div>
+    <div data-rise><p class="k">Starting from nothing is fine.</p><p class="v">If you don't have systems yet, there's nothing to migrate and no legacy to work around.</p></div>
+    <div data-rise><p class="k">You see working software.</p><p class="v">Progress shows up as software you can use, early, rather than as slides.</p></div>
+    <div data-rise><p class="k">Big-company discipline, at your pace.</p><p class="v">Our people have delivered at enterprise scale, and we work at the speed your company can actually move.</p></div>
   </div>
-</div></section>
+</section>
 
-<!-- WHAT MAKES THIS DIFFERENT -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">What makes this different</span>
-    <h2>Five things you won’t get from a platform pitch.</h2>
-  </div>
-  <div class="diffs">
-    <div class="diff"><h3>You’re not buying a platform.</h3><p>You’re getting systems built for your operations, owned by you.</p></div>
-    <div class="diff"><h3>No rip-and-replace.</h3><p>The tools your team relies on stay — they just get smarter.</p></div>
-    <div class="diff"><h3>No greenfield penalty.</h3><p>Starting fresh is an advantage: nothing to migrate, no legacy to work around.</p></div>
-    <div class="diff"><h3>Live systems, not slideware.</h3><p>You see working software, not a deck of promises.</p></div>
-    <div class="diff"><h3>Enterprise discipline, SME pace.</h3><p>The rigor of teams that have delivered at scale, at the speed you can actually move.</p></div>
-  </div>
-</div></section>
-
-<!-- CLOSING CTA -->
-<section><div class="wrap"><div class="cta-block">
-  <h2>Start with a conversation about your operations.</h2>
-  <p>The first step is a free Operations Teardown — a working look at where AI fits in how you run today.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<section class="close-line" aria-labelledby="hww-close">
+  <h2 id="hww-close">Start with the first step.</h2>
+  <p>The Operations Teardown is a working look at where AI fits in how you run today. It's free and takes 30 minutes.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260810-v1"></script>
-<script src="theme.js?v=20260810-v1"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>

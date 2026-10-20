@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260810-v1">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD for Google Sitelinks & Organization -->
@@ -113,168 +113,162 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO: the teardown artifact is the proof -->
-<header class="hero"><div class="wrap"><div class="hero-grid">
-  <div>
-    <div class="eyebrow mono">Operations-first · Build &amp; deploy</div>
-    <h1>We build and deploy the systems your business <span class="accent">actually needs.</span></h1>
-    <p class="lead">We work directly inside your operation — understand how the work runs, build the missing software and AI layer, connect the tools you already use, and deploy it into production.</p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-      <a class="btn btn-ghost" href="how-we-work.html">See how we work</a>
-    </div>
-    <p class="hero-cta note">A free working teardown of your operations. No deck, no pitch.</p>
-  </div>
-
-  <!-- What we deploy — the four capabilities, offer-first (2026-08-10 feedback) -->
-  <div class="artifact hero-caps" aria-label="What we build and deploy">
-    <div class="hero-caps-head mono">What we build and deploy</div>
-    <div class="hero-cap"><div class="hero-cap-n mono">A</div><div><h3>Operations &amp; ERP intelligence</h3><p>Ask your systems questions in plain language; catch problems before they cost you.</p></div></div>
-    <div class="hero-cap"><div class="hero-cap-n mono">B</div><div><h3>Customer &amp; CRM systems</h3><p>Turn stored data into the next best move, per account.</p></div></div>
-    <div class="hero-cap"><div class="hero-cap-n mono">C</div><div><h3>Automation &amp; agents</h3><p>Software that does the repetitive operational work, end to end.</p></div></div>
-    <div class="hero-cap"><div class="hero-cap-n mono">D</div><div><h3>Custom AI platforms</h3><p>Purpose-built, AI-native tools when off-the-shelf won&rsquo;t do.</p></div></div>
-    <div class="hero-caps-foot mono">On the systems you already run &middot; no rip-and-replace</div>
-  </div>
-</div></div></header>
-
-<!-- HOW WE WORK (brief) -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">How we work</span>
-    <h2>Understand, then build. In that order.</h2>
-  </div>
-  <div class="steps">
-    <div class="step">
-      <div class="step-n">01 — Understand</div>
-      <h3>Sit with your operations</h3>
-      <p>Your data, workflows, and systems — and the points where intelligence actually changes an outcome.</p>
-    </div>
-    <div class="step">
-      <div class="step-n">02 — Build</div>
-      <h3>On top of your stack, or the stack itself</h3>
-      <p>Intelligence layers, agents, custom platforms. You keep what works; we make it smarter.</p>
-    </div>
-    <div class="step">
-      <div class="step-n">03 — Operate</div>
-      <h3>Ship systems you own</h3>
-      <p>Working software you shape, and we stay close to improve it as your business changes.</p>
+<!-- Hero: what we do, on one alignment; the working panel peeks in below -->
+<header class="hero-rail">
+  <div class="col">
+    <h1><span class="mask"><span>We build AI into the</span></span><span class="mask"><span>systems you run.</span></span></h1>
+    <p class="lead">Optimity is a senior engineering team in India, the USA and the UAE. We work in three practices: AI &amp; Automation, Product Engineering and Enterprise Solutions.</p>
+    <div class="acts">
+      <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+      <a class="tlink" href="#nexus">Try a Nexus AI question</a>
     </div>
   </div>
-  <p class="mt-32"><a class="link-inline" href="how-we-work.html">Read the full method →</a></p>
-</div></section>
+  <div class="peek ui-panel" data-ui aria-hidden="true">
+    <div class="qbar"><span class="mark"></span><span class="q">Which invoices are more than 30 days overdue?</span><span class="ask">Ask</span></div>
+    <p class="route">Sent to <b>SmartOps</b> · ERPNext · read-only</p>
+  </div>
+</header>
 
-<!-- PROBLEM -->
-<section class="problem-section"><div class="wrap">
-  <div class="problem-split">
-    <div class="section-head problem-text">
-      <h2>Your business runs on systems that work. The problem is they can’t think.</h2>
-      <p>Your ERP records every transaction but can’t tell you what’s about to go wrong. Your CRM stores every customer but won’t surface the next move. Generic AI tools ignore all of it — and “transformation” usually means ripping out software your team depends on daily. We do neither. We make what you already have see, reason, and act — or build it that way from the start.</p>
+<!-- The product doing its job -->
+<section class="sec" id="nexus" aria-labelledby="nexus-h">
+  <div class="on-rail demo-head" data-rise>
+    <h2 id="nexus-h">Nexus AI, on sample data</h2>
+    <p>Nexus AI is our own product. It reads ERPNext, Odoo, HubSpot, PostgreSQL databases and your documents, and answers in plain English with the rows it used.</p>
+  </div>
+  <div class="demo on-rail" data-ui data-demo data-rise style="--i:1">
+    <div class="result">
+      <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q" data-q-text>Which invoices are more than 30 days overdue?</span><span class="ask">Ask</span></div>
+      <div class="chips" role="group" aria-label="Sample questions">
+        <button class="chip" type="button" data-q="invoices" aria-pressed="true">Overdue invoices</button>
+        <button class="chip" type="button" data-q="orders" aria-pressed="false">Unshipped orders</button>
+        <button class="chip" type="button" data-q="deals" aria-pressed="false">Stalled deals</button>
+        <button class="chip" type="button" data-q="docs" aria-pressed="false">Contract terms</button>
+        <button class="chip" type="button" data-q="sql" aria-pressed="false">Repeat customers</button>
+      </div>
+      <p class="route" data-route>Sent to <b>SmartOps</b> · ERPNext · read-only</p>
+      <div data-out aria-live="polite">
+        <table class="ui-table">
+          <thead><tr><th scope="col">Invoice</th><th scope="col">Due</th><th scope="col" class="num">Days late</th><th scope="col" class="num">Balance</th></tr></thead>
+          <tbody>
+            <tr><td>SINV-0418</td><td>02 Sep</td><td class="num">47</td><td class="num">4,820.00</td></tr>
+            <tr><td>SINV-0431</td><td>09 Sep</td><td class="num">40</td><td class="num">1,265.50</td></tr>
+            <tr><td>SINV-0457</td><td>15 Sep</td><td class="num">34</td><td class="num">9,310.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="sample" style="margin-top:16px">Sample data, not a client's.</p>
     </div>
-    <div class="problem-visual-card opsmap opsmap--calm" aria-hidden="true">
-      <div class="opsmap-zone">
-        <div class="opsmap-label state-label">Current state</div>
-        <div class="opsmap-boxes">
-          <span class="opsmap-box">Spreadsheets</span><span class="opsmap-box">WhatsApp</span>
-          <span class="opsmap-box">CRM</span><span class="opsmap-box">ERP</span>
-        </div>
-        <div class="opsmap-annot mono">manual re-entry between every pair</div>
-      </div>
-      <div class="opsmap-mid"><span class="opsmap-line"></span><span class="opsmap-fd mono">Forward deployment ↓</span><span class="opsmap-line"></span></div>
-      <div class="opsmap-zone">
-        <div class="opsmap-label target-label">Target state</div>
-        <div class="opsmap-target-grid">
-          <div class="opsmap-tcol"><span class="opsmap-tbox">CRM</span><span class="opsmap-tbox">Spreadsheets</span></div>
-          <div class="opsmap-core">One operational<br>system</div>
-          <div class="opsmap-tcol"><span class="opsmap-tbox">ERP</span><span class="opsmap-tbox">Production ✓</span></div>
-        </div>
-        <div class="opsmap-note"><span>Same tools. Connected. In production.</span><span class="mono opsmap-sample">sample · illustrative</span></div>
-      </div>
+    <div class="controls">
+      <p class="ctl-group">Sources</p>
+      <button class="ctl" type="button" data-src="ERPNext" aria-pressed="true"><span>ERPNext</span><span class="tg"></span></button>
+      <button class="ctl" type="button" data-src="Odoo" aria-pressed="false"><span>Odoo</span><span class="tg"></span></button>
+      <button class="ctl" type="button" data-src="HubSpot" aria-pressed="false"><span>HubSpot</span><span class="tg"></span></button>
+      <button class="ctl more" type="button" data-src="Documents" aria-pressed="false"><span>Documents</span><span class="tg"></span></button>
+      <button class="ctl more" type="button" data-src="PostgreSQL" aria-pressed="false"><span>PostgreSQL</span><span class="tg"></span></button>
+      <p class="ctl-group">Answer</p>
+      <button class="ctl" type="button" disabled aria-pressed="true"><span>Read-only queries <span class="val">· always on</span></span><span class="tg"></span></button>
+      <button class="ctl" type="button" data-opt="rows" aria-pressed="true"><span>Show the source rows</span><span class="tg"></span></button>
+      <button class="ctl" type="button" data-opt="chart" aria-pressed="true"><span>Chart</span><span class="tg"></span></button>
     </div>
   </div>
-</div></section>
+  <p class="on-rail note">On a teardown we can show it on your own systems. <a class="tlink" href="nexus-ai.html">How Nexus AI works</a></p>
+</section>
 
-<!-- TWO WAYS IN -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Two ways in, one starting point</span>
-    <h2>Whichever you are, we start the same way.</h2>
-    <p>We begin by understanding how your business actually runs — then decide what to build.</p>
+<!-- The three practices, as things you can switch on -->
+<section class="sec" aria-labelledby="build-h">
+  <h2 class="on-rail" id="build-h" data-rise>What we build</h2>
+  <div class="switches" style="margin-left:calc(-1 * var(--m));margin-right:calc(-1 * var(--m))">
+    <button class="sw b1" type="button" aria-pressed="true"><span class="s"><span class="t">Answer questions from your own data.</span><span class="c"><b>AI &amp; Automation.</b> Assistants built on your documents, LLM integrations and private RAG, and workflow automation for the multi-step work your team does by hand.</span></span><span class="tg" aria-hidden="true"></span></button>
+    <button class="sw b2" type="button" aria-pressed="false"><span class="s"><span class="t">Stop retyping orders between systems.</span><span class="c"><b>Enterprise Solutions.</b> ERP and CRM integration, Salesforce work, reporting and business intelligence, and the process automation that runs between them.</span></span><span class="tg" aria-hidden="true"></span></button>
+    <button class="sw b3" type="button" aria-pressed="true"><span class="s"><span class="t">Build the app your process is missing.</span><span class="c"><b>Product Engineering.</b> SaaS products and MVPs, web and mobile applications, and platform and API design, on cloud-native architecture.</span></span><span class="tg" aria-hidden="true"></span></button>
+    <button class="sw b1" type="button" aria-pressed="false"><span class="s"><span class="t">Answer the phone at nine at night.</span><span class="c"><b>Our client engagement agents.</b> Move Concierge AI answers a moving company's calls and books the survey. Property Connect AI calls a new property lead within a minute and books the showing.</span></span><span class="tg" aria-hidden="true"></span></button>
+    <button class="sw b2" type="button" aria-pressed="false"><span class="s"><span class="t">Ask the ERP directly.</span><span class="c"><b>Nexus AI.</b> Plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with read-only access and the source rows shown.</span></span><span class="tg" aria-hidden="true"></span></button>
   </div>
-  <div class="cols-2">
-    <div class="entry">
-      <div class="tagline">You have systems</div>
-      <h3>We make them intelligent.</h3>
-      <p>AI layered on top of your ERP, CRM, and tools — no rip-and-replace, no migration risk. The software your team relies on stays. It just gets smarter.</p>
-    </div>
-    <div class="entry">
-      <div class="tagline">You don’t yet</div>
-      <h3>We build them AI-native.</h3>
-      <p>No legacy software to work around, no debt to migrate later. Intelligent from day one — and starting fresh is an advantage, not a penalty.</p>
-    </div>
-  </div>
-</div></section>
+</section>
 
-<!-- "What we build" moved into the hero panel (2026-08-10 feedback) -->
-
-<!-- DEPLOYMENT LOG slot — intentionally empty (2026-08-10 feedback).
-     Composite dossiers read as fake next to real client logos. The .dlog CSS
-     component is kept; this slot receives the first REAL anonymized deployment
-     story (TODOS.md P1) once a client from assets/logo/PERMISSIONS.md agrees. -->
-
-<!-- TRUSTED BY COMPANIES -->
-<section class="trusted-section">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">Trusted by companies</span>
-      <h2>Companies we’ve built and deployed for.</h2>
+<!-- How it starts: the teardown, pinned, changing as you read -->
+<section class="sec" aria-labelledby="start-h">
+  <div class="pin">
+    <div class="steps">
+      <h2 id="start-h">How it starts</h2>
+      <div class="step act" data-step="1"><h3>First, tell us which systems you run.</h3><p>A short list is enough: the ERP, the CRM, the spreadsheets, and the WhatsApp groups where orders really arrive.</p></div>
+      <div class="step" data-step="2"><h3>Then we spend 30 minutes on it with you.</h3><p>We go through the hand-offs between those systems and find where work gets stuck or typed in twice.</p></div>
+      <div class="step" data-step="3"><h3>You keep the teardown.</h3><p>Where AI would pay off, and where it wouldn't yet. If there's a fit, we write a proposal priced to that scope. If not, the teardown is still yours.</p></div>
     </div>
-    <div class="trusted-logos-grid">
-      <div class="trusted-card" title="SUITS">
-        <img src="assets/logo/suits.png" width="1728" height="512" loading="lazy" decoding="async" alt="SUITS" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">SUITS</span>
+    <div class="stage" data-state="1">
+      <div class="card state state-1" data-ui>
+        <h4>Your systems <span>Example</span></h4>
+        <div class="chk"><i class="y"></i>ERPNext</div>
+        <div class="chk"><i class="y"></i>HubSpot</div>
+        <div class="chk"><i class="y"></i>Excel, a lot of it</div>
+        <div class="chk"><i class="y"></i>WhatsApp groups</div>
+        <div class="chk"><i></i>Something custom</div>
       </div>
-      <div class="trusted-card" title="Technosphere">
-        <img src="assets/logo/technosphere.png" width="600" height="97" loading="lazy" decoding="async" alt="Technosphere" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">Technosphere</span>
+      <div class="card state state-2" data-ui>
+        <h4>Teardown call <span>30 min · Example</span></h4>
+        <div class="chk"><span>Orders from WhatsApp into ERPNext</span><span class="r">by hand</span></div>
+        <div class="chk"><span>Overdue invoice follow-up</span><span class="r">in Excel</span></div>
+        <div class="chk"><span>Weekly pipeline review</span><span class="r">exported</span></div>
+        <div class="chk"><span>Stock questions to the warehouse</span><span class="r">by phone</span></div>
       </div>
-      <div class="trusted-card" title="ZeeSense">
-        <img src="assets/logo/zeesense.png" width="240" height="84" loading="lazy" decoding="async" alt="ZeeSense" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">ZeeSense</span>
-      </div>
-      <div class="trusted-card" title="Lodestar">
-        <img src="assets/logo/lodestar.png" width="163" height="70" loading="lazy" decoding="async" alt="Lodestar" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">Lodestar</span>
-      </div>
-      <div class="trusted-card" title="Kalajitha">
-        <img src="assets/logo/kalajitha.png" width="200" height="53" loading="lazy" decoding="async" alt="Kalajitha" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">Kalajitha</span>
-      </div>
-      <div class="trusted-card" title="Funtoot">
-        <img src="assets/logo/funtoot.png" width="300" height="106" loading="lazy" decoding="async" alt="Funtoot" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">Funtoot</span>
-      </div>
-      <div class="trusted-card" title="Icube Labs USA">
-        <img src="assets/logo/icube-labs-usa.png" width="191" height="39" loading="lazy" decoding="async" alt="Icube Labs USA" class="trusted-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
-        <span class="trusted-logo-text" style="display:none;">Icube Labs USA</span>
+      <div class="card state state-3" data-ui>
+        <h4>What you keep <span>Example</span></h4>
+        <div class="chk"><span><b>Pays off now:</b> order intake, invoice follow-up</span></div>
+        <div class="chk"><span><b>Not yet:</b> pipeline forecasting, the CRM data isn't clean enough</span></div>
+        <div class="chk"><span><b>If you want it:</b> a proposal priced to that scope</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLOSING CTA -->
-<section class="band"><div class="wrap"><div class="cta-block">
-  <h2>Start with a conversation about your operations.</h2>
-  <p>Not a deck of features you don’t need. We’ll look at how your business runs and show you exactly where AI fits — and where it doesn’t.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<!-- Clients: one quiet row -->
+<section class="sec" aria-label="Clients">
+  <div class="logos" data-rise>
+    <span class="lbl">Built and deployed for</span>
+    <img src="assets/logo/suits.png" width="1728" height="512" loading="lazy" decoding="async" alt="SUITS">
+    <img src="assets/logo/technosphere.png" width="600" height="97" loading="lazy" decoding="async" alt="Technosphere">
+    <img class="tall" src="assets/logo/zeesense.png" width="240" height="84" loading="lazy" decoding="async" alt="ZeeSense">
+    <img class="tall" src="assets/logo/lodestar.png" width="163" height="70" loading="lazy" decoding="async" alt="Lodestar Career Guidance">
+    <img src="assets/logo/kalajitha.png" width="200" height="53" loading="lazy" decoding="async" alt="Kalajitha">
+    <img class="tall" src="assets/logo/funtoot.png" width="300" height="106" loading="lazy" decoding="async" alt="Funtoot">
+    <img src="assets/logo/icube-labs-usa.png" width="191" height="39" loading="lazy" decoding="async" alt="Icube Labs, U.S.A.">
+  </div>
+</section>
+
+<!-- People -->
+<section class="sec" aria-labelledby="people-h">
+  <div class="people">
+    <h2 id="people-h" data-rise>Who you'll talk to</h2>
+    <div class="person" data-rise style="--i:1"><img src="assets/team/ramesh_sethuraman_founder.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Ramesh Sethuraman"><div><h3>Ramesh Sethuraman</h3><p class="role">Founder &amp; CEO</p><p>35 years in IT. Has founded and sold two IT services companies.</p></div></div>
+    <div class="person" data-rise style="--i:2"><img src="assets/team/makam_nagendra_director.jpeg" width="482" height="488" loading="lazy" decoding="async" alt="Makam Nagendra"><div><h3>Makam Nagendra</h3><p class="role">Director, Dallas</p><p>33 years leading delivery in telecom, VoIP, IoT and mobile. <a class="tlink" href="management-team.html">Management team</a></p></div></div>
+  </div>
+</section>
+
+<!-- Close: the first step, already open -->
+<section class="close" aria-labelledby="close-h">
+  <div class="words">
+    <h2 id="close-h">Bring us<br>one question</h2>
+    <p>The one your ERP or CRM can't answer today. We'll look at it with you for 30 minutes.</p>
+  </div>
+  <div class="book-card" data-ui>
+    <h3>Operations Teardown</h3>
+    <dl>
+      <dt>Length</dt><dd>30 minutes</dd>
+      <dt>Cost</dt><dd>Free</dd>
+      <dt>You keep</dt><dd>The teardown, whether or not we work together</dd>
+    </dl>
+    <a class="btn" href="contact.html#book">Pick a time</a>
+  </div>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260810-v1"></script>
-<script src="theme.js?v=20260810-v1"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>

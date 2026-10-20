@@ -28,14 +28,14 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20260921-v5">
+<link rel="stylesheet" href="styles.css?v=20261019-r2">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD -->
@@ -66,144 +66,123 @@
 
 <div id="site-header"><!--#include virtual="/header.html" --></div>
 
-<main id="main">
+<main id="main" class="page">
 
-<!-- HERO & POSITIONING -->
-<header class="hero"><div class="wrap">
-  <span class="kicker">Flagship Intelligence Platform</span>
-  <h1>Meet Nexus AI™: The Operations Intelligence Layer for Your Enterprise</h1>
-  <p class="lead lead-mt">Your ERP records transactions. Your CRM logs customers. Your databases store records. Nexus AI connects to all of them, giving your team an intelligent conversational layer to query, analyze, and act across your entire company in real time — with zero rip-and-replace.</p>
-  
-  <div class="systag-group mt-24">
-    <span class="systag">SQL</span>
-    <span class="systag">Documents</span>
-    <span class="systag">ERPNext</span>
-    <span class="systag">Odoo</span>
-    <span class="systag">HubSpot</span>
-    <span class="systag">LLM (Private / On-Prem)</span>
+<header class="prod-hero">
+  <h1><span class="mask"><span>Nexus AI<span class="tm">™</span> answers</span></span><span class="mask"><span>from your own systems.</span></span></h1>
+  <div>
+    <p class="lead">Your ERP records transactions, your CRM logs customers and your databases store records. Nexus AI connects to all of them and gives your team one place to ask questions in plain English and act on the answer, without replacing anything.</p>
+    <div class="acts"><a class="btn" href="contact.html#book">See it on your data</a><a class="tlink" href="#engines">How it answers</a></div>
   </div>
-</div></header>
-
-<!-- CORE CAPABILITIES (3 PILLARS) -->
-<section class="band"><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Core Capabilities</span>
-    <h2>Three specialized intelligence engines. One unified layer.</h2>
-    <p class="lead">Nexus AI routes natural language queries to the exact intelligence engine suited for the task — unstructured files, transactional business systems, or relational production databases.</p>
+  <div class="ui-panel" data-ui data-rise>
+    <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">Which customers have an overdue invoice and an open order?</span><span class="ask">Ask</span></div>
+    <p class="route">Sent to <b>SmartOps</b> · ERPNext and HubSpot · read-only</p>
+    <table class="ui-table">
+      <thead><tr><th scope="col">Account</th><th scope="col" class="num">Overdue</th><th scope="col" class="num">Open orders</th><th scope="col">Owner</th></tr></thead>
+      <tbody>
+        <tr><td>Account 0117</td><td class="num">2,410.00</td><td class="num">3</td><td>East team</td></tr>
+        <tr><td>Account 0342</td><td class="num">9,860.00</td><td class="num">1</td><td>North team</td></tr>
+        <tr><td>Account 0388</td><td class="num">515.25</td><td class="num">2</td><td>East team</td></tr>
+      </tbody>
+    </table>
+    <p class="sample" style="margin-top:14px">Sample data.</p>
   </div>
+</header>
 
-  <div class="nexus-grid">
-    
-    <!-- CARD 1: DocIntellect AI -->
-    <article class="nexus-card" id="demo-card-1">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Unstructured Data &amp; Knowledge</span>
-        <h3>DocIntellect AI™</h3>
-        <p class="nexus-card-headline">Ask Questions Across Documents, Contracts &amp; Reports</p>
-        <p class="nexus-card-summary">Instant conversational answers from your internal knowledge base, PDFs, spreadsheets, operating procedures, and compliance documents.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Semantic Vector Search (RAG) powered by Qdrant</li>
-          <li>Document citations with direct source snippet verification</li>
-          <li>Multi-format ingestion: PDFs, Word, Excel, Policy Docs, Financial Statements</li>
-          <li>Multi-tenant isolated knowledge repositories per team or organization</li>
+<!-- The three engines: pick one and see what it does -->
+<section class="sec" id="engines" aria-labelledby="eng-h">
+  <div class="on-rail" data-rise>
+    <h2 id="eng-h">Each question goes to the right engine</h2>
+    <p style="margin-top:14px">Nexus AI sends a question to the engine built for that kind of data: documents and files, live business systems, or relational databases.</p>
+  </div>
+  <div class="engines" data-rise style="--i:1">
+    <div class="engine-list" role="group" aria-label="Engines">
+      <button class="engine-btn" type="button" aria-pressed="true" aria-controls="eng-doc"><b>DocIntellect AI™</b><span>Documents, contracts and reports</span></button>
+      <button class="engine-btn" type="button" aria-pressed="false" aria-controls="eng-ops"><b>SmartOps AI™</b><span>ERPNext, Odoo and HubSpot</span></button>
+      <button class="engine-btn" type="button" aria-pressed="false" aria-controls="eng-sql"><b>SQL Database Agent</b><span>PostgreSQL, in plain English</span></button>
+    </div>
+    <div class="engine-view">
+      <div class="engine-pane on" id="eng-doc">
+        <h3>Ask questions across documents, contracts and reports</h3>
+        <p style="margin-top:10px">Answers from your knowledge base, PDFs, spreadsheets, operating procedures and compliance documents, each with the passage it came from.</p>
+        <div class="ui-panel" data-ui>
+          <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">What are the late payment terms in the supplier agreement?</span></div>
+          <p style="margin-top:14px">Payment is due 30 days from invoice. After 45 days a 1.5% monthly late fee applies.</p>
+          <p class="cite">“…late fee of 1.5% per month on balances unpaid after 45 days…”<span class="src">Supplier agreement, section 4.2 · sample document</span></p>
+        </div>
+        <ul>
+          <li>Semantic vector search (RAG) on Qdrant</li>
+          <li>Citations with the source snippet, so every answer can be checked</li>
+          <li>Reads PDFs, Word, Excel, policy documents and financial statements</li>
+          <li>A separate, isolated knowledge base per team or organisation</li>
         </ul>
       </div>
-    </article>
-
-    <!-- CARD 2: SmartOps AI -->
-    <article class="nexus-card" id="demo-card-2">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Live Business Systems</span>
-        <h3>SmartOps AI™</h3>
-        <p class="nexus-card-headline">Conversational Operations for ERPNext, Odoo &amp; HubSpot</p>
-        <p class="nexus-card-summary">Live bidirectional intelligence over your sales pipelines, inventory, invoices, and purchase orders without digging through menus.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Native live connectors: ERPNext, Odoo, and HubSpot</li>
-          <li>Real-time KPI summaries: Unfulfilled orders, overdue invoices, deal pipeline stages</li>
-          <li>Dynamic visual generation: Automatically generates interactive Bar, Line, Pie, and Donut charts directly inside the conversation</li>
-          <li>Automated cross-system reconciliation and operational alerts</li>
+      <div class="engine-pane" id="eng-ops">
+        <h3>Conversational operations for ERPNext, Odoo and HubSpot</h3>
+        <p style="margin-top:10px">Two-way access to sales pipelines, inventory, invoices and purchase orders, without digging through menus.</p>
+        <div class="ui-panel" data-ui>
+          <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">Unfulfilled orders by week, this month</span></div>
+          <div class="bars" aria-hidden="true"><span style="height:45%"></span><span style="height:70%"></span><span class="hi" style="height:92%"></span><span style="height:38%"></span></div>
+          <div class="bar-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+          <p class="sample" style="margin-top:12px">Sample data.</p>
+        </div>
+        <ul>
+          <li>Live connectors for ERPNext, Odoo and HubSpot</li>
+          <li>Summaries such as unfulfilled orders, overdue invoices and pipeline stages</li>
+          <li>Bar, line, pie and donut charts generated inside the conversation</li>
+          <li>Cross-system reconciliation and operational alerts</li>
         </ul>
       </div>
-    </article>
-
-    <!-- CARD 3: SQL Database Agent -->
-    <article class="nexus-card" id="demo-card-3">
-      <div class="nexus-card-top">
-        <span class="kicker mb-8">Relational Data &amp; Analytics</span>
-        <h3>SQL Database Agent</h3>
-        <p class="nexus-card-headline">Natural Language to SQL — Zero Technical Bottlenecks</p>
-        <p class="nexus-card-summary">Non-technical executives and ops managers can query production PostgreSQL databases in plain English without writing SQL.</p>
-      </div>
-
-      <div class="nexus-card-body">
-        <div class="mono small text-muted mb-8">Key Capabilities</div>
-        <ul class="nexus-features-list">
-          <li>Automated Text-to-SQL generation with strict read-only execution sandboxes</li>
-          <li>Instant interactive tabular result views with sorting and export</li>
-          <li>Auto-visualized data trends and operational anomaly detection</li>
-          <li>Drastically cuts IT and BI team backlog for ad-hoc operational reports</li>
+      <div class="engine-pane" id="eng-sql">
+        <h3>Plain English in, SQL out, for people who don't write SQL</h3>
+        <p style="margin-top:10px">Executives and operations managers query production PostgreSQL databases in plain English.</p>
+        <div class="ui-panel" data-ui>
+          <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">How many customers ordered more than once this quarter?</span></div>
+          <pre class="sql"><code>SELECT count(*) FROM (
+  SELECT customer_id FROM orders
+  WHERE created_at &gt;= date_trunc('quarter', now())
+  GROUP BY customer_id HAVING count(*) &gt; 1
+) repeat_customers;</code></pre>
+          <p class="sample">Read-only sandbox · sample data</p>
+        </div>
+        <ul>
+          <li>Text-to-SQL that runs in strict read-only sandboxes</li>
+          <li>Result tables you can sort and export</li>
+          <li>Trends and anomalies charted automatically</li>
+          <li>Fewer ad-hoc report requests landing on IT and BI teams</li>
         </ul>
       </div>
-    </article>
-
-  </div>
-</div></section>
-
-<!-- ENTERPRISE TRUST & ARCHITECTURE STRIP -->
-<section><div class="wrap">
-  <div class="section-head">
-    <span class="kicker">Enterprise Architecture</span>
-    <h2>Engineered for security, privacy, and seamless coexistence.</h2>
-  </div>
-
-  <div class="nexus-trust-grid">
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">01</div>
-      <h3>Zero Rip-and-Replace</h3>
-      <p>Sits directly on top of your current databases, ERP, and CRM stacks. No migrating data, no retraining teams, no downtime.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">02</div>
-      <h3>Dedicated Multi-Tenancy</h3>
-      <p>Strict cryptographic organization and team isolation powered by Clerk enterprise auth and isolated database partitions.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">03</div>
-      <h3>Private LLM Deployment</h3>
-      <p>Compatible with self-hosted / on-premise inference via vLLM. Your sensitive business data never trains public commercial models.</p>
-    </div>
-
-    <div class="nexus-trust-item">
-      <div class="nexus-trust-num mono">04</div>
-      <h3>Role-Based Access Control</h3>
-      <p>Granular team-level and row-level permissions ensure staff only access operational data authorized for their role.</p>
     </div>
   </div>
-</div></section>
+</section>
 
-<!-- CLOSING CTA -->
-<section class="band"><div class="wrap"><div class="cta-block">
-  <span class="kicker">Bring us the problem</span>
-  <h2>See Nexus AI in action on your actual data.</h2>
-  <p>The first step is a free Operations Teardown — we sit with your systems and demonstrate an AI intelligence layer directly on your workflows. No generic decks.</p>
-  <a class="btn btn-primary" href="contact.html#book">Book an Operations Teardown →</a>
-</div></div></section>
+<!-- Architecture: a real table of how it sits in your stack -->
+<section class="sec" aria-labelledby="arch-h">
+  <h2 class="on-rail" id="arch-h" data-rise>How it sits in your stack</h2>
+  <div class="table-wrap on-rail" data-rise style="--i:1">
+    <table class="data">
+      <tbody>
+        <tr><th scope="row">No rip-and-replace</th><td>Sits on top of your current databases, ERP and CRM. No data migration, no retraining your team, no downtime.</td></tr>
+        <tr><th scope="row">Separate tenants</th><td>Strict cryptographic isolation between organisations and teams, using Clerk enterprise authentication and isolated database partitions.</td></tr>
+        <tr><th scope="row">Private LLM deployment</th><td>Works with self-hosted, on-premise inference through vLLM. Your business data never trains public commercial models.</td></tr>
+        <tr><th scope="row">Role-based access</th><td>Team-level and row-level permissions, so staff only see the operational data their role allows.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="close-line" aria-labelledby="nx-close">
+  <h2 id="nx-close">See it working on your own data.</h2>
+  <p>The first step is a free Operations Teardown. We sit with your systems and show an AI layer working on your workflows.</p>
+  <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
+</section>
 
 </main>
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20260921-v4"></script>
-<script src="theme.js?v=20260921-v4"></script>
+<script src="components.js?v=20261019-r2"></script>
+<script src="theme.js?v=20261019-r2"></script>
+<script src="site.js?v=20261019-r2"></script>
 </body>
 </html>
