@@ -11,7 +11,7 @@ Before a page ships: **would an operations director believe a serious software c
 Premium B2B software. A white page with navy type and a navy **stage** on which the product's own screens sit, one at a time. Density **balanced (5)**, variance **offset asymmetric (6)**, motion **restrained (3)**.
 
 - **The homepage is a three-product overview** (ads link straight to each product page): a headline naming the three markets, a navy index of the three products, then one section per product (outcome headline, one screen, Book a demo, "See how it works"), delivery, how we work, and a light closing band.
-- **The signature:** on the Move Concierge AI page the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The stage is sized to the screen it shows, the whole screen is visible, and the headline starts level with it. Its "Illustrative" caption sits above the screen.
+- **The signature:** on the Move Concierge AI page the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The stage is sized to the screen it shows, the whole screen is visible, and the headline starts level with it.
 - **Hierarchy follows the business.** Move Concierge AI is first in every menu, list and on the homepage, and its page carries the full call-to-follow-up walkthrough. Each product page is an ad landing page in its own right: it opens on the outcome for that buyer.
 - Neighbouring sections never share a shape: a headline beside a navy product index; alternating product rows; a five-step strip whose first step is filled navy; statement rows beside a surface panel; a light closing band (separated from the navy footer by space, never touching it). Inner pages add real tables, a timestamped timeline, tabs and a fit list.
 - Light is the default; dark is complete and is how leadership reviews (on a phone).
@@ -47,7 +47,7 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 - **Buttons:** flat Signal Orange, navy text, 6px radius, 48px (44px small). Hover lightens; press moves 1px. One primary per screen; the second action is a text link with a 2px underline.
 - **Header:** logo; Home · Products (link with a dropdown: Move Concierge AI first on a tinted row, then Property Connect AI, Nexus AI, each with its buyer) · Custom AI Systems · About · Contact; theme toggle; **Book a Demo**. Under 1040px the links move into the existing `#nav-cb` drawer (theme.js unchanged). Dropdowns close with Escape.
-- **Product screens:** PNG placeholders on the navy stage, 10px radius, no shadow, each with a figure caption "Illustrative". On the stage the caption sits above the screen and the screen is capped to the stage height, so the caption is never clipped. On phones the stage gives way to the same screens inline, one per step, on full-width navy bands; there the screens run off the right edge (160%) so their text stays legible.
+- **Product screens:** PNG placeholders on navy, 10px radius, no shadow, no caption. Each screen carries its own "Sample data" tag in its title bar. On the stage the screen is capped to the stage height. On phones the stage gives way to the same screens inline, one per step, shown whole.
 - **Tables:** real `<table>` with row rules; on phones each row stacks with `data-label` labels.
 - **Tabs (Nexus AI):** `role=tablist`, arrow keys, selected tab filled navy; without JavaScript every panel shows.
 - **"What it won't do" / limits panels:** surface panels that state what stays with people. Every product page has one.
@@ -68,7 +68,7 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 - **Real only:** the logo, the seven permitted client logos (single-colour; labelled "Companies we've built software for… engineering clients, not product customers"), and the two team photographs from `assets/team` (shown at or below native size).
 - **Product screens are placeholders until real screenshots exist.** Each is an HTML/CSS mock-up in `assets/products/placeholders/src/`, rendered to PNG at 2x with the gstack browse tool, saved in `assets/products/placeholders/`, and listed in `assets/products/placeholders/PLACEHOLDERS.md` with its pixel size, where it is used and what should replace it.
-- **Every placeholder shown on the site carries a visible "Illustrative" caption**, and its alt text starts with "Illustrative". Placeholders use fictional businesses ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co."), invoice and enquiry numbers, and hidden phone numbers. They never show a real name, number or phone number, and never look like a real customer deployment.
+- **Every placeholder shows a visible "Sample data" tag inside the screen** (in its title bar, never cropped), and its alt text starts with "Sample". The separate "Illustrative" caption was removed at Deepak's request on 2026-10-21; the in-screen tag and the fictional names are the label. Placeholders use fictional businesses ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co."), invoice and enquiry numbers, and hidden phone numbers. They never show a real name, number or phone number, and never look like a real customer deployment.
 - A real screenshot replaces a placeholder by using the same file name and pixel size; remove its caption when you do. No AI image generator is used for interface screens. `og-image.png` is rendered the same way from `assets/og-src/og-image.html`.
 
 ## 8. Voice
@@ -83,7 +83,7 @@ A senior engineer talking to an operations manager: plain, specific, confident. 
 
 This rule is load-bearing for the firm's positioning and survives every redesign:
 - **No invented proof.** Never render client names, logos, testimonials, ROI, metrics, customer counts, certifications or integrations that aren't real and permissioned — not even as placeholder/filler. An empty proof slot is acceptable; a fake one is not. Displayed client logos require recorded permission (`assets/logo/PERMISSIONS.md`), and are labelled for what they are.
-- **Sample artifacts must be labeled.** Every illustrative product screen, sample call, sample lead or example workflow carries a visible "Illustrative" / "Sample data" / "sample" marker and uses obviously fictional content (see §7). No control or crop may hide the label.
+- **Sample artifacts must be labeled.** Every illustrative product screen, sample call, sample lead or example workflow carries a visible "Sample data" / "sample" marker and uses obviously fictional content (see §7). No control or crop may hide the label.
 - **Anonymized-by-default proof.** Real deployment proof is published fully anonymized (sector-only, ranges) unless a client grants named permission.
 - **Live systems over slideware.** Favor real working-software screenshots over decorative imagery everywhere; until they exist, labelled placeholders of the real product UI.
 - **Only substantiated claims.** Integrations are limited to those named on the product pages before this rebuild; security and oversight statements are limited to what the products are documented to do.
@@ -95,7 +95,7 @@ Robots, glowing brains, circuit boards, stock businesspeople · fake terminals, 
 ## 11. Files
 
 - `styles.css` (tokens, components, responsive) · `site.js` (stage, tabs, nav state) · `theme.js` and `components.js` (unchanged behaviour).
-- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261021-p22`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261021-p23`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
 - Retired URLs (how-we-work, industries, why-optimity, management-team) 301 in `nginx.conf` and `.htaccess`, query string kept, to the canonical `.html` pages.
 
 ## Decisions Log

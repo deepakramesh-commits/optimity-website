@@ -27,8 +27,8 @@
         img.src = step.getAttribute('data-shot');
         img.alt = step.getAttribute('data-alt') || '';
         if (cap) {
-          // An empty data-cap means a real screenshot: no caption. A missing one keeps "Illustrative".
-          var text = step.hasAttribute('data-cap') ? step.getAttribute('data-cap') : 'Illustrative';
+          // A step can carry its own caption in data-cap; without one the caption stays empty.
+          var text = step.getAttribute('data-cap') || '';
           cap.textContent = text;
           cap.hidden = !text;
         }

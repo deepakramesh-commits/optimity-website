@@ -14,6 +14,7 @@ Changes from four outside reviews of the product-led site.
 - US English throughout, including the sample screens: lead, estimate, elevator, on weekends
 - Desktop product screens show whole; the stage fits its screen; the Move Concierge walkthrough has far less empty space; section gaps are smaller
 - Phone product screens show whole again
+- The "Illustrative" caption under product screens is removed; each screen keeps its "Sample data" tag and fictional names, and alt text starts with "Sample"
 - Client logos moved from the homepage to About ("Companies our engineering team has built software for")
 - The closing band is light and no longer touches the navy footer; sample screens are dimmed in dark mode; ™ only on first mention and in the footer; Nexus AI's tabs use plain labels
 

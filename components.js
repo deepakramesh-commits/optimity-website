@@ -49,7 +49,7 @@
       if (callback) callback();
       return;
     }
-    fetch(file + '?v=20261021-p22')
+    fetch(file + '?v=20261021-p23')
       .then(function(res) {
         if (!res.ok) throw new Error('Failed to load ' + file);
         return res.text();

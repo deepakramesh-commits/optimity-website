@@ -1,13 +1,13 @@
 # Product screen placeholders
 
-There are no real product screenshots yet. Every product screen on the site is a placeholder, built as an HTML/CSS mock-up in `src/` and rendered to PNG at 2x with the gstack browse tool. Each one uses fictional sample data ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co.", hidden phone numbers) and US English (lead, estimate, elevator) and is shown on the site with a visible **"Illustrative"** caption.
+There are no real product screenshots yet. Every product screen on the site is a placeholder, built as an HTML/CSS mock-up in `src/` and rendered to PNG at 2x with the gstack browse tool. Each one uses fictional sample data ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co.", hidden phone numbers) and US English (lead, estimate, elevator) and shows a **"Sample data"** tag in its title bar. There is no separate caption on the site.
 
 ## Swapping in a real screenshot
 
 1. Save the real file under the **same name** and at the **same pixel size** (listed below) in this folder. Pages reference only the file name and size.
 2. Bump the shared `?v=` cache string (every page, `components.js`, and the generator if you use it). Image URLs carry it too (`mc-incoming-call.png?v=…`), so returning visitors get the new file instead of a 30-day cached placeholder.
-3. Remove its "Illustrative" label: delete the `<figcaption>Illustrative</figcaption>` in that file's figures, and on the Move Concierge page set `data-cap=""` on the matching step. Never delete the figcaption inside the stage (`<aside class="stage">`): it is shared by every step and hides itself when a step's `data-cap` is empty.
-4. Update the `alt` text and the `data-alt` attribute, which currently start with "Illustrative".
+3. A real screenshot has no "Sample data" tag, so nothing else needs removing. Real screenshots must not show real customer names or numbers without permission (step 6).
+4. Update the `alt` text and the `data-alt` attribute, which currently start with "Sample".
 5. If you replace `mc-enquiry-record.png`, re-render `/og-image.png` from `assets/og-src/og-image.html` too (it composites that screen). Social networks cache share images for days; use their debuggers to refresh.
 6. Real screenshots must not show real customer names, numbers or phone numbers unless the customer has agreed (DESIGN.md, Content Integrity).
 
@@ -26,7 +26,7 @@ There are no real product screenshots yet. Every product screen on the site is a
 | `nexus-answer-table.png` | 1440 × 1000 (720 × 500) | Products: Nexus row · Nexus AI page: hero and the ERP and CRM tab | A SmartOps answer from ERPNext, Odoo or HubSpot with its table and chart |
 | `nexus-doc-answer.png` | 1440 × 640 (720 × 320) | Home: Nexus section · Nexus AI page: the Documents tab | A DocIntellect answer with its cited passage |
 
-The Database tab on the Nexus AI page shows an example query as text (labelled "Example query, illustrative"), not an image.
+The Database tab on the Nexus AI page shows an example query as text (labelled "Example query"), not an image.
 
 ## Re-rendering a placeholder
 

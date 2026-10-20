@@ -76,7 +76,7 @@ When a workflow needs something the products don't do, Optimity builds a focused
 
 ## 9. Proof policy
 
-Client logos shown on the site are companies Optimity has built software for, displayed with recorded permission; they are not presented as product customers. No testimonials, case studies or results are published until they are real and approved. Product screens on the site are labelled illustrative placeholders with fictional sample data.
+Client logos shown on the site are companies Optimity has built software for, displayed with recorded permission; they are not presented as product customers. No testimonials, case studies or results are published until they are real and approved. Product screens on the site are sample screens, tagged "Sample data", with fictional businesses and data.
 
 ## 10. Contact
 

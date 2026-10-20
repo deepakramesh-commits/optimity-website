@@ -10,7 +10,7 @@ Add the GA4 tag (needs the founder's `G-XXXXXXX` measurement ID) and verify the 
 
 ### Replace the product-screen placeholders with real screenshots
 **Priority:** P1
-Every product screen on the site is an "Illustrative" placeholder (assets/products/placeholders/PLACEHOLDERS.md). Capture real screens from Move Concierge AI first (call log, transcript, enquiry record, survey booking, staff hand-off, overnight summary), then Property Connect AI and Nexus AI. Same file names and sizes; remove each caption as it is replaced.
+Every product screen on the site is a sample placeholder (tagged "Sample data") (assets/products/placeholders/PLACEHOLDERS.md). Capture real screens from Move Concierge AI first (call log, transcript, enquiry record, survey booking, staff hand-off, overnight summary), then Property Connect AI and Nexus AI. Same file names and sizes; remove each caption as it is replaced.
 
 ### Confirm which integrations are live
 **Priority:** P1
