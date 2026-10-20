@@ -141,6 +141,7 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
 .stage .shot figcaption { margin: 0 0 10px; }
 .stage .shot img { border-radius: 10px; max-height: calc(100svh - var(--bar-h) - 48px - 2 * var(--stage-pad) - 36px); object-fit: cover; object-position: left top; transition: opacity 160ms var(--ease); }
 .stage .shot.swap img { opacity: 0; }
+[data-theme="dark"] .shot img { filter: brightness(.84); }
 .stage :focus-visible { outline-color: var(--stage-ink); }
 /* Each step's own screen: shown on phones, and on desktop whenever the stage can't run (no JS). */
 @media screen and (min-width: 1040.01px) {
@@ -150,32 +151,34 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
   html:not(.has-js) .split .inline-shot, .no-stage .split .inline-shot { margin-top: 20px; }
 }
 
-.hero h1 { font-size: clamp(2.4rem, 1rem + 2.6vw, 3.75rem); }
-.hero h1 .ln, .page-hero h1 .nm { display: block; }
-/* The headline starts level with the top of the screen on the stage beside it. */
-.hero { display: flex; flex-direction: column; padding: calc(24px + clamp(24px, 2.6vw, 44px) + 30px) 0 48px; max-width: 600px; }
-.hero .lead { margin-top: 24px; }
+.page-hero h1 .nm { display: block; }
 
+.home-hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(28px, 4vw, 72px); align-items: center; padding: clamp(32px, 4vw, 64px) var(--m) 0; }
+.home-hero h1 { font-size: clamp(1.6rem, 0.8rem + 2.3vw, 3.25rem); }
+.home-hero h1 .ln { display: block; }
+.home-hero .lead { margin-top: 22px; max-width: 46ch; }
+.hh-index { display: grid; padding: clamp(8px, 1.2vw, 16px) clamp(20px, 2.4vw, 32px); }
+.hh-index a { display: grid; gap: 4px; padding: 20px 0; text-decoration: none; }
+.hh-index a + a { border-top: 1px solid rgba(238, 241, 245, .14); } /* taste-skill-ignore: divides a list of links */
+.hh-index b { font-family: var(--display); font-weight: 500; font-size: var(--t-lead); }
+.hh-index a:hover b { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.hi-who { font-size: var(--t-small); color: var(--stage-muted); }
+@media (min-width: 1040.01px) { .home-prods .prod-row { grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); } }
+.home-prods h2 { font-size: clamp(1.5rem, 0.8rem + 1.7vw, 2.4rem); margin-top: 6px; }
+.prod-row .scene { margin-top: 16px; font-family: var(--display); font-size: var(--t-lead); line-height: 1.45; }
 .journey { padding-top: clamp(24px, 3vw, 48px); }
 .journey > h2 { font-size: clamp(1.6rem, 0.6rem + 2.3vw, 2.75rem); }
 .journey > h2 .ln { display: block; }
 .journey > .scene { margin-top: 20px; font-size: var(--t-lead); line-height: 1.45; max-width: 36ch; }
 .steps { list-style: none; margin-top: 24px; }
-.step { min-height: 64vh; padding-top: 48px; display: grid; align-content: start; gap: 10px; }
+.step { min-height: 40vh; padding-top: 48px; display: grid; align-content: start; gap: 10px; }
 .step h3 { font-size: var(--t-lead); }
-.step:last-child { min-height: 52vh; }
+.step:last-child { min-height: 34vh; }
 .after { padding: 24px 0 0; max-width: 42ch; }
-.split-end { height: 20vh; }
+.split-end { height: 8vh; }
 
 /* Secondary products: deliberately smaller */
-.others { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(24px, 4vw, 72px); align-items: start; }
-.others h2 { grid-column: 1 / -1; }
-.prod-mini { display: grid; gap: 14px; align-content: start; }
-.prod-mini .who { color: var(--muted); }
-.prod-mini h3 a, .prod-row h2 a { display: inline-flex; align-items: center; min-height: 44px; }
 
-.prod-mini .on-stage { padding: clamp(16px, 2vw, 28px); }
-.prod-mini.small .on-stage { padding: 16px; }
 
 /* Ordered delivery steps */
 ol.deliver { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 32px; }
@@ -199,18 +202,16 @@ ol.deliver b { display: block; font-family: var(--display); font-weight: 500; fo
 [data-theme="dark"] .logo-row img { filter: grayscale(1) invert(1) contrast(1.05); mix-blend-mode: screen; }
 
 /* Final call to action band */
-.final { background: var(--stage); color: var(--stage-ink); border-radius: var(--r-stage); margin: var(--section) var(--m) 0; padding: clamp(48px, 7vw, 104px) clamp(28px, 5vw, 80px); display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: end; }
-.final p { color: var(--stage-muted); margin-top: 16px; }
+.final { background: var(--surface); color: var(--ink); border-radius: var(--r-stage); margin: var(--section) var(--m) 0; padding: clamp(48px, 7vw, 104px) clamp(28px, 5vw, 80px); display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: end; }
+.final h2 { font-size: clamp(1.5rem, 1rem + 1.9vw, 2.75rem); }
+.final p { margin-top: 16px; }
 .final .acts { margin-top: 0; justify-content: flex-end; }
-.final .tlink { color: var(--stage-ink); }
 /* A page that ends on the navy band runs straight into the navy footer with a small gap. */
-main:has(> .final:last-child) + #site-footer footer.site { margin-top: 12px; }
-.final :focus-visible { outline-color: var(--stage-ink); }
 
 /* ── Inner pages ── */
 .page-hero { display: grid; grid-template-columns: 44fr 56fr; gap: clamp(28px, 4vw, 72px); align-items: center; padding: clamp(24px, 3vw, 48px) var(--m) 0; }
 .page-hero .lead { margin-top: 22px; }
-.page-hero h1 { font-size: clamp(2rem, 1rem + 2.4vw, 3.4rem); }
+.page-hero h1 { font-size: clamp(1.6rem, 0.6rem + 2.2vw, 3.1rem); }
 .page-hero.text-only h1 { font-size: var(--t-display); }
 .page-hero.text-only { grid-template-columns: minmax(0, 860px); }
 .tm { font-size: .42em; vertical-align: super; letter-spacing: 0; }
@@ -258,6 +259,8 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
 .sys-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .sys-list li { padding: 8px 14px; background: var(--surface); border-radius: 6px; }
 
+.prod-row h2 a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.prod-row h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .prod-row { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 4vw, 72px); align-items: center; }
 .prod-row.flip { grid-template-columns: 7fr 5fr; }
 .prod-row.flip > .on-stage { order: -1; }
@@ -302,6 +305,8 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
 /* ── Responsive ── */
 @media (max-width: 1180px) {
   .navlinks a.link { padding: 0 9px; }
+  .home-hero { grid-template-columns: minmax(0, 1fr); }
+  .hh-index { max-width: 640px; }
 }
 
 @media (max-width: 1040px) {
@@ -322,10 +327,9 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
   .split > .stage { display: none; }
   .split > .copy { padding: 0 var(--m); }
   .inline-shot { display: block; margin: 20px calc(-1 * var(--m)) 0; border-radius: 0; padding: 18px var(--m); }
-  .hero { min-height: 0; padding: 48px 0 0; }
   .step, .step:last-child { min-height: 0; padding-top: 40px; }
   .split-end { display: none; }
-  .others, .trust, .facts2, .page-hero, .book, .prod-row, .prod-row.flip, .prod-row.small, .tabs, .other-ways, .team { grid-template-columns: minmax(0, 1fr); }
+  .home-hero, .trust, .facts2, .page-hero, .book, .prod-row, .prod-row.flip, .prod-row.small, .tabs, .other-ways, .team { grid-template-columns: minmax(0, 1fr); }
   .prod-row.flip > .on-stage { order: 0; }
   ol.deliver { grid-template-columns: 1fr 1fr; }
   .timeline { grid-template-columns: 1fr 1fr; }
@@ -335,13 +339,11 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
 }
 
 @media (max-width: 680px) {
+  /* Phone headlines wrap naturally instead of at the desktop line breaks. */
+  .home-hero h1 .ln, .page-hero h1 .nm { display: inline; }
   :root { --m: 20px; --bar-h: 64px; }
   .brand img { height: 34px; }
   .acts .btn { width: 100%; }
-  /* Product screens run off the right edge on phones, as on the desktop stage, so their text stays legible. */
-  .on-stage:has(> .shot) { overflow: hidden; padding-right: 0; }
-  .on-stage .shot { width: 160%; }
-  .on-stage .shot img { border-radius: 10px 0 0 10px; }
   .booking-embed .note { padding: 14px var(--m) 4px; }
   .btn { white-space: normal; text-align: center; padding-top: 10px; padding-bottom: 10px; }
   .commit li { grid-template-columns: 1fr; gap: 6px; }

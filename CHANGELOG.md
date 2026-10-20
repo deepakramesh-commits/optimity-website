@@ -4,6 +4,23 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.0.1.0] - 2026-10-21
+
+Changes from four outside reviews of the product-led site.
+
+### Changed
+- Homepage is a three-product overview: "AI for moving companies, real-estate teams and operations", a product index, then one section per product with its outcome headline, a screen and a product-specific Book a Demo. The Move Concierge walkthrough lives on its own page only
+- Product pages open on the outcome for their buyer: "The calls your moving company misses, answered", "Every web lead called back within a minute", "Ask your ERP and CRM questions in plain English" (titles match, for ad landing)
+- US English throughout, including the sample screens: lead, estimate, elevator, on weekends
+- Desktop product screens show whole; the stage fits its screen; the Move Concierge walkthrough has far less empty space; section gaps are smaller
+- Phone product screens show whole again
+- Client logos moved from the homepage to About ("Companies our engineering team has built software for")
+- The closing band is light and no longer touches the navy footer; sample screens are dimmed in dark mode; ™ only on first mention and in the footer; Nexus AI's tabs use plain labels
+
+### Removed
+- The empty "Security and reliability" commitment and the "Custom code is yours" line from the homepage
+- "Schools" from the questions Property Connect AI answers
+
 ## [2.0.0.0] - 2026-10-20
 
 Product-led rebuild on the `product-led` branch: Optimity presented as an AI product company with three products and a selective custom AI capability, Move Concierge AI first. Design "Split stage" (DESIGN.md).

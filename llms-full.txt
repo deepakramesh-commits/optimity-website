@@ -1,6 +1,6 @@
 # Optimity Technologies — Full Knowledge Base
 
-> Optimity Technologies builds AI products for specific workflows. Its lead product, Move Concierge AI™, answers the calls a moving company misses and gives the team a complete enquiry to follow up. It also makes Property Connect AI™ and Nexus AI™, and builds custom AI systems where a product doesn't fit.
+> Optimity Technologies builds AI products for specific workflows. Its lead product, Move Concierge AI™, answers the calls a moving company misses and gives the team a complete lead to follow up. It also makes Property Connect AI™ and Nexus AI™, and builds custom AI systems where a product doesn't fit.
 
 ---
 
@@ -12,26 +12,26 @@ Optimity Technologies is a team of senior engineers and architects in India, the
 
 **Who it's for:** independent moving companies with a busy phone line, where the owner, general manager or office manager decides how calls are handled and there is already a phone, a calendar and a CRM or dispatch tool. Single or multiple locations.
 
-**The problem:** moving customers call in the evening, at weekends, and when every line is busy. By the time someone calls back in the morning, the customer may already have booked a survey elsewhere.
+**The problem:** moving customers call in the evening, on weekends, and when every line is busy. By the time someone calls back in the morning, the customer may already have booked an estimate elsewhere.
 
 **How it works, from the call to the team:**
-1. **The call comes in** on the calls the company routes to it: after hours, at weekends, or when every line is busy. Callers talk normally and can interrupt.
-2. **It asks about the move:** moving date, origin and destination, home size, stairs and lift access, and large or fragile items such as a piano, artwork, gym equipment or a safe.
-3. **It writes up the enquiry:** contact details and every answer in one record, with the call recording and transcript attached, and a lead score.
-4. **It books the next step** where configured: a video or in-person survey in the estimators' calendar, or a callback, and a summary to the caller by SMS or WhatsApp.
-5. **The team takes it from there:** the enquiry reaches staff by email or in the moving software or CRM. Complaints, unusual requests and anything it can't answer go to a person.
+1. **The call comes in** on the calls the company routes to it: after hours, on weekends, or when every line is busy. Callers talk normally and can interrupt.
+2. **It asks about the move:** moving date, origin and destination, home size, stairs and elevator access, and large or fragile items such as a piano, artwork, gym equipment or a safe.
+3. **It writes up the lead:** contact details and every answer in one record, with the call recording and transcript attached, and a lead score.
+4. **It books the next step** where configured: a virtual or in-home estimate in the estimators' calendar, or a callback, and a summary to the caller by text message.
+5. **The team takes it from there:** the lead reaches staff by email or in the moving software or CRM. Complaints, unusual requests and anything it can't answer go to a person.
 
-A daily summary shows enquiries, bookings and the callers who still need a call back.
+A daily summary shows leads, bookings and the callers who still need a call back.
 
 **What it won't do:** quote a binding price, promise a date or agree to an exception. Those go to the team.
 
-**Systems it connects to:** Google Calendar or a dispatch or booking tool (surveys); MoveOps, Supermove, HubSpot, or the company's own database through a webhook (the enquiry); SMS and WhatsApp Business (caller summary, pre-move checklist 48 hours before the move). Which calls reach it is agreed during setup.
+**Systems it connects to:** Google Calendar or a dispatch or booking tool (estimates); MoveOps, Supermove, HubSpot, or the company's own database through a webhook (the lead); SMS and WhatsApp Business (caller summary, pre-move checklist 48 hours before the move). Which calls reach it is agreed during setup.
 
 ## 3. Property Connect AI™
 
-**Who it's for:** brokerages, real-estate teams and developers whose agents can't call every web, portal or listing-sign enquiry back straight away.
+**Who it's for:** brokerages, real-estate teams and developers whose agents can't call every web, portal or listing-sign lead back straight away.
 
-**How it works:** calls new web enquiries back within a minute of the form; answers listing questions (price, square footage, HOA fees, schools); checks budget, mortgage pre-approval and timeline; books tours in agents' calendars with SMS invites; and warm-transfers serious buyers after a short private briefing to the agent. Offers, negotiation and anything outside the agreed questions stay with agents. Optimity maintains the call script and reviews it against fair-housing guidelines. Calls are recorded and transcribed.
+**How it works:** calls new web leads back within a minute of the form; answers listing questions (price, square footage and HOA fees); checks budget, mortgage pre-approval and timeline; books tours in agents' calendars with SMS invites; and warm-transfers serious buyers after a short private briefing to the agent. Offers, negotiation and anything outside the agreed questions stay with agents. Optimity maintains the call script and reviews it against fair-housing guidelines. Calls are recorded and transcribed.
 
 **Systems:** CRM sync with Follow Up Boss, kvCORE, HubSpot, Salesforce or custom webhooks; agent calendars; SMS.
 
@@ -41,12 +41,12 @@ A daily summary shows enquiries, bookings and the callers who still need a call 
 
 **How it works:** each question goes to the engine built for that kind of data.
 - **SmartOps AI™:** two-way access to sales pipelines, inventory, invoices and purchase orders in ERPNext, Odoo and HubSpot; summaries such as unfulfilled orders and overdue invoices; charts in the conversation; cross-system reconciliation and alerts.
-- **DocIntellect AI™:** answers from knowledge bases, PDFs, spreadsheets, procedures and compliance documents, with citations to the source passage; semantic search (RAG) on Qdrant; a separate knowledge base per team or organisation.
+- **DocIntellect AI™:** answers from knowledge bases, PDFs, spreadsheets, procedures and compliance documents, with citations to the source passage; semantic search (RAG) on Qdrant; a separate knowledge base per team or organization.
 - **SQL Database Agent:** plain English to SQL over production PostgreSQL in strict read-only sandboxes; sortable, exportable results.
 
 Nexus AI can act on an answer only for actions that have been configured and approved, and only for people whose role allows it.
 
-**Fit and security:** sits on top of existing databases, ERP and CRM with no data migration; organisations and teams kept apart with Clerk enterprise authentication and isolated database partitions; self-hosted, on-premise inference through vLLM, so business data doesn't train public models; team-level and row-level permissions.
+**Fit and security:** sits on top of existing databases, ERP and CRM with no data migration; organizations and teams kept apart with Clerk enterprise authentication and isolated database partitions; self-hosted, on-premise inference through vLLM, so business data doesn't train public models; team-level and row-level permissions.
 
 ## 5. How a product goes live
 
@@ -71,7 +71,7 @@ When a workflow needs something the products don't do, Optimity builds a focused
 
 ## 8. Team
 
-- **Ramesh Sethuraman, Founder & CEO:** 35 years in the global IT industry; founded and exited two IT services companies; led strategic programmes for Fortune 500 companies and multinational enterprises; startup advisor, mentor and angel investor.
+- **Ramesh Sethuraman, Founder & CEO:** 35 years in the global IT industry; founded and exited two IT services companies; led strategic programs for Fortune 500 companies and multinational enterprises; startup advisor, mentor and angel investor.
 - **Makam Nagendra, Director:** 33 years in technology leadership, delivery management and business consulting across telecommunications, VoIP, IoT and mobile applications; based in Dallas, Texas.
 
 ## 9. Proof policy

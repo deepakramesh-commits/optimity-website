@@ -10,9 +10,10 @@ Before a page ships: **would an operations director believe a serious software c
 
 Premium B2B software. A white page with navy type and a navy **stage** on which the product's own screens sit, one at a time. Density **balanced (5)**, variance **offset asymmetric (6)**, motion **restrained (3)**.
 
-- **The signature:** on the home and Move Concierge AI pages the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The stage is sized to the screen it shows, the whole screen is visible, and the headline starts level with it. Its "Illustrative" caption sits above the screen.
-- **Hierarchy follows the business.** Move Concierge AI gets the most space everywhere (hero, the longest section, first in every menu and list). Property Connect AI and Nexus AI are real products shown at a visibly smaller size.
-- Neighbouring sections never share a shape: split stage; a 7/5 pair of unequal product blocks; a five-step strip whose first step is filled navy; statement rows beside a surface panel; a logo row; a navy closing band. Inner pages add real tables, a timestamped timeline, tabs and a fit list.
+- **The homepage is a three-product overview** (ads link straight to each product page): a headline naming the three markets, a navy index of the three products, then one section per product (outcome headline, one screen, Book a demo, "See how it works"), delivery, how we work, and a light closing band.
+- **The signature:** on the Move Concierge AI page the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The stage is sized to the screen it shows, the whole screen is visible, and the headline starts level with it. Its "Illustrative" caption sits above the screen.
+- **Hierarchy follows the business.** Move Concierge AI is first in every menu, list and on the homepage, and its page carries the full call-to-follow-up walkthrough. Each product page is an ad landing page in its own right: it opens on the outcome for that buyer.
+- Neighbouring sections never share a shape: a headline beside a navy product index; alternating product rows; a five-step strip whose first step is filled navy; statement rows beside a surface panel; a light closing band (separated from the navy footer by space, never touching it). Inner pages add real tables, a timestamped timeline, tabs and a fit list.
 - Light is the default; dark is complete and is how leadership reviews (on a phone).
 
 ## 2. Color Palette & Roles
@@ -37,10 +38,10 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 - **Display: Literata** (Google Fonts, optical sizes, weight 500). Headlines, step titles, product names, statements. Tracking `-0.015em`, leading 1.04–1.2.
 - **Text: Geist** (weights 400/500/600). Body, navigation, buttons, tables.
-- Steps: small 14px · body 17–18px · lead 19–22px · head 28–44px · display 38–60px (hero) and up to 70px on text-only page heroes. Product-page heroes are set smaller (32–54px) so a product name plus "for …" fits two lines.
-- Headlines fit two lines at 1440, 1024 and 390. Hero lines and product names are authored with `<span class="ln">` / `<span class="nm">` blocks.
+- Steps: small 14px · body 17–18px · lead 19–22px · head 28–44px · display 38–60px (hero) and up to 70px on text-only page heroes. Product-page heroes carry the outcome headline ("The calls your moving company misses, answered") at 26–50px; the product name with ™ opens the lead sentence.
+- Headlines fit two lines from 680px up. Desktop line breaks are authored with `<span class="ln">` / `<span class="nm">` blocks; on phones they wrap naturally (the long homepage headline takes three lines at 390px and below).
 - Sentence case. No uppercase labels, no letter-spaced captions, no monospace outside real code (`pre.code` in the Nexus SQL tab).
-- `™` appears in product page headlines, menus, the footer and the products overview, set small (`.tm`).
+- `™` appears once per page on the product name's first mention (product-page lead, homepage index, products overview) and in the footer, set small (`.tm`). Not in the menu or on Nexus AI's internal engines.
 
 ## 4. Component Stylings
 
@@ -72,7 +73,7 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 ## 8. Voice
 
-A senior engineer talking to an operations manager: plain, specific, confident. Describe what happens before, during and after an enquiry. Name the systems only where today's product pages already name them.
+A senior engineer talking to an operations manager: plain, specific, confident. US English for US buyers: lead (not enquiry), estimate (not survey), elevator (not lift), on weekends. Describe what happens before, during and after a lead. Name the systems only where today's product pages already name them.
 - Avoid "not X but Y", neat pairs and groups of three as rhetoric, slogans, and: seamless, elevate, unlock, empower, cutting-edge, transform, journey, in motion.
 - Never promise every enquiry converts, a revenue figure, or that AI replaces a team. The voice products don't give binding prices, promise dates or agree to exceptions.
 - Every CTA is "Book a Demo" or a product-specific version of it; custom work is "Discuss a problem our products don't solve". The old "Operations Teardown" name is retired.
@@ -94,7 +95,7 @@ Robots, glowing brains, circuit boards, stock businesspeople · fake terminals, 
 ## 11. Files
 
 - `styles.css` (tokens, components, responsive) · `site.js` (stage, tabs, nav state) · `theme.js` and `components.js` (unchanged behaviour).
-- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261020-p17`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261021-p22`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
 - Retired URLs (how-we-work, industries, why-optimity, management-team) 301 in `nginx.conf` and `.htaccess`, query string kept, to the canonical `.html` pages.
 
 ## Decisions Log
@@ -107,5 +108,6 @@ Robots, glowing brains, circuit boards, stock businesspeople · fake terminals, 
 | 2026-10-20 | Literata + Geist | Literata approved with the direction; Geist already on the site |
 | 2026-10-20 | Placeholder rule (§7) | No real screenshots yet; HTML-rendered, captioned placeholders keep the design honest and swappable |
 | 2026-10-20 | "Book a Demo" with `?demo=` routing and Calendly `utm_content` | One booking path, product named on the page and recorded on the booking; Calendly account unchanged |
-| 2026-10-20 | Client logos labelled as engineering clients | They are not Move Concierge customers |
+| 2026-10-20 | Client logos labelled as engineering clients, shown on About only | They are proof of the team, not of the products |
 | 2026-10-20 | Integrations listed only as named on the pre-rebuild product pages | Approved by Deepak; nothing new added |
+| 2026-10-21 | Homepage becomes a three-product overview; outcome headlines on product pages; US English; walkthrough tightened; phone screens shown whole | Outside reviews (designer, moving-company owner, copy editor, skeptical buyer): vague headline, duplicated Move Concierge content, cut-off phone screens, UK terms. Deepak: ads link to each product page, so the homepage stays about all three |
