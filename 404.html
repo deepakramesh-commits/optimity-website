@@ -12,8 +12,8 @@
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 <style>
   /* Self-contained: this page is served for unknown paths at any depth, so it links nothing relative. */
-  :root { --bg:#FFFFFF; --surface:#F2F2F0; --ink:#232323; --muted:#5C5C59; --accent:#F2541B; --accent-ink:#1A1A1A; }
-  [data-theme="dark"] { --bg:#141414; --surface:#1E1E1E; --ink:#EDEDEB; --muted:#A6A6A2; }
+  :root { --bg:#FFFFFF; --ink:#232323; --muted:#5C5C59; --accent:#F2541B; --accent-hover:#F46A39; --accent-ink:#1A1A1A; }
+  [data-theme="dark"] { --bg:#141414; --ink:#EDEDEB; --muted:#A6A6A2; }
   * { box-sizing:border-box; margin:0; padding:0; }
   body { background:var(--bg); color:var(--ink); font-family:Archivo,system-ui,sans-serif; font-size:18px; line-height:1.55; min-height:100svh; display:grid; grid-template-columns:27% 1fr; align-content:center; padding:40px clamp(20px,2.6vw,40px); }
   main { grid-column:2; max-width:640px; }
@@ -22,9 +22,10 @@
   .home .d { display:none; } [data-theme="dark"] .home .l { display:none; } [data-theme="dark"] .home .d { display:block; }
   h1 { font-weight:400; font-size:clamp(2.25rem,1.1rem + 4.2vw,4.75rem); line-height:1.02; letter-spacing:-.028em; }
   p { margin-top:20px; max-width:44ch; }
-  .code { font-variant-numeric:tabular-nums; color:var(--muted); margin-top:0; margin-bottom:12px; }
   .acts { display:flex; flex-wrap:wrap; gap:12px 28px; align-items:center; margin-top:32px; }
-  a.btn { display:inline-flex; align-items:center; min-height:48px; padding:0 22px; background:var(--accent); color:var(--accent-ink); font-weight:600; border-radius:4px; text-decoration:none; }
+  a.btn { display:inline-flex; align-items:center; min-height:48px; padding:0 22px; background:var(--accent); color:var(--accent-ink); font-weight:600; border-radius:4px; text-decoration:none; transition:transform 220ms, background-color 220ms; }
+  a.btn:hover { background:var(--accent-hover); }
+  a.btn:active { transform:translateY(1px); }
   a.tl { color:var(--ink); font-weight:500; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:6px; display:inline-flex; align-items:center; min-height:44px; }
   a:focus-visible { outline:2px solid var(--ink); outline-offset:3px; }
   @media (max-width:680px) { body { display:block; padding-top:120px; } }
@@ -33,9 +34,8 @@
 <body>
 <a class="home" href="/" aria-label="Optimity Technologies, home"><img class="l" src="/logo_lightmode.png" width="476" height="152" alt="Optimity Technologies"><img class="d" src="/logo_darkmode.png" width="884" height="282" alt="Optimity Technologies"></a>
 <main>
-  <p class="code">Error 404</p>
   <h1>There's no page at this address.</h1>
-  <p>The link may be old, or the address mistyped. Everything else on the site is where it should be.</p>
+  <p>Error 404. The link may be old, or the address mistyped. Everything else on the site is where it should be.</p>
   <div class="acts">
     <a class="btn" href="/contact.html#book">Book an Operations Teardown</a>
     <a class="tl" href="/">Back to the homepage</a>

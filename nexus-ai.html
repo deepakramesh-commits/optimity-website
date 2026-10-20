@@ -35,7 +35,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20261019-r2">
+<link rel="stylesheet" href="styles.css?v=20261019-r11">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD -->
@@ -69,14 +69,14 @@
 <main id="main" class="page">
 
 <header class="prod-hero">
-  <h1><span class="mask"><span>Nexus AI<span class="tm">™</span> answers</span></span><span class="mask"><span>from your own systems.</span></span></h1>
+  <h1><span class="mask"><span>Nexus AI<span class="tm">™</span> answers</span></span> <span class="mask"><span>from your own systems.</span></span></h1>
   <div>
     <p class="lead">Your ERP records transactions, your CRM logs customers and your databases store records. Nexus AI connects to all of them and gives your team one place to ask questions in plain English and act on the answer, without replacing anything.</p>
     <div class="acts"><a class="btn" href="contact.html#book">See it on your data</a><a class="tlink" href="#engines">How it answers</a></div>
   </div>
   <div class="ui-panel" data-ui data-rise>
     <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">Which customers have an overdue invoice and an open order?</span><span class="ask">Ask</span></div>
-    <p class="route">Sent to <b>SmartOps</b> · ERPNext and HubSpot · read-only</p>
+    <p class="route">Sent to <b>SmartOps</b> · ERPNext and HubSpot</p>
     <table class="ui-table">
       <thead><tr><th scope="col">Account</th><th scope="col" class="num">Overdue</th><th scope="col" class="num">Open orders</th><th scope="col">Owner</th></tr></thead>
       <tbody>
@@ -85,7 +85,7 @@
         <tr><td>Account 0388</td><td class="num">515.25</td><td class="num">2</td><td>East team</td></tr>
       </tbody>
     </table>
-    <p class="sample" style="margin-top:14px">Sample data.</p>
+    <p class="sample sub">Sample data.</p>
   </div>
 </header>
 
@@ -93,21 +93,21 @@
 <section class="sec" id="engines" aria-labelledby="eng-h">
   <div class="on-rail" data-rise>
     <h2 id="eng-h">Each question goes to the right engine</h2>
-    <p style="margin-top:14px">Nexus AI sends a question to the engine built for that kind of data: documents and files, live business systems, or relational databases.</p>
+    <p class="sub">Nexus AI sends a question to the engine built for that kind of data: documents and files, live business systems, or relational databases.</p>
   </div>
   <div class="engines" data-rise style="--i:1">
-    <div class="engine-list" role="group" aria-label="Engines">
-      <button class="engine-btn" type="button" aria-pressed="true" aria-controls="eng-doc"><b>DocIntellect AI™</b><span>Documents, contracts and reports</span></button>
-      <button class="engine-btn" type="button" aria-pressed="false" aria-controls="eng-ops"><b>SmartOps AI™</b><span>ERPNext, Odoo and HubSpot</span></button>
-      <button class="engine-btn" type="button" aria-pressed="false" aria-controls="eng-sql"><b>SQL Database Agent</b><span>PostgreSQL, in plain English</span></button>
+    <div class="engine-list" role="tablist" aria-label="Engines">
+      <button class="engine-btn" type="button" role="tab" id="tab-eng-doc" aria-selected="true" tabindex="0" aria-controls="eng-doc"><b>DocIntellect AI™</b><span>Documents, contracts and reports</span></button>
+      <button class="engine-btn" type="button" role="tab" id="tab-eng-ops" aria-selected="false" tabindex="-1" aria-controls="eng-ops"><b>SmartOps AI™</b><span>ERPNext, Odoo and HubSpot</span></button>
+      <button class="engine-btn" type="button" role="tab" id="tab-eng-sql" aria-selected="false" tabindex="-1" aria-controls="eng-sql"><b>SQL Database Agent</b><span>PostgreSQL, in plain English</span></button>
     </div>
     <div class="engine-view">
-      <div class="engine-pane on" id="eng-doc">
+      <div class="engine-pane on" id="eng-doc" role="tabpanel" aria-labelledby="tab-eng-doc">
         <h3>Ask questions across documents, contracts and reports</h3>
-        <p style="margin-top:10px">Answers from your knowledge base, PDFs, spreadsheets, operating procedures and compliance documents, each with the passage it came from.</p>
+        <p class="sub">Answers from your knowledge base, PDFs, spreadsheets, operating procedures and compliance documents, each with the passage it came from.</p>
         <div class="ui-panel" data-ui>
           <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">What are the late payment terms in the supplier agreement?</span></div>
-          <p style="margin-top:14px">Payment is due 30 days from invoice. After 45 days a 1.5% monthly late fee applies.</p>
+          <p class="sub">Payment is due 30 days from invoice. After 45 days a 1.5% monthly late fee applies.</p>
           <p class="cite">“…late fee of 1.5% per month on balances unpaid after 45 days…”<span class="src">Supplier agreement, section 4.2 · sample document</span></p>
         </div>
         <ul>
@@ -117,14 +117,14 @@
           <li>A separate, isolated knowledge base per team or organisation</li>
         </ul>
       </div>
-      <div class="engine-pane" id="eng-ops">
+      <div class="engine-pane" id="eng-ops" role="tabpanel" aria-labelledby="tab-eng-ops">
         <h3>Conversational operations for ERPNext, Odoo and HubSpot</h3>
-        <p style="margin-top:10px">Two-way access to sales pipelines, inventory, invoices and purchase orders, without digging through menus.</p>
+        <p class="sub">Two-way access to sales pipelines, inventory, invoices and purchase orders, without digging through menus.</p>
         <div class="ui-panel" data-ui>
           <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">Unfulfilled orders by week, this month</span></div>
           <div class="bars" aria-hidden="true"><span style="height:45%"></span><span style="height:70%"></span><span class="hi" style="height:92%"></span><span style="height:38%"></span></div>
           <div class="bar-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
-          <p class="sample" style="margin-top:12px">Sample data.</p>
+          <p class="sample sub">Sample data.</p>
         </div>
         <ul>
           <li>Live connectors for ERPNext, Odoo and HubSpot</li>
@@ -133,9 +133,9 @@
           <li>Cross-system reconciliation and operational alerts</li>
         </ul>
       </div>
-      <div class="engine-pane" id="eng-sql">
+      <div class="engine-pane" id="eng-sql" role="tabpanel" aria-labelledby="tab-eng-sql">
         <h3>Plain English in, SQL out, for people who don't write SQL</h3>
-        <p style="margin-top:10px">Executives and operations managers query production PostgreSQL databases in plain English.</p>
+        <p class="sub">Executives and operations managers query production PostgreSQL databases in plain English.</p>
         <div class="ui-panel" data-ui>
           <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q">How many customers ordered more than once this quarter?</span></div>
           <pre class="sql"><code>SELECT count(*) FROM (
@@ -181,8 +181,8 @@
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20261019-r2"></script>
-<script src="theme.js?v=20261019-r2"></script>
-<script src="site.js?v=20261019-r2"></script>
+<script src="components.js?v=20261019-r11"></script>
+<script src="theme.js?v=20261019-r11"></script>
+<script src="site.js?v=20261019-r11"></script>
 </body>
 </html>

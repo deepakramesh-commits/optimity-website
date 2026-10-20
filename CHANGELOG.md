@@ -25,10 +25,21 @@ Full redesign, built on the `redesign` branch as a new version alongside the cur
 - Calendly colour parameters follow the new palette (`ffffff` / `232323` / `c2410c`); the embed itself is unchanged
 - 404 page restyled, still self-contained for any URL depth
 - `llms.txt` and `llms-full.txt` rewritten to match, now including the practices, products and leadership
-- One cache string (`?v=20261019-r2`) across every page and the partial fetch
+- One cache string (`?v=20261019-r11`) across every page and the partial fetch
+
+### Fixed (pre-landing review of the redesign)
+- Keyboard focus ring visible on every surface, including the ink close band and the white booking card
+- Button hover keeps AA contrast (lighter orange instead of darker)
+- Dark mode keeps filled tiles and the industries close band dark instead of turning them into light slabs
+- Header fits a 320px screen; under 360px the booking button moves into the menu
+- With JavaScript off, or in print, every teardown card, switch description and Nexus engine pane is visible; on phones the teardown cards sit in the flow instead of pinning
+- Single-choice controls use radio and tab semantics with arrow keys; dropdowns close with Escape; screen readers hear a short summary instead of the whole sample table
+- Sample labels can't be switched off; claims kept to the old facts ("read-only" only for the SQL agent, "founded and exited", data stays the client's, no implied Dallas office)
+- No horizontal scroll on any page from 320px up
 
 ### Removed
 - Uppercase mono labels, eyebrows, numbered steps, hairline dividers, resting shadows, icon-and-card grids and the decorative system diagrams on industries, about and the homepage
+- `nexus-demo.js`, which no page loaded any more
 
 ## [1.0.1.0] - 2026-08-10
 

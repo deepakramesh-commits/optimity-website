@@ -12,7 +12,7 @@ Optimity Technologies builds and deploys operational systems for SME and mid-mar
 
 ## Products
 
-- [Nexus AI™](https://optimitytechnologies.com/nexus-ai.html): plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and documents, through three engines (DocIntellect AI™, SmartOps AI™, SQL Database Agent). Read-only queries, cited sources, private LLM deployment via vLLM, Clerk-based tenant isolation, row-level access control.
+- [Nexus AI™](https://optimitytechnologies.com/nexus-ai.html): plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and documents, through three engines (DocIntellect AI™, SmartOps AI™, SQL Database Agent). Read-only SQL sandboxes, cited document sources, private LLM deployment via vLLM, Clerk-based tenant isolation, row-level access control.
 - [Move Concierge AI™](https://optimitytechnologies.com/move-concierge.html): voice and WhatsApp agent for movers and packers; takes enquiries, itemises inventory, quotes and books surveys.
 - [Property Connect AI™](https://optimitytechnologies.com/property-connect.html): calls new real estate leads within a minute, qualifies them, warm-transfers to agents and books showings.
 

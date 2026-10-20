@@ -35,7 +35,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <script>(function(){try{var t=localStorage.getItem("optimity-theme");if(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css?v=20261019-r2">
+<link rel="stylesheet" href="styles.css?v=20261019-r11">
 <!-- LLM & AI Agent Markdown Discovery -->
 <link rel="alternate" type="text/markdown" title="llms.txt" href="/llms.txt">
 <!-- Schema.org JSON-LD for Google Sitelinks & Organization -->
@@ -118,7 +118,7 @@
 <!-- Hero: what we do, on one alignment; the working panel peeks in below -->
 <header class="hero-rail">
   <div class="col">
-    <h1><span class="mask"><span>We build AI into the</span></span><span class="mask"><span>systems you run.</span></span></h1>
+    <h1><span class="mask"><span>We build AI into the</span></span> <span class="mask"><span>systems you run.</span></span></h1>
     <p class="lead">Optimity is a senior engineering team in India, the USA and the UAE. We work in three practices: AI &amp; Automation, Product Engineering and Enterprise Solutions.</p>
     <div class="acts">
       <a class="btn" href="contact.html#book">Book an Operations Teardown</a>
@@ -127,7 +127,7 @@
   </div>
   <div class="peek ui-panel" data-ui aria-hidden="true">
     <div class="qbar"><span class="mark"></span><span class="q">Which invoices are more than 30 days overdue?</span><span class="ask">Ask</span></div>
-    <p class="route">Sent to <b>SmartOps</b> · ERPNext · read-only</p>
+    <p class="route">Sent to <b>SmartOps</b> · ERPNext · <span class="sample">Sample</span></p>
   </div>
 </header>
 
@@ -135,20 +135,22 @@
 <section class="sec" id="nexus" aria-labelledby="nexus-h">
   <div class="on-rail demo-head" data-rise>
     <h2 id="nexus-h">Nexus AI, on sample data</h2>
-    <p>Nexus AI is our own product. It reads ERPNext, Odoo, HubSpot, PostgreSQL databases and your documents, and answers in plain English with the rows it used.</p>
+    <p>Nexus AI is our own product. It reads ERPNext, Odoo, HubSpot, PostgreSQL databases and your documents, and answers in plain English, with the source document or the result table behind each answer.</p>
   </div>
   <div class="demo on-rail" data-ui data-demo data-rise style="--i:1">
     <div class="result">
       <div class="qbar"><span class="mark" aria-hidden="true"></span><span class="q" data-q-text>Which invoices are more than 30 days overdue?</span><span class="ask">Ask</span></div>
-      <div class="chips" role="group" aria-label="Sample questions">
-        <button class="chip" type="button" data-q="invoices" aria-pressed="true">Overdue invoices</button>
-        <button class="chip" type="button" data-q="orders" aria-pressed="false">Unshipped orders</button>
-        <button class="chip" type="button" data-q="deals" aria-pressed="false">Stalled deals</button>
-        <button class="chip" type="button" data-q="docs" aria-pressed="false">Contract terms</button>
-        <button class="chip" type="button" data-q="sql" aria-pressed="false">Repeat customers</button>
+      <div class="chips" role="radiogroup" aria-label="Sample questions" data-single>
+        <button class="chip" type="button" role="radio" data-q="invoices" aria-checked="true">Overdue invoices</button>
+        <button class="chip" type="button" role="radio" data-q="orders" aria-checked="false">Unshipped orders</button>
+        <button class="chip" type="button" role="radio" data-q="deals" aria-checked="false">Stalled deals</button>
+        <button class="chip" type="button" role="radio" data-q="docs" aria-checked="false">Contract terms</button>
+        <button class="chip" type="button" role="radio" data-q="sql" aria-checked="false">Repeat customers</button>
       </div>
-      <p class="route" data-route>Sent to <b>SmartOps</b> · ERPNext · read-only</p>
-      <div data-out aria-live="polite">
+      <p class="route" data-route>Sent to <b>SmartOps</b> · ERPNext</p>
+      <p class="vh" aria-live="polite" data-announce></p>
+      <!-- No-JS fallback: mirrors QUESTIONS.invoices in site.js. Change both together. -->
+      <div data-out>
         <table class="ui-table">
           <thead><tr><th scope="col">Invoice</th><th scope="col">Due</th><th scope="col" class="num">Days late</th><th scope="col" class="num">Balance</th></tr></thead>
           <tbody>
@@ -157,19 +159,20 @@
             <tr><td>SINV-0457</td><td>15 Sep</td><td class="num">34</td><td class="num">9,310.00</td></tr>
           </tbody>
         </table>
+        <p class="sample sub">Sample data, not a client’s.</p>
       </div>
-      <p class="sample" style="margin-top:16px">Sample data, not a client's.</p>
     </div>
     <div class="controls">
-      <p class="ctl-group">Sources</p>
-      <button class="ctl" type="button" data-src="ERPNext" aria-pressed="true"><span>ERPNext</span><span class="tg"></span></button>
-      <button class="ctl" type="button" data-src="Odoo" aria-pressed="false"><span>Odoo</span><span class="tg"></span></button>
-      <button class="ctl" type="button" data-src="HubSpot" aria-pressed="false"><span>HubSpot</span><span class="tg"></span></button>
-      <button class="ctl more" type="button" data-src="Documents" aria-pressed="false"><span>Documents</span><span class="tg"></span></button>
-      <button class="ctl more" type="button" data-src="PostgreSQL" aria-pressed="false"><span>PostgreSQL</span><span class="tg"></span></button>
+      <p class="ctl-group" id="src-h">Sources</p>
+      <div role="radiogroup" aria-labelledby="src-h" data-single>
+      <button class="ctl" type="button" role="radio" data-src="ERPNext" aria-checked="true"><span>ERPNext</span><span class="tg"></span></button>
+      <button class="ctl" type="button" role="radio" data-src="Odoo" aria-checked="false"><span>Odoo</span><span class="tg"></span></button>
+      <button class="ctl" type="button" role="radio" data-src="HubSpot" aria-checked="false"><span>HubSpot</span><span class="tg"></span></button>
+      <button class="ctl more" type="button" role="radio" data-src="Documents" aria-checked="false"><span>Documents</span><span class="tg"></span></button>
+      <button class="ctl more" type="button" role="radio" data-src="PostgreSQL" aria-checked="false"><span>PostgreSQL</span><span class="tg"></span></button>
+      </div>
       <p class="ctl-group">Answer</p>
-      <button class="ctl" type="button" disabled aria-pressed="true"><span>Read-only queries <span class="val">· always on</span></span><span class="tg"></span></button>
-      <button class="ctl" type="button" data-opt="rows" aria-pressed="true"><span>Show the source rows</span><span class="tg"></span></button>
+            <button class="ctl" type="button" data-opt="rows" aria-pressed="true"><span>Show the source rows</span><span class="tg"></span></button>
       <button class="ctl" type="button" data-opt="chart" aria-pressed="true"><span>Chart</span><span class="tg"></span></button>
     </div>
   </div>
@@ -179,27 +182,27 @@
 <!-- The three practices, as things you can switch on -->
 <section class="sec" aria-labelledby="build-h">
   <h2 class="on-rail" id="build-h" data-rise>What we build</h2>
-  <div class="switches" style="margin-left:calc(-1 * var(--m));margin-right:calc(-1 * var(--m))">
+  <div class="switches">
     <button class="sw b1" type="button" aria-pressed="true"><span class="s"><span class="t">Answer questions from your own data.</span><span class="c"><b>AI &amp; Automation.</b> Assistants built on your documents, LLM integrations and private RAG, and workflow automation for the multi-step work your team does by hand.</span></span><span class="tg" aria-hidden="true"></span></button>
     <button class="sw b2" type="button" aria-pressed="false"><span class="s"><span class="t">Stop retyping orders between systems.</span><span class="c"><b>Enterprise Solutions.</b> ERP and CRM integration, Salesforce work, reporting and business intelligence, and the process automation that runs between them.</span></span><span class="tg" aria-hidden="true"></span></button>
     <button class="sw b3" type="button" aria-pressed="true"><span class="s"><span class="t">Build the app your process is missing.</span><span class="c"><b>Product Engineering.</b> SaaS products and MVPs, web and mobile applications, and platform and API design, on cloud-native architecture.</span></span><span class="tg" aria-hidden="true"></span></button>
     <button class="sw b1" type="button" aria-pressed="false"><span class="s"><span class="t">Answer the phone at nine at night.</span><span class="c"><b>Our client engagement agents.</b> Move Concierge AI answers a moving company's calls and books the survey. Property Connect AI calls a new property lead within a minute and books the showing.</span></span><span class="tg" aria-hidden="true"></span></button>
-    <button class="sw b2" type="button" aria-pressed="false"><span class="s"><span class="t">Ask the ERP directly.</span><span class="c"><b>Nexus AI.</b> Plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with read-only access and the source rows shown.</span></span><span class="tg" aria-hidden="true"></span></button>
+    <button class="sw b2" type="button" aria-pressed="false"><span class="s"><span class="t">Ask the ERP directly.</span><span class="c"><b>Nexus AI.</b> Plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and your documents, with the source document or result table behind each answer.</span></span><span class="tg" aria-hidden="true"></span></button>
   </div>
 </section>
 
 <!-- How it starts: the teardown, pinned, changing as you read -->
 <section class="sec" aria-labelledby="start-h">
+  <h2 id="start-h">How it starts</h2>
   <div class="pin">
     <div class="steps">
-      <h2 id="start-h">How it starts</h2>
       <div class="step act" data-step="1"><h3>First, tell us which systems you run.</h3><p>A short list is enough: the ERP, the CRM, the spreadsheets, and the WhatsApp groups where orders really arrive.</p></div>
       <div class="step" data-step="2"><h3>Then we spend 30 minutes on it with you.</h3><p>We go through the hand-offs between those systems and find where work gets stuck or typed in twice.</p></div>
       <div class="step" data-step="3"><h3>You keep the teardown.</h3><p>Where AI would pay off, and where it wouldn't yet. If there's a fit, we write a proposal priced to that scope. If not, the teardown is still yours.</p></div>
     </div>
     <div class="stage" data-state="1">
       <div class="card state state-1" data-ui>
-        <h4>Your systems <span>Example</span></h4>
+        <p class="ft">Your systems <span>Example</span></p>
         <div class="chk"><i class="y"></i>ERPNext</div>
         <div class="chk"><i class="y"></i>HubSpot</div>
         <div class="chk"><i class="y"></i>Excel, a lot of it</div>
@@ -207,14 +210,14 @@
         <div class="chk"><i></i>Something custom</div>
       </div>
       <div class="card state state-2" data-ui>
-        <h4>Teardown call <span>30 min · Example</span></h4>
+        <p class="ft">Teardown call <span>30 min · Example</span></p>
         <div class="chk"><span>Orders from WhatsApp into ERPNext</span><span class="r">by hand</span></div>
         <div class="chk"><span>Overdue invoice follow-up</span><span class="r">in Excel</span></div>
         <div class="chk"><span>Weekly pipeline review</span><span class="r">exported</span></div>
         <div class="chk"><span>Stock questions to the warehouse</span><span class="r">by phone</span></div>
       </div>
       <div class="card state state-3" data-ui>
-        <h4>What you keep <span>Example</span></h4>
+        <p class="ft">What you keep <span>Example</span></p>
         <div class="chk"><span><b>Pays off now:</b> order intake, invoice follow-up</span></div>
         <div class="chk"><span><b>Not yet:</b> pipeline forecasting, the CRM data isn't clean enough</span></div>
         <div class="chk"><span><b>If you want it:</b> a proposal priced to that scope</span></div>
@@ -240,8 +243,8 @@
 <!-- People -->
 <section class="sec" aria-labelledby="people-h">
   <div class="people">
-    <h2 id="people-h" data-rise>Who you'll talk to</h2>
-    <div class="person" data-rise style="--i:1"><img src="assets/team/ramesh_sethuraman_founder.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Ramesh Sethuraman"><div><h3>Ramesh Sethuraman</h3><p class="role">Founder &amp; CEO</p><p>35 years in IT. Has founded and sold two IT services companies.</p></div></div>
+    <h2 id="people-h" data-rise>Who leads Optimity</h2>
+    <div class="person" data-rise style="--i:1"><img src="assets/team/ramesh_sethuraman_founder.jpg" width="400" height="400" loading="lazy" decoding="async" alt="Ramesh Sethuraman"><div><h3>Ramesh Sethuraman</h3><p class="role">Founder &amp; CEO</p><p>35 years in IT. Has founded and exited two IT services companies.</p></div></div>
     <div class="person" data-rise style="--i:2"><img src="assets/team/makam_nagendra_director.jpeg" width="482" height="488" loading="lazy" decoding="async" alt="Makam Nagendra"><div><h3>Makam Nagendra</h3><p class="role">Director, Dallas</p><p>33 years leading delivery in telecom, VoIP, IoT and mobile. <a class="tlink" href="management-team.html">Management team</a></p></div></div>
   </div>
 </section>
@@ -267,8 +270,8 @@
 
 <div id="site-footer"><!--#include virtual="/footer.html" --></div>
 
-<script src="components.js?v=20261019-r2"></script>
-<script src="theme.js?v=20261019-r2"></script>
-<script src="site.js?v=20261019-r2"></script>
+<script src="components.js?v=20261019-r11"></script>
+<script src="theme.js?v=20261019-r11"></script>
+<script src="site.js?v=20261019-r11"></script>
 </body>
 </html>

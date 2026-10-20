@@ -79,7 +79,7 @@ Logistics runs on an ERP and telematics, clinics on an EHR and fax, retail on PO
 
 ## 9. What clients can hold us to
 
-1. **Clients own what we build.** The code, the system and the roadmap. No platform fee, no lock-in, and we don't hold on to client data.
+1. **Clients own what we build.** The code, the system and the roadmap. No platform fee, no lock-in, and client data stays the client's.
 2. **Built into the stack.** We read from and write to the ERP, CRM and spreadsheets already in use. Nothing gets ripped out to make room for us.
 3. **AI only where it changes an outcome.** Where it won't pay, we say so.
 4. **Security and reliability by default**, delivered at the speed a 50 to 500 person company moves.
@@ -88,7 +88,7 @@ Logistics runs on an ERP and telematics, clinics on an EHR and fax, retail on PO
 
 ## 10. Leadership
 
-- **Ramesh Sethuraman, Founder & CEO**: 35 years in the global IT industry. Has founded and sold two IT services companies; led strategic programmes for Fortune 500 companies and multinational enterprises; startup advisor, mentor and angel investor. Expertise in global delivery management, technology consulting and business change.
+- **Ramesh Sethuraman, Founder & CEO**: 35 years in the global IT industry. Has founded and exited two IT services companies; led strategic programmes for Fortune 500 companies and multinational enterprises; startup advisor, mentor and angel investor. Expertise in global delivery management, technology consulting and business change.
 - **Makam Nagendra, Director**: 33 years in technology leadership, delivery management and business consulting across telecommunications, VoIP, IoT and mobile applications. Has led multinational teams and improved QA and delivery processes. Based in Dallas, Texas.
 Page: https://optimitytechnologies.com/management-team.html
 

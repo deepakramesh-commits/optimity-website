@@ -26,13 +26,16 @@ One ground, one ink, one accent. The accent is the logo's own orange and appears
 | **Stage** (`--stage`) | Stage Grey `#E6E6E3` | Stage Graphite `#282826` | The flat colour behind a fragment, controls column, clocks |
 | **Ink** (`--ink`) | Near-Black `#232323` | Bone `#EDEDEB` | All running text, headings |
 | **Muted** (`--muted`) | Slate Grey `#5C5C59` | Ash `#A6A6A2` | Secondary notes, labels inside fragments, table headers |
-| **Signal Orange** (`--accent`) | `#F2541B` | `#F2541B` | Primary buttons, the home close field, the Nexus query mark. Text on it is `#1A1A1A` (4.9:1) |
-| **Calendly orange** (`--accent-deep`) | `#C2410C` | — | Calendly's `primary_color` only, so its white button text passes AA |
+| **Signal Orange** (`--accent`) | `#F2541B` | `#F2541B` | Primary buttons, the home close field, the Nexus query mark, the highlighted bar in a sample chart, the current-page underline in the nav. Text on it is `#1A1A1A` (5.0:1) |
+| **Orange hover** (`--accent-hover`) | `#F46A39` | `#F46A39` | Button hover: lighter, so the dark text stays at 5.8:1 |
+| **Strong** (`--strong` / `--strong-ink`) | `#232323` / `#FFFFFF` | `#34342F` / `#EDEDEB` | Filled tiles (active engine tab, the hot timeline step, the first next step) and the ink close band. Stays dark in dark mode, never a light slab |
+| **Calendly orange** | `#C2410C` | — | Calendly's `primary_color` only (set in contact.html's data-url), so its white button text passes AA |
 | Band tints (`--band-1/2/3`) | `#E8E6E2` `#DFE6E8` `#E7E3EC` | `#2B2721` `#1F292B` `#27232C` | Fill of a switched-on sentence band on the home page |
 
 - Body copy is always full ink (≥ 7:1). Muted is for secondary notes only.
 - Surfaces are separated by a tone step, never by a line or a shadow.
 - Orange is never used as text colour on white (3.3:1 fails).
+- Focus rings use `--focus`, which flips inside strong tiles and always-white fragments so the ring always contrasts.
 - Banned: cream-and-terracotta, purple/indigo, neon, gradients, pure `#000000`.
 
 ## 3. Typography Rules
@@ -47,10 +50,12 @@ One ground, one ink, one accent. The accent is the logo's own orange and appears
 
 ## 4. Component Stylings
 
-- **Buttons:** flat Signal Orange fill, near-black text, 4px radius, 48px tall (44px small, 52px in cards). Hover darkens one step; press translates 1px. One primary action per screen; the second action is a **text link** with a 2px underline that opens on hover, never a ghost button.
+- **Buttons:** flat Signal Orange fill, near-black text, 4px radius, 48px tall (44px small, 52px in cards). Hover lightens to `#F46A39`; press translates 1px. One primary action per screen; the second action is a **text link** with a 2px underline that opens on hover, never a ghost button.
 - **Header:** logo, six plain links (two are dropdowns: Products, About us), a text theme toggle and the orange "Book an Operations Teardown" button (short label "Book a teardown" under 1180px). No bar chrome. Under 1040px the links move into a drawer driven by the existing `#nav-cb` checkbox (`theme.js` unchanged).
 - **Dropdowns:** the only resting shadow on the site, because they float. Group names inside (Operational intelligence, Client engagement agents) are plain small text.
-- **Interface fragments (`data-ui`):** cropped pieces of real product UI at true size: query bar with an orange mark, routed-to line, data table with tabular figures, small bar chart, source toggles, checklists, transcripts, records. Inside a fragment the product's own conventions apply (1px control borders, 6–10px radii). **Every fragment that shows data carries a visible "Sample data" / "Example" / "Sample" label.**
+- **Interface fragments (`data-ui`):** cropped pieces of real product UI at true size: query bar with an orange mark, routed-to line, data table with tabular figures, small bar chart, source toggles, checklists, transcripts, records. Inside a fragment the product's own conventions apply (1px control borders, 6–10px radii, 8px chips). Fragment titles are `p.ft`, not headings. Citations sit on a Stage tone step, never a coloured side rule. **Every fragment that shows data carries a visible "Sample data" / "Example" / "Sample" label, and no control can hide it.**
+- **Choice groups:** single-choice buttons use radio semantics (`role=radiogroup`/`radio`, `aria-checked`, arrow keys); the Nexus engine picker is a tab list; independent switches use `aria-pressed`.
+- **Product claims inside fragments** stay inside the old facts: "read-only" only for the SQL Database Agent; SmartOps is two-way.
 - **Sentence bands with switches (home):** a full-width band per capability; the switch is a real `<button aria-pressed>`; switching on fills the band with a tint and opens the practice it belongs to.
 - **Tables:** real `<table>` with header cells and 1px row rules; on phones each row stacks into a labelled block (`data-label`).
 - **Statement rows:** a key sentence in the rail column and its explanation from the rail onward; every other row sits on Surface.
@@ -67,10 +72,10 @@ One ground, one ink, one accent. The accent is the logo's own orange and appears
 
 ## 6. Motion & Interaction
 
-- **Signature move:** hero headline lines rise from behind their baseline on load (pure CSS, 900ms, second line +110ms).
-- **Entrances:** headings, rows, list items and fragments rise 24px with opacity as they enter (`site.js`, IntersectionObserver, staggered 80ms by position). Content is visible without JavaScript, and anything already on screen at load is shown immediately.
+- **Signature move:** hero headline lines rise from behind their baseline on load (pure CSS, 680ms from 70% with a fade, second line +110ms), so the headline is partly visible from the first frame.
+- **Entrances:** headings, rows, list items and fragments rise 24px with opacity as they enter (`site.js`, IntersectionObserver, staggered 70ms by position, capped at 3 steps). Content is visible without JavaScript, anything already on screen at load is shown at once, and everything is revealed at the bottom of the page and for print. Only the `rise-on` root class hides content; `has-js` only means the script ran.
 - **Live things (one per page, from real content):** home — the Nexus AI sample panel (questions and sources switch the answer); sentence switches; the pinned teardown card changing state. Nexus AI — the engine picker. About — live office clocks for India, Dallas and the UAE. Product pages — the call and lead fragments.
-- Transform and opacity only. `prefers-reduced-motion` stops everything (CSS kill switch, and `site.js` skips entrances and bar growth).
+- Transform and opacity only (sample bars grow with `scaleY`). `prefers-reduced-motion` stops everything (CSS kill switch, and `site.js` skips entrances and bar growth). Hover- and focus-opened dropdowns close with Escape.
 - No perpetual loops, nothing floats, no "live" indicators. (A deliberate departure from stitch-skill's default of perpetual micro-loops.)
 
 ## 7. Imagery
@@ -104,7 +109,7 @@ Eyebrow labels above headings · monospace outside real code · 01/02/03 index n
 ## 11. Files
 
 - `styles.css` — tokens, components, responsive rules. `site.js` — entrances, Nexus sample panel, switches, pinned teardown, engine picker, clocks, dropdown state. `theme.js` and `components.js` — unchanged behaviour (theme toggle, partial loading, nav highlighting).
-- Cache string: every page and `components.js` share `?v=YYYYMMDD-rN` (currently `20261019-r2`). Bump it whenever `styles.css`, `site.js`, `theme.js` or `components.js` changes.
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-rN` (currently `20261019-r11`). Bump it whenever `styles.css`, `site.js`, `theme.js` or `components.js` changes.
 - Verification: `taste-skill` `lint.mjs` (0 FAIL) and `inspect.mjs` on every page; screenshots at 1440 / 1024 / 390 in both themes via gstack `/browse`.
 
 ## Decisions Log
@@ -120,3 +125,4 @@ Eyebrow labels above headings · monospace outside real code · 01/02/03 index n
 | 2026-10-19 | Mono labels, eyebrows, numbered steps, hairlines, shadows removed | Generated-page tells (audit 2026-10-19) |
 | 2026-10-19 | Industries / about diagrams replaced by a sector table, a document-to-record fragment and live office clocks | The diagrams were decoration, not real systems |
 | 2026-10-19 | Calendly primary `#C2410C` | Keeps Calendly's own white button text at AA |
+| 2026-10-19 | `/review` fixes: strong-tile token, lighter hover, Escape on dropdowns, radio/tab semantics, no-JS and print show every state, 320px header | Review Army + adversarial pass on the redesign branch |
