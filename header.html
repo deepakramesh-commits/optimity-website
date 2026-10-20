@@ -1,57 +1,30 @@
-<nav class="site"><div class="wrap">
-  <a class="brand" href="index.html" aria-label="Optimity Technologies">
+<nav class="site" aria-label="Main"><div class="bar">
+  <a class="brand" href="index.html" aria-label="Optimity Technologies, home">
     <img src="logo_lightmode.png" width="476" height="152" alt="Optimity Technologies" class="logo-light">
     <img src="logo_darkmode.png" width="884" height="282" alt="Optimity Technologies" class="logo-dark">
   </a>
-  <input type="checkbox" id="nav-cb" class="nav-cb" aria-hidden="true">
-  <div class="navlinks">
-    <a class="link" href="how-we-work.html">How We Work</a>
+  <input type="checkbox" id="nav-cb" class="nav-cb" aria-hidden="true" tabindex="-1" autocomplete="off">
+  <div class="navlinks" id="navlinks">
+    <a class="link" href="index.html" data-nav="index.html">Home</a>
     <div class="nav-dropdown">
-      <button class="link nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
-        Featured Products <span class="caret">▾</span>
-      </button>
-      <div class="dropdown-menu dropdown-menu-flyout">
-        <div class="dropdown-submenu">
-          <div class="dropdown-submenu-trigger" tabindex="0" role="button" aria-haspopup="true">
-            <span>Operational Intelligence</span>
-            <span class="sub-caret">▸</span>
-          </div>
-          <div class="dropdown-subpanel">
-            <a class="dropdown-item" href="nexus-ai.html" data-nav="nexus-ai.html">Nexus AI™</a>
-          </div>
-        </div>
-        <div class="dropdown-submenu">
-          <div class="dropdown-submenu-trigger" tabindex="0" role="button" aria-haspopup="true">
-            <span>Client Engagement Agent</span>
-            <span class="sub-caret">▸</span>
-          </div>
-          <div class="dropdown-subpanel">
-            <a class="dropdown-item" href="move-concierge.html" data-nav="move-concierge.html">Move Concierge AI™</a>
-            <a class="dropdown-item" href="property-connect.html" data-nav="property-connect.html">Property Connect AI™</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="link" href="industries.html" data-nav="industries.html">Industries</a>
-    <a class="link" href="why-optimity.html" data-nav="why-optimity.html">Why Optimity</a>
-    <div class="nav-dropdown">
-      <button class="link nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
-        About us <span class="caret">▾</span>
-      </button>
+      <a class="link nav-dropdown-trigger" href="products.html" data-nav="products.html" aria-haspopup="true" aria-expanded="false">Products</a>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="about.html" data-nav="about.html">Company</a>
-        <a class="dropdown-item" href="management-team.html" data-nav="management-team.html">Management Team</a>
+        <a class="dropdown-item lead-item" href="move-concierge.html" data-nav="move-concierge.html">Move Concierge AI™<span>For moving companies</span></a>
+        <a class="dropdown-item" href="property-connect.html" data-nav="property-connect.html">Property Connect AI™<span>For real-estate teams</span></a>
+        <a class="dropdown-item" href="nexus-ai.html" data-nav="nexus-ai.html">Nexus AI™<span>For questions across your business systems</span></a>
       </div>
     </div>
-    <a class="link" href="contact.html">Contact</a>
+    <a class="link" href="custom-ai-systems.html" data-nav="custom-ai-systems.html">Custom AI Systems</a>
+    <a class="link" href="about.html" data-nav="about.html">About</a>
+    <a class="link" href="contact.html" data-nav="contact.html">Contact</a>
     <div class="mobile-nav-actions">
       <button class="toggle" data-theme-toggle type="button">◐ Dark</button>
-      <a class="btn btn-primary btn-sm nav-cta" href="contact.html#book">Book an Operations Teardown</a>
+      <a class="btn" href="contact.html#book">Book a Demo</a>
     </div>
   </div>
   <div class="navactions">
-    <button class="toggle desktop-only" data-theme-toggle type="button">◐ Dark</button>
-    <a class="btn btn-primary btn-sm nav-cta desktop-only" href="contact.html#book"><span class="cta-long">Book an Operations Teardown</span><span class="cta-short">Book a teardown</span></a>
-    <label class="menu-btn" for="nav-cb" role="button" tabindex="0" aria-label="Toggle menu">≡</label>
+    <button class="toggle" data-theme-toggle type="button">◐ Dark</button>
+    <a class="btn btn-sm nav-cta" href="contact.html#book">Book a Demo</a>
+    <label class="menu-btn" for="nav-cb" role="button" tabindex="0" aria-label="Open the menu" aria-controls="navlinks" aria-expanded="false">Menu</label>
   </div>
 </div></nav>
