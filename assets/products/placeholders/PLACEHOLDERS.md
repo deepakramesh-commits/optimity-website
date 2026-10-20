@@ -1,6 +1,6 @@
 # Product screen placeholders
 
-There are no real product screenshots yet. Every product screen on the site is a placeholder, built as an HTML/CSS mock-up in `src/` and rendered to PNG at 2x with the gstack browse tool. Each one uses fictional sample data ("Sample Moving Co.", "Sample Realty", "Sample Distribution Co.", hidden phone numbers) and US English (lead, estimate, elevator) and shows a **"Sample data"** tag in its title bar. There is no separate caption on the site.
+There are no real product screenshots yet. Every product screen on the site is a placeholder, built as an HTML/CSS mock-up in `src/` and rendered to PNG at 2x with the gstack browse tool. Each one uses fictional sample data ("Sample Moving Co.", "Sample Home Services Co.", "Sample Nail Studio", "Sample Hair Studio", "Sample Realty", "Sample Distribution Co.", hidden phone numbers) and US English (lead, estimate, elevator) and shows a **"Sample data"** tag in its title bar. There is no separate caption on the site.
 
 ## Swapping in a real screenshot
 
@@ -17,14 +17,26 @@ There are no real product screenshots yet. Every product screen on the site is a
 |---|---|---|---|
 | `mc-incoming-call.png` | 1440 × 840 (720 × 420) | Move Concierge page: "How it works" step 1 and the stage's first screen | The call log or dashboard view showing an after-hours or busy-line call answered by Move Concierge AI |
 | `mc-call-transcript.png` | 1440 × 800 (720 × 400) | Home: Move Concierge section · Move Concierge page: step 2 | The transcript view of a real (consented or test) call, showing the move questions and the "no binding price" handling |
-| `mc-enquiry-record.png` | 1760 × 1040 (880 × 520) | Products: Move Concierge row · Move Concierge page: hero and step 3 · also composited into `/og-image.png` | The structured enquiry record with the recording attached |
+| `mc-enquiry-record.png` | 1760 × 1040 (880 × 520) | Products: AI Receptionist row · Move Concierge page: hero and step 3 · also composited into `/og-image.png` | The structured enquiry record with the recording attached |
 | `mc-survey-booked.png` | 1440 × 880 (720 × 440) | Move Concierge page: step 4 | The survey or callback as it appears in the estimator calendar, plus the SMS or WhatsApp message to the caller |
 | `mc-team-handoff.png` | 1440 × 960 (720 × 480) | Move Concierge page: step 5 | The email or CRM record staff receive, ideally one that shows a "needs a person" flag |
-| `mc-morning-summary.png` | 1440 × 920 (720 × 460) | Move Concierge page: "What you can see" | The daily summary: enquiries, surveys booked, callbacks due, items passed to a person |
+| `mc-morning-summary.png` | 1440 × 920 (720 × 460) | Move Concierge page: "What you can see" · AI Receptionist overview: movers edition row | The daily summary: enquiries, surveys booked, callbacks due, items passed to a person |
 | `pc-lead-record.png` | 1440 × 880 (720 × 440) | Products: Property Connect row · Property Connect page: hero and "How it works" | A qualified web lead record with call-back time, pre-approval, timeline and tour |
 | `pc-tour-briefing.png` | 1440 × 760 (720 × 380) | Home: Property Connect section · Property Connect page: "How it works" | The agent's private briefing and the booked tour |
 | `nexus-answer-table.png` | 1440 × 1000 (720 × 500) | Products: Nexus row · Nexus AI page: hero and the ERP and CRM tab | A SmartOps answer from ERPNext, Odoo or HubSpot with its table and chart |
 | `nexus-doc-answer.png` | 1440 × 640 (720 × 320) | Home: Nexus section · Nexus AI page: the Documents tab | A DocIntellect answer with its cited passage |
+| `ar-hs-dashboard.png` | 1440 × 960 (720 × 480) | AI Receptionist, home services page: hero · AI Receptionist overview: its edition row | The real AI Receptionist dashboard for a home-services business (plumbing, electrical, HVAC): calls answered, bookings and calls passed to a person |
+| `ar-hs-call.png` | 1440 × 680 (720 × 340) | AI Receptionist, home services page: "How it works" step 1 and the stage's first screen | A real (consented) or clearly labelled demo call for a home-services business (plumbing, electrical, HVAC), or an audio recording of the demo line (the number itself stays off the site) |
+| `ar-hs-booking.png` | 1440 × 920 (720 × 460) | AI Receptionist, home services page: step 2 | The booking as it appears in the business's real booking system |
+| `ar-hs-call-record.png` | 1440 × 880 (720 × 440) | AI Receptionist, home services page: step 3 | The same call's record in the real dashboard |
+| `ar-nail-dashboard.png` | 1440 × 960 (720 × 480) | AI Receptionist, nail salons page: hero · AI Receptionist overview: its edition row | The real AI Receptionist dashboard for a nail or beauty studio: calls answered, bookings and calls passed to a person |
+| `ar-nail-call.png` | 1440 × 680 (720 × 340) | AI Receptionist, nail salons page: "How it works" step 1 and the stage's first screen | A real (consented) or clearly labelled demo call for a nail or beauty studio, or an audio recording of the demo line (the number itself stays off the site) |
+| `ar-nail-booking.png` | 1440 × 800 (720 × 400) | AI Receptionist, nail salons page: step 2 | The booking as it appears in the business's real booking system |
+| `ar-nail-call-record.png` | 1440 × 720 (720 × 360) | AI Receptionist, nail salons page: step 3 | The same call's record in the real dashboard |
+| `ar-hair-dashboard.png` | 1440 × 960 (720 × 480) | AI Receptionist, hair salons page: hero · AI Receptionist overview: its edition row | The real AI Receptionist dashboard for a hair salon or barbershop: calls answered, bookings and calls passed to a person |
+| `ar-hair-call.png` | 1440 × 720 (720 × 360) | AI Receptionist, hair salons page: "How it works" step 1 and the stage's first screen | A real (consented) or clearly labelled demo call for a hair salon or barbershop, or an audio recording of the demo line (the number itself stays off the site) |
+| `ar-hair-booking.png` | 1440 × 840 (720 × 420) | AI Receptionist, hair salons page: step 2 | The booking as it appears in the business's real booking system |
+| `ar-hair-call-record.png` | 1440 × 840 (720 × 420) | AI Receptionist, hair salons page: step 3 | The same call's record in the real dashboard |
 
 The Database tab on the Nexus AI page shows an example query as text (labelled "Example query"), not an image.
 
