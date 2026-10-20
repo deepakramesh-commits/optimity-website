@@ -4,6 +4,43 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.0.0.0] - 2026-10-20
+
+Product-led rebuild on the `product-led` branch: Optimity presented as an AI product company with three products and a selective custom AI capability, Move Concierge AI first. Design "Split stage" (DESIGN.md).
+
+### Added
+- Products overview (`products.html`) and Custom AI Systems (`custom-ai-systems.html`) pages
+- Homepage built around Move Concierge AI: the missed-call scenario and the full call-to-follow-up journey, with a navy stage that shows each step's screen
+- Each product page answers who it's for, the problem, how it works, how it fits existing systems (only integrations already named on the old pages) and the next step; each says what stays with people
+- "Book a Demo" everywhere: product CTAs pass `?demo=`, the contact page names the product being booked and tags the Calendly booking with `utm_content`; "Discuss a problem our products don't solve" uses the same booking
+- Ten labelled product-screen placeholders (HTML sources in `assets/products/placeholders/src/`, rendered PNGs, `PLACEHOLDERS.md` with sizes, usage and replacements)
+- Trust section: commitments, a human-oversight and security note limited to documented product behaviour, and the permitted client logos labelled as engineering clients
+- Team section on About (`#team`) with Ramesh Sethuraman and Makam Nagendra
+- `site.js` for the stage, the Nexus AI tabs and nav state
+
+### Changed
+- Navigation: Home · Products · Custom AI Systems · About · Contact, with "Book a Demo"
+- Type: Literata and Geist (Fraunces and Geist Mono dropped). Palette: white, navy and charcoal with the logo's orange on buttons. Full dark theme
+- All titles, descriptions, JSON-LD, `og-image.png`, `sitemap.xml`, `llms.txt` and `llms-full.txt` rewritten for the product-led positioning
+- Move Concierge AI copy no longer promises accurate quotes, never missing an enquiry or "complete analytics"; it states that the product doesn't give binding prices or promise dates
+- 404 page restyled, still self-contained; points to the products
+- nginx sends relative redirect locations (`absolute_redirect off`); pages are served with `Cache-Control: no-cache` so a cached page never pairs with newer CSS or JS
+- Product-screen image URLs carry the shared `?v=` cache string, so a same-name screenshot swap shows after a bump
+- The company profile PDF is no longer linked (it described the old services positioning); see TODOS.md
+
+### Fixed
+- The sticky product stage keeps its "Illustrative" caption in view on short laptop screens, tracks the step being read when scrolling back up, and swaps instantly under reduced motion
+- Without JavaScript the home and Move Concierge pages stack and show each step's own screen
+- The mobile menu closes after any menu link (including product links and Book a Demo), after Back/forward, and when the window widens
+- `?demo=` only accepts the four known values
+- `/header` and `/footer` are no longer served as pages
+
+### Removed
+- how-we-work, industries, why-optimity and management-team pages, with 301s (also for the `.html` and trailing-slash forms, query string kept) to custom-ai-systems.html, products.html, about.html and about.html#team, in `nginx.conf` and `.htaccess`
+- The "Operations Teardown" name, everywhere
+- The `price: 0` Offer in the Nexus AI structured data
+- `nexus-demo.js`, which no page loaded
+
 ## [1.0.1.0] - 2026-08-10
 
 Homepage revisions from the first stakeholder review of staging (phone, dark mode).

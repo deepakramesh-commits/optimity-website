@@ -8,9 +8,17 @@ Add the GA4 tag (needs the founder's `G-XXXXXXX` measurement ID) and verify the 
 
 ## Proof & Content
 
+### Replace the product-screen placeholders with real screenshots
+**Priority:** P1
+Every product screen on the site is an "Illustrative" placeholder (assets/products/placeholders/PLACEHOLDERS.md). Capture real screens from Move Concierge AI first (call log, transcript, enquiry record, survey booking, staff hand-off, overnight summary), then Property Connect AI and Nexus AI. Same file names and sizes; remove each caption as it is replaced.
+
+### Confirm which integrations are live
+**Priority:** P1
+The product pages list only integrations named on the pre-rebuild pages (Google Calendar, MoveOps, Supermove, HubSpot, SMS, WhatsApp Business, webhooks; Follow Up Boss, kvCORE, Salesforce; ERPNext, Odoo, PostgreSQL). Confirm each is ready for a customer and remove any that aren't.
+
 ### Publish the first real anonymized deployment story
 **Priority:** P1
-The composite dossiers were removed (2026-08-10 stakeholder feedback — fictional companies read as fake next to real logos). The deployment-log slot on index.html and the .dlog CSS component await the first REAL story: convert one of the seven permitted clients (assets/logo/PERMISSIONS.md) into an anonymized DEPLOYMENT entry with a true number. Highest-leverage sales asset on the site.
+No case study is published. The first real one should come from a Move Concierge AI pilot (with the customer's permission, or anonymized by default) and sit in the homepage trust section. Until then the site shows no results, testimonials or customer counts.
 
 ## Deploy & Performance
 
@@ -28,7 +36,7 @@ favicon.svg is 181KB (huge for an icon), logo_darkmode.png is 82KB at 884×282 f
 
 ### Self-host fonts
 **Priority:** P3
-Google Fonts stylesheet is render-blocking and a third-party availability dependency. Self-host the used Fraunces/Geist/Geist Mono woff2 subsets.
+Google Fonts stylesheet is render-blocking and a third-party availability dependency. Self-host the Literata (500) and Geist (400/500/600) woff2 subsets.
 
 ### Post-deploy checks
 **Priority:** P3
@@ -38,7 +46,7 @@ After first production deploy: run the site through LinkedIn Post Inspector (ref
 
 ### Cache-version bump guard
 **Priority:** P3
-Nothing enforces bumping the `?v=` params when styles.css/components.js/theme.js change (30-day cache). Add a pre-ship check comparing diff vs. version strings.
+Nothing enforces bumping the `?v=` params when styles.css/site.js/components.js/theme.js change (30-day cache). Add a pre-ship check comparing diff vs. version strings.
 
 ### Deduplicate theme-button rendering
 **Priority:** P3
@@ -53,3 +61,16 @@ Off-scale spacing values remain in component CSS (14/18/22px gaps and paddings) 
 ### Replace the SEE/REASON/ACT hexagon diagram
 The problem section now carries the simplified Before/After ops map (relocated from the hero) — the last abstract-AI visual is gone.
 **Completed:** v1.0.1.0 (2026-08-10)
+
+## P1: Legal review of the voice-product copy
+
+The Property Connect and Move Concierge pages say every call is recorded and transcribed, and Property Connect places outbound AI calls to web enquiries. Before launch, have counsel confirm the recording notice and AI-disclosure wording callers hear, consent capture for outbound calls (TCPA), the fair-housing sentence ("reviews it against fair-housing guidelines"), whether Property Connect should answer questions about schools (a steering risk), and the custom-work ownership line. There is no privacy page yet; Calendly bookings and call recordings both collect personal data.
+
+## P2: A product-led company profile
+
+`Optimity_Profile_May_2026.pdf` is the old services deck (industries, consulting, a different email). It is no longer linked from About or llms-full.txt. It is still in the repo and served at its old URL, which search engines may have indexed; decide whether to remove it (and 410 the URL) or replace it. Replace it with a product-led profile, then link it again.
+
+## P2: Lighter product screens
+
+Placeholders are 2x PNGs (78–147 KB each). When real screenshots land, add WebP/AVIF and a 720w width through `srcset` (site.js would need to swap `srcset` too).
+

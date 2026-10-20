@@ -1,12 +1,13 @@
 # Optimity website
 
-Operations-first AI consulting. Static marketing site — six pages, no build step, no dependencies.
+Optimity Technologies makes AI products for specific workflows: Move Concierge AI (the lead product), Property Connect AI and Nexus AI, plus custom AI systems. Static marketing site: eight pages, no build step, no dependencies.
 
 - **Staging (review) URL:** https://deepakramesh-commits.github.io/optimity-website/
-- **Pages:** `index.html` (Home), `how-we-work.html`, `industries.html`, `why-optimity.html`, `about.html`, `contact.html` — plus a branded `404.html` error page
+- **Pages:** `index.html` (Home), `products.html`, `move-concierge.html`, `property-connect.html`, `nexus-ai.html`, `custom-ai-systems.html`, `about.html` (team at `#team`), `contact.html` (booking at `#book`) — plus a self-contained `404.html`. The old how-we-work, industries, why-optimity and management-team pages are retired and 301 in `nginx.conf`.
 - **Shared partials:** `header.html` / `footer.html`, loaded on every page by `components.js` (nginx SSI in production, fetch fallback locally)
-- **Styles:** `styles.css` · **Theme toggle:** `theme.js` · **Design system:** `DESIGN.md`
-- **Booking:** inline Calendly embed on the Contact page (`#book`).
+- **Styles:** `styles.css` · **Theme toggle:** `theme.js` · **Page behaviour:** `site.js` (the product stage, Nexus tabs, nav state) · **Design system:** `DESIGN.md`
+- **Booking:** inline Calendly embed on the Contact page (`#book`). Every "Book a Demo" links there; product CTAs add `?demo=move-concierge`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`, which names the product on the page and tags the booking with `utm_content`.
+- **Product screens:** labelled placeholders in `assets/products/placeholders/` until real screenshots exist; see `PLACEHOLDERS.md` there for sizes, usage and how to swap one in.
 - **Discovery layer:** `sitemap.xml`, `robots.txt`, `llms.txt` / `llms-full.txt`, `og-image.png` share card, Schema.org JSON-LD in each page head.
 - **Version:** `VERSION` holds the current release (`X.Y.Z.W`); every release gets an entry in `CHANGELOG.md`. Open work lives in `TODOS.md`.
 
@@ -31,9 +32,9 @@ docker compose up -d --build   # serves on 127.0.0.1:3000
 ```
 
 - **`Dockerfile`** — `nginx:1.27-alpine`, copies the site files (HTML, CSS, JS, images, the profile PDF, and the txt/xml discovery files) plus `assets/` into the web root (favicons are copied to the root because every page links them there).
-- **`nginx.conf`** — clean URLs (`/about` → `about.html`), SSI for the shared header/footer partials, gzip, 30-day static-asset caching, security headers repeated per location block (a location-level `add_header` cancels inheritance), and `404.html` as the error page for unknown paths.
+- **`nginx.conf`** — clean URLs (`/about` → `about.html`), SSI for the shared header/footer partials, gzip, 30-day static-asset caching, security headers repeated per location block (a location-level `add_header` cancels inheritance), 301s for the four retired pages (relative `Location`, via `absolute_redirect off`, so they work behind the TLS proxy; query strings kept), `Cache-Control: no-cache` on pages, and `404.html` as the error page for unknown paths. `.htaccess` carries the same redirects for Apache hosting; keep the two in step. GitHub Pages staging cannot serve these 301s.
 - **`docker-compose.yml`** — binds **localhost only** (`127.0.0.1:3000`); a reverse proxy (Dokploy) terminates TLS and exposes the site publicly. Port 3000 must not be reachable externally.
-- **`.dockerignore`** — excludes all Markdown (including the internal `assets/logo/PERMISSIONS.md` ledger) so internal docs are never published to the public web.
+- **`.dockerignore`** — excludes all Markdown (including the internal `assets/logo/PERMISSIONS.md` ledger and `PLACEHOLDERS.md`) and the HTML sources of rendered images (`assets/products/placeholders/src`, `assets/og-src`), so internal files are never published from the Docker image. GitHub Pages staging publishes the whole repository, these files included.
 
 ## Versioning & changelog
 
@@ -55,9 +56,10 @@ git checkout -b edit/hero-copy        # name it for what you're changing
 git add -A
 git commit -m "Tighten hero subhead copy"
 
-# If you touched styles.css, theme.js, or components.js: bump the shared
-# `?v=YYYYMMDD-vN` cache-version string everywhere it appears (all pages +
-# components.js) — production caches static assets for 30 days.
+# If you touched styles.css, site.js, theme.js, or components.js, or replaced a product
+# screenshot in assets/products/placeholders: bump the shared
+# `?v=YYYYMMDD-pN` cache-version string everywhere it appears (all pages, including
+# the placeholder image URLs, + the partial fetch in components.js) — production caches static assets for 30 days.
 
 # 4. Push the branch and open a PR against main
 git push -u origin edit/hero-copy

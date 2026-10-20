@@ -1,39 +1,25 @@
-# Optimity Technologies — Operations-First Engineering for SMEs and Mid-Market Companies
+# Optimity Technologies — AI products for specific workflows
 
-> We build and deploy the systems your business actually needs. Operations-first engineering for SME and mid-market companies: software, AI, and integrations that go into production.
+> Optimity Technologies builds AI products for specific workflows. Its lead product, Move Concierge AI™, answers the calls a moving company misses and gives the team a complete enquiry to follow up. It also makes Property Connect AI™ for real-estate teams and Nexus AI™ for questions across business systems, and builds custom AI systems where a product doesn't fit.
 
-Optimity Technologies is a team of senior engineers and architects working across India, the USA, and the UAE. We work directly inside a customer's operation: understand how the business actually runs, build the missing software/AI/integration layer, connect the tools already in use, and deploy it into production. No rip-and-replace.
+Optimity is a team of senior engineers and architects in India, the USA and the UAE. Its products connect to the systems a business already runs. People stay in charge: the voice products pass complaints, unusual requests and anything they can't answer to staff, and Nexus AI only takes actions that have been approved.
 
-## What we do
+## Products
 
-- **Workflow automation**: software that does the multi-step work teams do by hand — reading from the ERP, writing to the CRM, moving the order along without retyping.
-- **Document intelligence**: contracts, invoices, referrals, and manuals read into structured, searchable records that staff approve instead of retype.
-- **Decision support**: the morning questions answered before they're asked — what's about to go wrong, which account needs a call, what to reorder.
-- **Compliance & audit**: continuous checks against a company's own rules and regulations, with an auditable trail.
+- [Move Concierge AI™](https://optimitytechnologies.com/move-concierge.html): voice AI for moving companies. Answers the inbound and after-hours calls routed to it; asks about the move (date, origin and destination, home size, stairs and lift access, large or fragile items); writes up a structured enquiry with recording and transcript; books a video or in-person survey or a callback where configured; sends the caller an SMS or WhatsApp summary; and passes the enquiry to staff by email or in the moving software or CRM. It does not give binding prices, promise dates or agree to exceptions. Connects to Google Calendar or a dispatch or booking tool, MoveOps, Supermove, HubSpot, a webhook to the company's own database, SMS and WhatsApp Business.
+- [Property Connect AI™](https://optimitytechnologies.com/property-connect.html): voice AI for real-estate teams. Calls new web enquiries back within a minute, answers listing questions, checks budget, pre-approval and timeline, books tours in agents' calendars and warm-transfers serious buyers after a private briefing. CRM sync with Follow Up Boss, kvCORE, HubSpot, Salesforce or custom webhooks.
+- [Nexus AI™](https://optimitytechnologies.com/nexus-ai.html): plain-English questions across ERPNext, Odoo, HubSpot, PostgreSQL and documents, with the source of each answer shown. Three engines (SmartOps AI™, DocIntellect AI™, SQL Database Agent). Read-only SQL sandboxes, Clerk-based tenant isolation, private LLM deployment through vLLM, row-level access control; actions only where configured and approved.
+- [All products](https://optimitytechnologies.com/products.html): short overview of the three.
 
-Built on the systems companies already run: NetSuite, SAP, Dynamics 365, Salesforce, HubSpot, Shopify, POS systems, EHRs, accounting software, and the spreadsheets in between.
+## Custom AI systems
 
-## How we work
+- [Custom AI Systems](https://optimitytechnologies.com/custom-ai-systems.html): focused workflows, agents, integrations and interfaces for operational needs the products don't cover, built around existing systems, preferring reusable components. Delivery: discover the workflow, configure, integrate, launch, improve. Code written only for a client belongs to the client; extensions of an Optimity product stay in the product.
 
-- [How We Work](https://optimitytechnologies.com/how-we-work.html): operations-first method — **Understand, Build, Operate**. We learn how the business actually runs before deciding what to build; we build on the existing stack or build AI-native; we deploy into production and stay to improve it.
-- [The Operations Teardown](https://optimitytechnologies.com/contact.html#book): the free first step — a working look at where AI and software change an outcome in a specific operation, and where they don't. No deck, no pitch.
+## Company
 
-## Who it's for
-
-- [Industries](https://optimitytechnologies.com/industries.html): SME and mid-market companies (roughly 50–500 people). Sector focus: logistics & distribution, retail & e-commerce, manufacturing, healthcare, real estate, professional services. The tools differ by sector; the friction — systems that don't talk, people carrying data by hand — repeats.
-
-## Ways of working
-
-- [Why Optimity](https://optimitytechnologies.com/why-optimity.html): not a dev shop, not a consultancy — we deploy. Clients own what we build; systems are built into the existing stack; AI only where it changes an outcome. Three engagement models:
-  - **Product Studio**: we build and run the whole thing, from discovery to a system the team uses daily.
-  - **Embedded Teams**: senior engineers working inside the client's team, on their tools, at their cadence.
-  - **Strategic Advisory**: architecture reviews, build-vs-buy decisions, fractional CTO work.
-
-## Company & contact
-
-- [About Us](https://optimitytechnologies.com/about.html): builders first, advisors where it helps — one team does the understanding, building, and deploying.
-- [Contact & Book a Teardown](https://optimitytechnologies.com/contact.html): direct booking or `contact@optimitytechnologies.com`.
+- [About](https://optimitytechnologies.com/about.html): who we are, engineering, offices (India, USA, UAE) and the team: Ramesh Sethuraman (Founder & CEO) and Makam Nagendra (Director).
+- [Book a Demo](https://optimitytechnologies.com/contact.html#book): a 30-minute demo of any product (`?demo=move-concierge`, `?demo=property-connect`, `?demo=nexus-ai`), or a call about custom work (`?demo=custom`). Email: `contact@optimitytechnologies.com`.
 
 ## Full text for LLMs & RAG engines
 
-- [llms-full.txt](https://optimitytechnologies.com/llms-full.txt): consolidated company positioning, methodology, and engagement details for LLM and RAG ingestion.
+- [llms-full.txt](https://optimitytechnologies.com/llms-full.txt): products, workflows, integrations, delivery, trust commitments and team in full.
