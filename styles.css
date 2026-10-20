@@ -27,7 +27,7 @@
 
   --m: clamp(20px, 2.6vw, 40px);
   --gap: 24px;
-  --section: clamp(96px, 11vw, 160px);
+  --section: clamp(72px, 8vw, 120px);
   --r: 6px;
   --r-stage: 14px;
   --bar-h: 76px;
@@ -134,12 +134,12 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
 /* Split: content left, sticky stage right */
 .split { display: grid; grid-template-columns: 44fr 56fr; align-items: start; }
 .split > .copy { padding: 0 clamp(28px, 4vw, 72px) 0 var(--m); min-width: 0; }
-.split > .stage { position: sticky; top: var(--bar-h); height: calc(100svh - var(--bar-h)); background: var(--stage); border-radius: var(--r-stage) 0 0 var(--r-stage); display: grid; align-items: center; justify-items: start; padding: clamp(28px, 3.4vw, 56px) 0 clamp(28px, 3.4vw, 56px) clamp(28px, 3.4vw, 56px); overflow: hidden; }
-/* The screen runs off the right edge of the stage, so it reads at a useful size. The caption sits above it
-   and the screen is capped to the stage height (cropped from the bottom), so "Illustrative" is never clipped. */
-.stage .shot { width: min(122%, 1100px); display: flex; flex-direction: column-reverse; }
+.split > .stage { --stage-pad: clamp(24px, 2.6vw, 44px); position: sticky; top: calc(var(--bar-h) + 24px); margin: 24px var(--m) 0 0; background: var(--stage); border-radius: var(--r-stage); padding: var(--stage-pad); overflow: hidden; }
+/* The stage is sized to the screen it shows, and the whole screen is visible. The caption sits above it; on a
+   very short window the screen is capped to fit (cropped from the bottom), so "Illustrative" is never clipped. */
+.stage .shot { width: 100%; display: flex; flex-direction: column-reverse; }
 .stage .shot figcaption { margin: 0 0 10px; }
-.stage .shot img { border-radius: 10px 0 0 10px; max-height: calc(100svh - var(--bar-h) - 2 * clamp(28px, 3.4vw, 56px) - 40px); object-fit: cover; object-position: left top; transition: opacity 160ms var(--ease); }
+.stage .shot img { border-radius: 10px; max-height: calc(100svh - var(--bar-h) - 48px - 2 * var(--stage-pad) - 36px); object-fit: cover; object-position: left top; transition: opacity 160ms var(--ease); }
 .stage .shot.swap img { opacity: 0; }
 .stage :focus-visible { outline-color: var(--stage-ink); }
 /* Each step's own screen: shown on phones, and on desktop whenever the stage can't run (no JS). */
@@ -150,13 +150,15 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
   html:not(.has-js) .split .inline-shot, .no-stage .split .inline-shot { margin-top: 20px; }
 }
 
-.hero h1 { font-size: clamp(2.4rem, 1.3rem + 3vw, 3.75rem); }
+.hero h1 { font-size: clamp(2.4rem, 1rem + 2.6vw, 3.75rem); }
 .hero h1 .ln, .page-hero h1 .nm { display: block; }
-.hero { min-height: calc(100svh - var(--bar-h)); display: flex; flex-direction: column; justify-content: center; padding: 48px 0; max-width: 600px; }
+/* The headline starts level with the top of the screen on the stage beside it. */
+.hero { display: flex; flex-direction: column; padding: calc(24px + clamp(24px, 2.6vw, 44px) + 30px) 0 48px; max-width: 600px; }
 .hero .lead { margin-top: 24px; }
 
-.journey { padding-top: clamp(40px, 6vw, 96px); }
-.journey > h2 { max-width: 22ch; }
+.journey { padding-top: clamp(24px, 3vw, 48px); }
+.journey > h2 { font-size: clamp(1.6rem, 0.6rem + 2.3vw, 2.75rem); }
+.journey > h2 .ln { display: block; }
 .journey > .scene { margin-top: 20px; font-size: var(--t-lead); line-height: 1.45; max-width: 36ch; }
 .steps { list-style: none; margin-top: 24px; }
 .step { min-height: 64vh; padding-top: 48px; display: grid; align-content: start; gap: 10px; }
@@ -206,12 +208,9 @@ main:has(> .final:last-child) + #site-footer footer.site { margin-top: 12px; }
 .final :focus-visible { outline-color: var(--stage-ink); }
 
 /* ── Inner pages ── */
-.page-hero { display: grid; grid-template-columns: 44fr 56fr; gap: clamp(28px, 4vw, 72px); align-items: center; padding: clamp(40px, 7vw, 96px) var(--m) 0; }
+.page-hero { display: grid; grid-template-columns: 44fr 56fr; gap: clamp(28px, 4vw, 72px); align-items: center; padding: clamp(24px, 3vw, 48px) var(--m) 0; }
 .page-hero .lead { margin-top: 22px; }
-.page-hero h1 { font-size: clamp(2rem, 1.3rem + 2.5vw, 3.4rem); }
-.page-hero > .on-stage { overflow: hidden; padding-right: 0; border-radius: var(--r-stage) 0 0 var(--r-stage); margin-right: calc(-1 * var(--m)); }
-.page-hero > .on-stage .shot { width: 118%; }
-.page-hero > .on-stage .shot img { border-radius: 10px 0 0 10px; }
+.page-hero h1 { font-size: clamp(2rem, 1rem + 2.4vw, 3.4rem); }
 .page-hero.text-only h1 { font-size: var(--t-display); }
 .page-hero.text-only { grid-template-columns: minmax(0, 860px); }
 .tm { font-size: .42em; vertical-align: super; letter-spacing: 0; }
@@ -328,7 +327,6 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
   .split-end { display: none; }
   .others, .trust, .facts2, .page-hero, .book, .prod-row, .prod-row.flip, .prod-row.small, .tabs, .other-ways, .team { grid-template-columns: minmax(0, 1fr); }
   .prod-row.flip > .on-stage { order: 0; }
-  .page-hero > .on-stage { margin-right: calc(-1 * var(--m)); }
   ol.deliver { grid-template-columns: 1fr 1fr; }
   .timeline { grid-template-columns: 1fr 1fr; }
   .final { grid-template-columns: 1fr; }
@@ -342,7 +340,7 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
   .acts .btn { width: 100%; }
   /* Product screens run off the right edge on phones, as on the desktop stage, so their text stays legible. */
   .on-stage:has(> .shot) { overflow: hidden; padding-right: 0; }
-  .on-stage .shot, .page-hero > .on-stage .shot { width: 160%; }
+  .on-stage .shot { width: 160%; }
   .on-stage .shot img { border-radius: 10px 0 0 10px; }
   .booking-embed .note { padding: 14px var(--m) 4px; }
   .btn { white-space: normal; text-align: center; padding-top: 10px; padding-bottom: 10px; }

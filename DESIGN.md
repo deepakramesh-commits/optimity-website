@@ -10,7 +10,7 @@ Before a page ships: **would an operations director believe a serious software c
 
 Premium B2B software. A white page with navy type and a navy **stage** on which the product's own screens sit, one at a time. Density **balanced (5)**, variance **offset asymmetric (6)**, motion **restrained (3)**.
 
-- **The signature:** on the home and Move Concierge AI pages the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The screen runs off the stage's right edge so it reads at a useful size, with its "Illustrative" caption in view.
+- **The signature:** on the home and Move Concierge AI pages the layout splits 44/56. The left column reads the journey (incoming call → conversation → enquiry → survey or callback → the team); the right column is a sticky navy stage that shows the screen for the step being read. The stage is sized to the screen it shows, the whole screen is visible, and the headline starts level with it. Its "Illustrative" caption sits above the screen.
 - **Hierarchy follows the business.** Move Concierge AI gets the most space everywhere (hero, the longest section, first in every menu and list). Property Connect AI and Nexus AI are real products shown at a visibly smaller size.
 - Neighbouring sections never share a shape: split stage; a 7/5 pair of unequal product blocks; a five-step strip whose first step is filled navy; statement rows beside a surface panel; a logo row; a navy closing band. Inner pages add real tables, a timestamped timeline, tabs and a fit list.
 - Light is the default; dark is complete and is how leadership reviews (on a phone).
@@ -46,7 +46,7 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 - **Buttons:** flat Signal Orange, navy text, 6px radius, 48px (44px small). Hover lightens; press moves 1px. One primary per screen; the second action is a text link with a 2px underline.
 - **Header:** logo; Home · Products (link with a dropdown: Move Concierge AI first on a tinted row, then Property Connect AI, Nexus AI, each with its buyer) · Custom AI Systems · About · Contact; theme toggle; **Book a Demo**. Under 1040px the links move into the existing `#nav-cb` drawer (theme.js unchanged). Dropdowns close with Escape.
-- **Product screens:** PNG placeholders on the navy stage, 10px radius, no shadow, each with a figure caption "Illustrative". On the stage the caption sits above the screen and the screen is capped to the stage height, so the caption is never clipped. On phones the stage gives way to the same screens inline, one per step, on full-width navy bands.
+- **Product screens:** PNG placeholders on the navy stage, 10px radius, no shadow, each with a figure caption "Illustrative". On the stage the caption sits above the screen and the screen is capped to the stage height, so the caption is never clipped. On phones the stage gives way to the same screens inline, one per step, on full-width navy bands; there the screens run off the right edge (160%) so their text stays legible.
 - **Tables:** real `<table>` with row rules; on phones each row stacks with `data-label` labels.
 - **Tabs (Nexus AI):** `role=tablist`, arrow keys, selected tab filled navy; without JavaScript every panel shows.
 - **"What it won't do" / limits panels:** surface panels that state what stays with people. Every product page has one.
@@ -54,7 +54,7 @@ Premium B2B software. A white page with navy type and a navy **stage** on which 
 
 ## 5. Layout Principles
 
-- Max width 1600px; margins `clamp(20px, 2.6vw, 40px)`; split 44/56. Section gap `clamp(96px, 11vw, 160px)`.
+- Max width 1600px; margins `clamp(20px, 2.6vw, 40px)`; split 44/56. Section gap `clamp(72px, 8vw, 120px)`.
 - Breakpoints: 1180 (tighter nav), 1040 (drawer, splits stack, stage becomes inline screens), 680 (phone composition), 400 and 359 (small phones: the booking button moves into the menu below 360px).
 - Touch targets ≥ 44px. No horizontal scroll from 320px up.
 
@@ -94,7 +94,7 @@ Robots, glowing brains, circuit boards, stock businesspeople · fake terminals, 
 ## 11. Files
 
 - `styles.css` (tokens, components, responsive) · `site.js` (stage, tabs, nav state) · `theme.js` and `components.js` (unchanged behaviour).
-- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261020-p11`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
+- Cache string: every page and `components.js` share `?v=YYYYMMDD-pN` (currently `20261020-p17`). Bump it whenever styles.css, site.js, theme.js or components.js change, or a placeholder is replaced (image URLs carry it too).
 - Retired URLs (how-we-work, industries, why-optimity, management-team) 301 in `nginx.conf` and `.htaccess`, query string kept, to the canonical `.html` pages.
 
 ## Decisions Log
