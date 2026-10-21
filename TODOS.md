@@ -85,7 +85,7 @@ Four outside reviews (2026-10-20) agreed these decide whether a buyer books a de
 5. Setup time and support hours, including what happens when the service is down.
 6. A company phone number, and the Calendly event renamed from "Deepak Ramesh · 30 Minute Meeting" to an Optimity product demo.
 
-## P1: AI Receptionist facts to confirm before launch
+## P1: Concierge AI facts to confirm before launch
 
-The new pages say only what the product does (answers every call, books into the booking system, dashboard of every call and booking, hands over to a person). Confirm with the product team: which booking systems each edition connects to (none are named yet), how an urgent home-services call reaches the on-call person, and whether callers are told they're talking to an AI. Replace the twelve `ar-*` sample screens with real ones, and consider an audio clip from each demo line (the number itself stays off the site).
+The new pages say only what the product does (answers every call, books into the booking system, dashboard of every call and booking, hands over to a person). Confirm with the product team: which booking systems each edition connects to (none are named yet), how an urgent Trade Concierge AI call reaches the on-call person, and whether callers are told they're talking to an AI. Replace the twelve `trade-*` and `salon-*` sample screens with real ones, and consider an audio clip from each demo line (the number itself stays off the site).
 

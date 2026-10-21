@@ -4,6 +4,27 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.2.0.0] - 2026-10-21
+
+The receptionist family becomes Concierge AI, and the homepage presents the company.
+
+### Changed
+- The product family is now Concierge AI: Move Concierge AI (movers, page and URL unchanged), Trade Concierge AI (`trade-concierge.html`, plumbers and home-service trades) and Salon Concierge AI (`salon-concierge.html`). The family overview moved to `concierge-ai.html`. "AI receptionist" is used only as the plain description in each Concierge page's title, meta description and opening line
+- The nail salon and hair salon pages are merged into Salon Concierge AI, with both sample calls (a nail client moving her appointment, a new client asking what color costs) on their own screen stages
+- Sample screens and their sources renamed (`trade-*`, `salon-nail-*`, `salon-hair-*`) and relabelled with the Concierge names; demo values are now `concierge-ai`, `trade-concierge` and `salon-concierge`
+- Homepage rebuilt around the company: a plain sentence about what Optimity builds with screens from three products, "Find what fits" routes for four problems (Concierge AI, Property Connect AI, Nexus AI, Custom AI Systems), what every product has in common, how a product goes live, the team, offices and permitted logos, and a closing call to book a demo or describe a problem
+- Homepage title, description, structured data and share image rewritten for the company; llms.txt and llms-full.txt updated to match
+- The product stage now follows the scroll position directly, so a jump or a fast scroll lands on the right screen
+
+### Fixed
+- Claims checked against each product page: the homepage no longer says every product hands complaints to your team or that every call books, and connections are confirmed per setup
+- Salon walkthrough copy now matches its screens, and bookings for three or more people go to the team
+- Products stays highlighted in the menu on the products page; the share image URL carries the cache string; the two salon stages have their own labels
+- Unused styles removed; PLACEHOLDERS.md, the logo permissions note and DESIGN.md brought up to date
+
+### Removed
+- The four AI Receptionist page names; they were only ever on the review copy, so no redirects are needed
+
 ## [2.1.0.0] - 2026-10-20
 
 The AI Receptionist joins the site as the lead product family.
