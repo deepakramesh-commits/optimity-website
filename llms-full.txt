@@ -1,6 +1,6 @@
 # Optimity Technologies — Full Knowledge Base
 
-> Optimity Technologies builds AI products for specific workflows. Its lead product is the AI Receptionist, with editions for movers (Move Concierge AI™), home-service trades, nail salons and hair salons. It also makes Property Connect AI™ and Nexus AI™, and builds custom AI systems where a product doesn't fit.
+> Optimity Technologies builds AI products that answer calls, follow up leads and work across business systems, and builds custom AI systems when a product doesn't fit. Concierge AI answers calls and books appointments, with editions for movers (Move Concierge AI™), home-service trades (Trade Concierge AI) and nail and hair salons (Salon Concierge AI). Property Connect AI™ calls real-estate web leads back within a minute. Nexus AI™ answers questions across ERP, CRM, databases and documents.
 
 ---
 
@@ -8,21 +8,20 @@
 
 Optimity Technologies is a team of senior engineers and architects in India, the USA and the UAE. The same team builds the products and the integrations around them. Its engineering covers AI and automation, product engineering, and ERP and CRM integration, which is why the products are built to connect to the systems a business already runs.
 
-## 2. AI Receptionist (lead product)
+## 2. Concierge AI (lead product family)
 
-**What it is:** an AI voice receptionist for businesses that take bookings by phone. It answers every call, day or night, books the appointment into the business's booking system, and shows every call and booking in one dashboard. Emergencies, complaints and anything it can't answer go to the owner or the team, as set up. It does not quote prices, promise times that haven't been offered or agree to exceptions.
+**What it is:** an AI receptionist for businesses that take bookings by phone. It answers every call, day or night, books the appointment into the business's booking system, and shows every call and booking in one dashboard. Emergencies, complaints and anything it can't answer go to the owner or the team, as set up. It does not quote prices, promise times that haven't been offered or agree to exceptions.
 
 **Editions:**
 - **Movers:** Move Concierge AI™ (section 3).
-- **Home services** (plumbers, electricians, HVAC techs, handymen): books jobs into the schedule; when a call is urgent, such as a leak at night, it marks it urgent and passes the details to the person the business chooses. It doesn't quote job prices, diagnose problems or promise arrival times.
-- **Nail salons** (nail salons, lash and beauty studios, spas): books clients with the right technician and moves appointments when plans change. Prices, group and bridal bookings and complaints go to the owner.
-- **Hair salons** (hair salons, barbers, stylists): books cuts and color with the right stylist. When a caller asks what a service costs, it books a consultation or passes the question to the team; it never quotes a price.
+- **Trade Concierge AI** (plumbers, electricians, HVAC techs, handymen): the AI receptionist for home-service trades. Books jobs into the schedule; when a call is urgent, such as a leak at night, it marks it urgent and passes the details to the person the business chooses. It doesn't price jobs, decide what's wrong or say when someone will arrive on an urgent call, and it isn't a substitute for 911.
+- **Salon Concierge AI** (nail salons, lash and beauty studios, spas, hair salons, barbershops, stylists): the AI receptionist for nail and hair salons. Books clients with the technician or stylist they ask for and moves appointments when plans change. When a caller asks what a service costs, it books a consultation or passes the question to the team; it never quotes a price. Color corrections, extensions, bookings for three or more people, bridal parties and complaints go to the owner or team.
 
 **Systems:** connected to the business's phone line and booking system during setup; what each setup needs is confirmed before anything is connected.
 
 **The demo:** the prospect calls it, books an appointment the way a customer would, then sees the booking in the dashboard, and can try a curveball such as a price question, a reschedule or an urgent job.
 
-## 3. Move Concierge AI™ (AI Receptionist, movers edition)
+## 3. Move Concierge AI™ (Concierge AI, movers edition)
 
 **Who it's for:** independent moving companies with a busy phone line, where the owner, general manager or office manager decides how calls are handled and there is already a phone, a calendar and a CRM or dispatch tool. Single or multiple locations.
 
@@ -93,6 +92,6 @@ Client logos shown on the site are companies Optimity has built software for, di
 
 ## 11. Contact
 
-- **Book a demo:** `https://optimitytechnologies.com/contact.html#book` (add `?demo=ai-receptionist`, `?demo=move-concierge`, `?demo=home-services`, `?demo=nail-salons`, `?demo=hair-salons`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`)
+- **Book a demo:** `https://optimitytechnologies.com/contact.html#book` (add `?demo=concierge-ai`, `?demo=move-concierge`, `?demo=trade-concierge`, `?demo=salon-concierge`, `?demo=property-connect`, `?demo=nexus-ai` or `?demo=custom`)
 - **Email:** `contact@optimitytechnologies.com`
 - **Offices:** India (delivery and engineering), United States and United Arab Emirates (delivery and client partnership).

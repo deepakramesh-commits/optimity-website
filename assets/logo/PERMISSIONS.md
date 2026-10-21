@@ -15,5 +15,5 @@ permission to display their logos on optimitytechnologies.com is granted.
 | funtoot.png | Funtoot | ✅ permitted |
 | icube-labs-usa.png | Icube Labs, U.S.A. | ✅ permitted |
 
-Displayed in the "Trusted by companies" section on index.html.
+Displayed on index.html ("Who you'd work with") and about.html, labelled as companies our engineering team has built software for, not product customers.
 Adding a new logo requires adding a row here first.

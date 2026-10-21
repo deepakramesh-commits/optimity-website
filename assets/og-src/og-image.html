@@ -5,15 +5,22 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1200px;height:630px;overflow:hidden}
-body{display:grid;grid-template-columns:560px 640px;background:#FFFFFF;font-family:Geist,sans-serif;color:#0F1B2D}
-.l{padding:64px 56px;display:flex;flex-direction:column;justify-content:space-between}
+body{display:grid;grid-template-columns:540px 660px;background:#FFFFFF;font-family:Geist,sans-serif;color:#0F1B2D}
+.l{padding:60px 52px;display:flex;flex-direction:column;justify-content:space-between}
 .l img{height:52px;width:auto;align-self:flex-start}
-h1{font-family:Literata,serif;font-weight:500;font-size:60px;line-height:1.04;letter-spacing:-.015em}
-p{font-size:22px;line-height:1.4;color:#4B5869;margin-top:18px}
-.r{background:#0F1B2D;border-radius:18px 0 0 18px;display:grid;place-items:center;padding:40px}
-.r img{width:100%;border-radius:10px}
-.r span{display:block;color:#C9D1DC;font-size:24px;margin-top:14px}
+h1{font-family:Literata,serif;font-weight:500;font-size:44px;line-height:1.06;letter-spacing:-.015em}
+p{font-size:21px;line-height:1.4;color:#4B5869;margin-top:18px}
+.r{background:#0F1B2D;border-radius:18px 0 0 18px;padding:36px 32px;display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-content:center;align-items:start}
+.r figure{margin:0}
+.r figure.wide{grid-row:span 2}
+.r .stack{display:grid;gap:16px}
+.r img{width:100%;border-radius:8px;display:block}
+.r figcaption{color:#C9D1DC;font-size:17px;margin-top:8px}
 </style></head><body>
-<div class="l"><img src="../../logo_lightmode.png" alt=""><div><h1>AI products for specific workflows</h1><p>Move Concierge AI answers the calls a moving company misses.</p></div></div>
-<div class="r"><div><img src="../products/placeholders/mc-enquiry-record.png" alt=""></div></div>
+<div class="l"><img src="../../logo_lightmode.png" alt=""><div><h1>AI products for calls, leads and business systems</h1><p>Concierge AI, Property Connect AI and Nexus AI, plus custom AI systems.</p></div></div>
+<div class="r">
+  <figure class="wide"><img src="../products/placeholders/trade-dashboard.png" alt=""><figcaption>Concierge AI</figcaption></figure>
+  <div class="stack"><figure><img src="../products/placeholders/pc-lead-record.png" alt=""><figcaption>Property Connect AI</figcaption></figure>
+  <figure><img src="../products/placeholders/nexus-answer-table.png" alt=""><figcaption>Nexus AI</figcaption></figure></div>
+</div>
 </body></html>

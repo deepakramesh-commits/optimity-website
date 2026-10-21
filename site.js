@@ -1,17 +1,17 @@
 // Optimity — page behaviour. Motion only where it explains a product:
 // the stage that shows each step's screen, the Nexus AI engine tabs, and nav/menu state.
-// Without this file (or IntersectionObserver) the split stacks and each step shows its own screen inline.
+// Without this file (or requestAnimationFrame) the split stacks and each step shows its own screen inline.
 (function () {
   'use strict';
   var root = document.documentElement;
 
-  // The stage: the step nearest the middle of the screen decides which product screen it shows.
+  // The stage: the last step whose top has passed the middle of the window decides which product screen it shows.
   // It only runs while the stage is on screen (wider than 1040px); on phones each step shows its own screen.
   var FADE = 160; // matches the opacity transition on .stage .shot img in styles.css
   function initStage() {
     var stages = document.querySelectorAll('[data-stage]');
     if (!stages.length) return;
-    if (!('IntersectionObserver' in window)) { root.classList.add('no-stage'); return; }
+    if (!('requestAnimationFrame' in window)) { root.classList.add('no-stage'); return; }
     var wide = window.matchMedia('(min-width: 1040.01px)');
     var calm = window.matchMedia('(prefers-reduced-motion: reduce)');
     for (var s = 0; s < stages.length; s++) (function (stage) {
@@ -21,6 +21,7 @@
       var scope = stage.closest('.split');
       if (!img || !scope) return;
       var steps = [].slice.call(scope.querySelectorAll('[data-shot]'));
+      if (!steps.length) return;
       var current = img.getAttribute('src');
       var timer = null, started = false;
       function apply(step) {
@@ -50,19 +51,20 @@
         // Fetch the other step screens after the page has loaded, so they never compete with the hero image.
         var preload = function () { for (var p = 0; p < steps.length; p++) { var pre = new Image(); pre.src = steps[p].getAttribute('data-shot'); } };
         if (document.readyState === 'complete') preload(); else window.addEventListener('load', preload, { once: true });
-        // Track every step inside the middle band and show the last one, so leaving the band counts too.
-        var inBand = [];
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            var i = inBand.indexOf(e.target);
-            if (e.isIntersecting && i < 0) inBand.push(e.target);
-            if (!e.isIntersecting && i >= 0) inBand.splice(i, 1);
-          });
-          var last = null;
-          for (var k = 0; k < steps.length; k++) if (inBand.indexOf(steps[k]) >= 0) last = steps[k];
-          if (last) show(last);
-        }, { rootMargin: '-45% 0px -45% 0px' });
-        for (var i = 0; i < steps.length; i++) io.observe(steps[i]);
+        // The step whose top has passed the middle of the window decides the screen. Checked once per frame on
+        // scroll and resize, so slow scrolling, fast scrolling and jumps from a link all land on the right screen.
+        var queued = false;
+        function pick() {
+          queued = false;
+          if (!wide.matches) return;
+          var mid = innerHeight / 2, last = steps[0];
+          for (var k = 0; k < steps.length; k++) if (steps[k].getBoundingClientRect().top < mid) last = steps[k];
+          show(last);
+        }
+        function queue() { if (!queued) { queued = true; requestAnimationFrame(pick); } }
+        window.addEventListener('scroll', queue, { passive: true });
+        window.addEventListener('resize', queue);
+        pick();
       }
       start();
       if (!started && wide.addEventListener) wide.addEventListener('change', start);

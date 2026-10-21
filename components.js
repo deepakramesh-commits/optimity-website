@@ -24,7 +24,8 @@
       if (trigger) {
         if (activeChild) {
           trigger.setAttribute('aria-current', 'page');
-        } else {
+        } else if (norm(trigger.getAttribute('data-nav') || trigger.getAttribute('href')) !== path) {
+          // Keep the highlight when the trigger itself links to this page (Products on products.html).
           trigger.removeAttribute('aria-current');
         }
       }
@@ -49,7 +50,7 @@
       if (callback) callback();
       return;
     }
-    fetch(file + '?v=20261020-p27')
+    fetch(file + '?v=20261021-p33')
       .then(function(res) {
         if (!res.ok) throw new Error('Failed to load ' + file);
         return res.text();
