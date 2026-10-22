@@ -10,11 +10,11 @@ Add the GA4 tag (needs the founder's `G-XXXXXXX` measurement ID) and verify the 
 
 ### Replace the product-screen placeholders with real screenshots
 **Priority:** P1
-Every product screen on the site is a sample placeholder (tagged "Sample data") (assets/products/placeholders/PLACEHOLDERS.md). Capture real screens from Move Concierge AI first (call log, transcript, enquiry record, survey booking, staff hand-off, overnight summary), then Property Connect AI and Nexus AI. Same file names and sizes; remove each caption as it is replaced.
+Every product screen on the site is a sample placeholder (tagged "Sample data") (assets/products/placeholders/PLACEHOLDERS.md). Capture real screens from Move Concierge AI first (call log, lead record, estimate booking, the details sent to the team, the dashboard), then Property Connect AI and Nexus AI. A real screen may only show features the pages claim. Same file names and sizes; remove each caption as it is replaced.
 
-### Confirm which integrations are live
+### Confirm the claims removed in the 2026-10-21 audit
 **Priority:** P1
-The product pages list only integrations named on the pre-rebuild pages (Google Calendar, MoveOps, Supermove, HubSpot, SMS, WhatsApp Business, webhooks; Follow Up Boss, kvCORE, Salesforce; ERPNext, Odoo, PostgreSQL). Confirm each is ready for a customer and remove any that aren't.
+After the claims audit the pages name only Google Calendar (Concierge AI and its editions) and ERPNext, HubSpot and PostgreSQL (Nexus AI). Everything else was removed until the team confirms it: Move Concierge AI's MoveOps, Supermove, HubSpot, webhooks, SMS summaries, WhatsApp Business, 48-hour checklist, lead scoring, daily summaries, multi-location support and call recording; Trade Concierge AI's urgent routing by night and safety message; Salon Concierge AI's consultations and handoff rules; Property Connect AI's Follow Up Boss, kvCORE, HubSpot, Salesforce, webhooks, portal leads, listing data, named calendars, no-agent fallback, fair-housing review and recording; Nexus AI's Odoo, vLLM, sandboxes, alerts and reconciliation; Custom AI Systems' support and code-ownership lines. Restore an item, with its exact wording, only once the team confirms it.
 
 ### Publish the first real anonymized deployment story
 **Priority:** P1
@@ -64,7 +64,7 @@ The problem section now carries the simplified Before/After ops map (relocated f
 
 ## P1: Legal review of the voice-product copy
 
-The Property Connect and Move Concierge pages say every call is recorded and transcribed, and Property Connect places outbound AI calls to web enquiries. Before launch, have counsel confirm the recording notice and AI-disclosure wording callers hear, consent capture for outbound calls (TCPA), the fair-housing sentence ("reviews it against fair-housing guidelines"), whether Property Connect should answer questions about schools (a steering risk), and the custom-work ownership line. There is no privacy page yet; Calendly bookings and call recordings both collect personal data.
+Property Connect places outbound AI calls to web leads. Before launch, have counsel confirm the AI-disclosure wording callers hear, consent capture and calling hours for outbound calls (TCPA), and a recording notice if recording is ever claimed again. If the fair-housing review or the custom-work ownership line is restored (see the audit item above), have counsel approve the wording first. There is no privacy page yet; Calendly bookings and call recordings both collect personal data.
 
 ## P2: A product-led company profile
 
@@ -87,5 +87,5 @@ Four outside reviews (2026-10-20) agreed these decide whether a buyer books a de
 
 ## P1: Concierge AI facts to confirm before launch
 
-The new pages say only what the product does (answers every call, books into the booking system, dashboard of every call and booking, hands over to a person). Confirm with the product team: which booking systems each edition connects to (none are named yet), how an urgent Trade Concierge AI call reaches the on-call person, and whether callers are told they're talking to an AI. Replace the twelve `trade-*` and `salon-*` sample screens with real ones, and consider an audio clip from each demo line (the number itself stays off the site).
+The pages say only what the playbook confirms (answers every call, day or night; books and reschedules in Google Calendar; a dashboard of every call and booking; sends the details to the team when a person needs to follow up). Confirm with the product team: how the details reach the team, how price questions behave on the demo lines, and whether callers are told they're talking to an AI. Replace the twelve `trade-*` and `salon-*` sample screens with real ones, and consider an audio clip from each demo line (the number itself stays off the site).
 

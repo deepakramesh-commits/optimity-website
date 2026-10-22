@@ -4,6 +4,21 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.3.0.0] - 2026-10-21
+
+Every product claim now matches what has been confirmed, and the homepage speaks to the buyer.
+
+### Changed
+- Homepage: new headline "Optimity builds AI that takes the routine work off your team.", a one-line route per product in the buyer's words, the buyer's three questions (will it work with my setup, can my team take over, can I see what happened) answered product by product, five one-line steps to go live, and a closing band "Let's find the right place to start." with Book a Demo and Discuss a Custom Project
+- Hero screen captions sit above the screens, so the three labels line up and none is cut off
+- Concierge AI and its editions name Google Calendar as the booking system, include rescheduling, and use one handoff line: when a person needs to follow up, the product sends the details to your team. A price question goes to the team
+- Property Connect AI's callback is scoped everywhere: it can call eligible leads back within 60 seconds when they come through connected forms and sources
+- Nexus AI lists ERPNext, HubSpot, PostgreSQL and supported document sources, cites supporting documents, and states that source traceability for ERP, CRM and database answers varies by connector and query
+- Sample screens, titles, meta descriptions, structured data, the share image and llms.txt / llms-full.txt match the narrowed claims
+
+### Removed
+- Claims not yet confirmed by the product team, listed in TODOS.md for confirmation: Move Concierge AI's moving-software, CRM, webhook, SMS, WhatsApp, pre-move checklist, lead-score, daily-summary, multi-location and call-recording claims; Trade Concierge AI's urgent routing and configurable safety message; Salon Concierge AI's consultations and handoff rules; Property Connect AI's named CRMs, portal leads, listing answers, fair-housing review and call recording; Nexus AI's Odoo, vLLM, sandbox, alert, reconciliation and "every answer" claims; Custom AI Systems' ongoing-support and code-ownership lines
+
 ## [2.2.0.0] - 2026-10-21
 
 The receptionist family becomes Concierge AI, and the homepage presents the company.

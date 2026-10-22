@@ -1,6 +1,6 @@
 # Optimity website
 
-Optimity Technologies builds AI products that answer calls, follow up leads and work across business systems: Concierge AI (the lead product family: Move Concierge AI for movers, Trade Concierge AI for home-service trades and Salon Concierge AI for salons), Property Connect AI and Nexus AI, plus custom AI systems. Static marketing site: eleven pages, no build step, no dependencies.
+Optimity Technologies is an AI product company that also builds custom AI systems. Its AI takes the routine work off a team: Concierge AI (the lead product family: Move Concierge AI for movers, Trade Concierge AI for home-service trades and Salon Concierge AI for salons), Property Connect AI and Nexus AI, plus custom AI systems. Static marketing site: eleven pages, no build step, no dependencies.
 
 - **Staging (review) URL:** https://deepakramesh-commits.github.io/optimity-website/
 - **Pages:** `index.html` (Home), `products.html`, `concierge-ai.html` (the Concierge AI family) with its editions `move-concierge.html` (movers), `trade-concierge.html` (home-service trades) and `salon-concierge.html` (nail and hair salons), `property-connect.html`, `nexus-ai.html`, `custom-ai-systems.html`, `about.html` (team at `#team`), `contact.html` (booking at `#book`) — plus a self-contained `404.html`. The old how-we-work, industries, why-optimity and management-team pages are retired and 301 in `nginx.conf`.
