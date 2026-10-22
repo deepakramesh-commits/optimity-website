@@ -4,6 +4,16 @@ All notable changes to the Optimity Technologies website.
 
 Format: [X.Y.Z.W] - YYYY-MM-DD, sections Added / Changed / Fixed / Removed.
 
+## [2.3.1.0] - 2026-10-21
+
+Custom AI Systems says how the work is agreed and checked, in plainer words.
+
+### Changed
+- "Your existing systems stay" now reads "We build around the systems you already run, and agree each connection before we start."
+- "A person stays in charge" now reads "Before it goes live, we agree with you where a person needs to check its work."
+- The Launch step now reads "We test it against real situations and roll it out with your team."
+- llms.txt and llms-full.txt match
+
 ## [2.3.0.0] - 2026-10-21
 
 Every product claim now matches what has been confirmed, and the homepage speaks to the buyer.
