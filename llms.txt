@@ -16,7 +16,7 @@ Optimity is a team of senior engineers and architects in India, the USA and the 
 
 ## Custom AI systems
 
-- [Custom AI Systems](https://optimitytechnologies.com/custom-ai-systems.html): focused workflows, agents, integrations and interfaces for operational needs the products don't cover, built around existing systems, with each connection scoped before it is built. Delivery: discover the workflow, configure, integrate, launch.
+- [Custom AI Systems](https://optimitytechnologies.com/custom-ai-systems.html): focused workflows, agents, integrations and interfaces for operational needs the products don't cover, built around the systems a business already runs, with each connection agreed before work starts. Delivery: discover the workflow, configure, integrate, launch.
 
 ## Company
 

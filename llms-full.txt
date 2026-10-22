@@ -69,7 +69,7 @@ Nexus AI only makes a change in a connected system after that action has been tu
 
 ## 7. Custom AI systems
 
-When a workflow needs something the products don't do, Optimity builds a focused workflow, agent, integration or interface for it. It is selective: a real operational workflow, existing systems kept (each connection scoped before it is built), something worth reusing (for example as an extension of a product), and a person in charge of anything uncertain or sensitive. General software development with no AI workflow in it is not taken on. Delivery: discover the workflow, configure, integrate, launch.
+When a workflow needs something the products don't do, Optimity builds a focused workflow, agent, integration or interface for it. It is selective: a real operational workflow, built around the systems the client already runs (each connection agreed before work starts), something worth reusing (for example as an extension of a product), and, agreed before it goes live, where a person needs to check its work. General software development with no AI workflow in it is not taken on. Delivery: discover the workflow, configure, integrate, launch.
 
 ## 8. Team
 
