@@ -183,12 +183,14 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
 .co-hero h1 { font-size: clamp(1.55rem, 1rem + 1.9vw, 3rem); line-height: 1.14; }
 .co-hero .lead { margin-top: 22px; max-width: 62ch; }
 .co-screens { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 28px); align-items: start; margin-top: clamp(32px, 4vw, 56px); }
-.co-screens figcaption { margin-top: 8px; font-size: var(--t-small); color: var(--stage-muted); }
+/* Captions sit above the screens so all three line up whatever each screen's height. */
+.co-screens .shot { display: flex; flex-direction: column-reverse; }
+.co-screens figcaption { margin: 0 0 10px; font-size: var(--t-small); line-height: 1.4; color: var(--stage-muted); }
 .routes { list-style: none; margin-top: 28px; }
-.routes li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 5fr) minmax(0, 3fr); gap: clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(22px, 2.6vw, 34px) 0; border-top: 1px solid var(--rule); } /* taste-skill-ignore: rows of a routing list */
+.routes li { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(16px, 3vw, 48px); align-items: baseline; padding: clamp(22px, 2.6vw, 34px) 0; border-top: 1px solid var(--rule); } /* taste-skill-ignore: rows of a routing list */
 .routes li:last-child { border-bottom: 1px solid var(--rule); } /* taste-skill-ignore: rows of a routing list */
 .r-problem { font-family: var(--display); font-size: var(--t-lead); line-height: 1.35; }
-.r-links { display: flex; flex-direction: column; align-items: flex-start; }
+.r-links { display: flex; flex-wrap: wrap; gap: 4px 28px; align-items: flex-start; }
 .r-links a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 500; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
 .commit.share { margin-top: 24px; max-width: 900px; }
 .who-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
@@ -215,8 +217,10 @@ footer.site :focus-visible { outline-color: var(--stage-ink); }
 /* Ordered delivery steps */
 ol.deliver { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 32px; }
 ol.deliver li { padding: 22px; background: var(--surface); border-radius: 10px; }
+ol.deliver.four { grid-template-columns: repeat(4, 1fr); }
 ol.deliver li:first-child { background: var(--stage); color: var(--stage-ink); }
 ol.deliver b { display: block; font-family: var(--display); font-weight: 500; font-size: var(--t-lead); margin-bottom: 8px; }
+ol.deliver.titles b { margin-bottom: 0; } /* the homepage steps are titles only */
 
 /* Trust */
 .trust { display: grid; grid-template-columns: 44fr 56fr; gap: clamp(24px, 4vw, 72px); align-items: start; }
@@ -288,8 +292,6 @@ table.data tbody th { font-weight: 600; width: 32%; }
 .has-js .tabpanel.on { display: block; }
 pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--ink); border-radius: 8px; overflow-x: auto; font: .875rem/1.55 ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 
-.sys-list { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.sys-list li { padding: 8px 14px; background: var(--surface); border-radius: 6px; }
 
 .prod-row h2 a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
 .prod-row h2 a:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
@@ -363,7 +365,7 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
   .split-end { display: none; }
   .who-grid, .home-hero, .trust, .facts2, .page-hero, .book, .prod-row, .prod-row.flip, .prod-row.small, .tabs, .other-ways, .team { grid-template-columns: minmax(0, 1fr); }
   .prod-row.flip > .on-stage { order: 0; }
-  ol.deliver { grid-template-columns: 1fr 1fr; }
+  ol.deliver, ol.deliver.four { grid-template-columns: 1fr 1fr; }
   .timeline { grid-template-columns: 1fr 1fr; }
   .final { grid-template-columns: 1fr; }
   .final .acts { justify-content: flex-start; }
@@ -381,7 +383,7 @@ pre.code { margin-top: 12px; padding: 16px; background: var(--bg); color: var(--
   .booking-embed .note { padding: 14px var(--m) 4px; }
   .btn { white-space: normal; text-align: center; padding-top: 10px; padding-bottom: 10px; }
   .commit li { grid-template-columns: 1fr; gap: 6px; }
-  ol.deliver, .timeline, .fit, .offices, .pair { grid-template-columns: 1fr; }
+  ol.deliver, ol.deliver.four, .timeline, .fit, .offices, .pair { grid-template-columns: 1fr; }
   .person { grid-template-columns: 112px 1fr; gap: 18px; }
   .logo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 24px; }
   .logo-row img { height: 26px; }
